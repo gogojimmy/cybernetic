@@ -1,0 +1,15 @@
+header.page-header
+  h1 所有頁面
+table.table
+  thead
+    tr
+      th 頁面
+      th 更新於
+      th 更新者
+  tbody
+    - @pages.each do |page|
+      tr
+        td= link_to page.title, edit_admin_page_path(page)
+        td= l page.updated_at, format: :short
+        td= page.user_email
+= will_paginate @pages

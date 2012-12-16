@@ -1,0 +1,34 @@
+.navbar
+  .navbar-inner
+    .container
+      a.btn.btn-navbar data-toggle="collapse" data-target=".nav-collapse"
+        span 目錄
+      .nav-collapse.collapse
+        ul.nav
+          li= link_to "關於嘉亨", "#"
+          li= link_to "產品資訊", "#"
+          li.dropdown
+            =link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
+              | 最新消息
+              b.caret
+            ul.dropdown-menu
+              li= link_to "最新消息", "#"
+              li= link_to "促銷活動", "#"
+          li.dropdown
+            =link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
+              | 經銷資訊
+              b.caret
+            ul.dropdown-menu
+              li= link_to "獨立店", "#"
+              li= link_to "3C賣場", "#"
+              li= link_to "生活賣場", "#"
+              li= link_to "網路賣場", "#"
+          li.dropdown
+            =link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
+              | 客戶服務
+              b.caret
+            ul.dropdown-menu
+              li= link_to "產品註冊", "#"
+              li= link_to "聯絡客服", "#"
+              li= link_to "下載中心", "#"
+              li= link_to "常見問題", "#"

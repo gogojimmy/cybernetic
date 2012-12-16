@@ -1,0 +1,37 @@
+doctype
+html
+  head
+    = render_page_title_tag
+    = render_page_description_meta_tag
+    = render_page_keywords_meta_tag
+    = render_page_image_link_tag
+    = csrf_meta_tag
+    = stylesheet_link_tag "application"
+    = yield :stylesheets
+    meta content=(page_title ||  SeoHelper.configuration.site_name) property="og:title"
+    meta content=(page_description || SeoHelper.configuration.default_page_description) property="og:description"
+    meta content=(page_image ||  SeoHelper.configuration.default_page_image) property="og:image:url"
+  body
+    /! header starts
+    header
+      .container
+        .row
+          .span6
+            .logo
+              = image_tag(asset_path("logo.png"))
+              .hmeta 嘉亨科技
+          .span6
+            .form
+              = form_tag '/posts', id: 'search-form', class: 'form-search' do
+                = text_field_tag 'search', nil, class: 'input-medium'
+                = submit_tag '搜尋', class: 'btn'
+    /! Navigation bar starts
+    = render partial: 'common/menu'
+    .content
+      .container
+        = yield
+    = render :partial => "common/footer"
+    = render :partial => "common/bootstrap_modal"
+    = render :partial => "common/google_analytics"
+    = javascript_include_tag "application"
+    = yield :javascripts
