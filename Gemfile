@@ -31,6 +31,7 @@ gem "rmagick"
 gem "carrierwave"
 gem "carrierwave-meta"
 gem 'exception_notification'
+gem "ancestry"
 
 gem "settingslogic"
 

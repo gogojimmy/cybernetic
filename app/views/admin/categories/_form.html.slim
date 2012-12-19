@@ -1,0 +1,6 @@
+= simple_form_for [:admin, @category], html: { class: 'form-horizontal' } do |f|
+  = f.input :parent_id, as: :hidden
+  = f.input :title, label: '分類標題'
+  = f.input :c_image, label: '分類圖示'
+  .form-actions
+    = f.submit '送出', class: 'btn btn-primary'

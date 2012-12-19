@@ -27,3 +27,22 @@
 .group {
    zoom: 1; /* IE6&7 */
 }
+
+.nested_categories {
+  margin-left: 30px;
+}
+
+ul#mega-menu {
+  width: 690px;
+  padding: 5px;
+  td {
+    vertical-align: top;
+    h4 {
+      font-weight: bold !important;
+      color: black;
+    }
+    a {
+      display: block;
+    }
+  }
+}

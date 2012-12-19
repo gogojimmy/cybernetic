@@ -1,0 +1,17 @@
+.category.well.span6
+  .row-fluid
+    .span3
+      = image_tag category.c_image_url(:normal)
+    .span4
+      = category.title
+    .actions.span5
+      = link_to "新增子分類", new_admin_category_path(parent_id: category)
+      '
+      | |
+      '
+      = link_to "編輯", edit_admin_category_path(category)
+      '
+      | |
+      '
+      = link_to "刪除", admin_category_path(category), confirm: '確定刪除該分類？', method: :delete
+.clearfix
