@@ -1,3 +1,13 @@
+GIT
+  remote: git://github.com/svenfuchs/globalize3.git
+  revision: fc4e110f704eb43e2c2edfb68e8e60e10838a4e1
+  branch: attr_accessible_locale
+  specs:
+    globalize3 (0.2.0)
+      activemodel (>= 3.0.0)
+      activerecord (>= 3.0.0)
+      paper_trail (~> 2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -116,6 +126,9 @@ GEM
       net-ssh (>= 1.99.1)
     open_graph_helper (0.1.1)
     orm_adapter (0.4.0)
+    paper_trail (2.6.4)
+      activerecord (~> 3.0)
+      railties (~> 3.0)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -214,6 +227,7 @@ DEPENDENCIES
   compass-rails
   devise
   exception_notification
+  globalize3!
   jquery-rails
   magic_encoding
   mysql2
