@@ -1,5 +1,15 @@
 .row
   .span12
     /! Slider (Parallax Slider)
-    #slider.carousel.slide
+    #slider.carousel.slide data-interval="3000"
       .carousel-inner
+        - @sliders.each do |slider|
+          .item
+            = image_tag(slider.image_url(:normal))
+            - if slider.title.present?
+              .carousel-caption
+                h4= slider.title
+                = simple_format slider.description
+      /! Carousel nav
+      a.carousel-control.left href="#slider" data-slide="prev" &lsaquo;
+      a.carousel-control.right href="#slider" data-slide="next" &rsaquo;
