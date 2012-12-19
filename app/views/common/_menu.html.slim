@@ -6,7 +6,50 @@
       .nav-collapse.collapse
         ul.nav
           li= link_to "關於嘉亨", "#"
-          li= link_to "產品資訊", "#"
+          li.dropdown
+            = link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
+              | 產品資訊
+              b.caret
+            ul.dropdown-menu#mega-menu
+              table
+                tbody
+                  - @categories.each_slice(4) do |a, b, c, d|
+                    tr
+                      td
+                        .row-fluid
+                          .span3
+                            = image_tag a.c_image_url(:normal)
+                          .span9
+                            h4= a.title
+                            - a.children.each do |child|
+                              = link_to child.title, "#"
+                      - if b.present?
+                        td
+                          .row-fluid
+                            .span3
+                              = image_tag b.c_image_url(:normal)
+                            .span9
+                              h4= b.title
+                              - b.children.each do |child|
+                                = link_to child.title, "#"
+                      - if c.present?
+                        td
+                          .row-fluid
+                            .span3
+                              = image_tag c.c_image_url(:normal)
+                            .span9
+                              h4= c.title
+                              - c.children.each do |child|
+                                = link_to child.title, "#"
+                      - if d.present?
+                        td
+                          .row-fluid
+                            .span3
+                              = image_tag d.c_image_url(:normal)
+                            .span9
+                              h4= d.title
+                              - d.children.each do |child|
+                                = link_to child.title, "#"
           li.dropdown
             =link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
               | 最新消息

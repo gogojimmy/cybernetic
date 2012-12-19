@@ -5,10 +5,12 @@ Cybernetic::Application.routes.draw do
   root :to => 'welcome#index'
 
   resources :pages, only: [:index, :show]
+  resources :categoires, only: [:show]
 
   namespace :admin do
     resources :pages, only: [:index, :show, :edit, :update]
     resources :sliders
+    resources :categories
   end
   #end
 
