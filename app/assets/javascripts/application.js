@@ -3,4 +3,5 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require twitter/bootstrap/alert
+//= require twitter/bootstrap/carousel
 //= require_tree ./common

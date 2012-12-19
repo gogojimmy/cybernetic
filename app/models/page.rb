@@ -1,5 +1,5 @@
 class Page < ActiveRecord::Base
-  attr_accessible :content, :title, :user_id
+  attr_accessible :content, :title, :user_id, :user
   belongs_to :user
   delegate :email, to: :user, prefix: true, allow_nil: true
 

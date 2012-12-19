@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121216181118) do
+ActiveRecord::Schema.define(:version => 20121219185520) do
 
   create_table "page_translations", :force => true do |t|
     t.integer  "page_id"
@@ -35,6 +35,17 @@ ActiveRecord::Schema.define(:version => 20121216181118) do
 
   add_index "pages", ["title"], :name => "index_pages_on_title"
   add_index "pages", ["user_id"], :name => "index_pages_on_user_id"
+
+  create_table "sliders", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "image"
+    t.integer  "user_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "sliders", ["user_id"], :name => "index_sliders_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

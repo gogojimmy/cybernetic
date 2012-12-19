@@ -1,0 +1,22 @@
+header.page-header
+  h1 首頁輪播圖片
+= link_to '新增圖片', new_admin_slider_path, class: 'btn btn-primary pull-right'
+.clearfix
+table.table
+  thead
+    tr
+      th 圖片
+      th 標題
+      th 文字內容
+      th 更新於
+      th 更新者
+  tbody
+    - @sliders.each do |slider|
+      tr
+        td= image_tag(slider.image_url(:thumb))
+        td= link_to slider.title, edit_admin_slider_path(slider)
+        td= slider.description
+        td= l slider.updated_at, format: :short
+        td= slider.user_email
+= will_paginate @sliders
+
