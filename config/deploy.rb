@@ -1,7 +1,6 @@
 require 'capistrano/ext/multistage'
 require 'bundler/capistrano'
 require 'capistrano_colors'
-require "delayed/recipes"
 #$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 require "rvm/capistrano"
 load 'deploy/assets'
