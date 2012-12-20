@@ -1,16 +1,9 @@
 doctype html
 html
   head
-    = render_page_title_tag
-    = render_page_description_meta_tag
-    = render_page_keywords_meta_tag
-    = render_page_image_link_tag
     = csrf_meta_tag
     = stylesheet_link_tag "application"
     = yield :stylesheets
-    meta content=(page_title ||  SeoHelper.configuration.site_name) property="og:title"
-    meta content=(page_description || SeoHelper.configuration.default_page_description) property="og:description"
-    meta content=(page_image ||  SeoHelper.configuration.default_page_image) property="og:image:url"
   body
     /! header starts
     header
