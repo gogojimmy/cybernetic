@@ -1,17 +1,17 @@
-ul.thumbnails
+ul#products
   - @category.products.each_slice(3) do |a, b, c|
     .row
       li.span3
-        .thumbnail
+        .product
           = link_to image_tag(a.feature_image(:large)), product_path(a)
-          h4= link_to a.name, product_path(a)
+          = link_to a.name, product_path(a)
       - if b
         li.span3
-          .thumbnail
+          .product
             = link_to image_tag(b.feature_image(:large)), product_path(b)
-            h4= link_to b.name, product_path(b)
+            = link_to b.name, product_path(b)
       - if c
         li.span3
-          .thumbnail
+          .product
             = link_to image_tag(c.feature_image(:large)), product_path(c)
-            h4= link_to c.name, product_path(c)
+            = link_to c.name, product_path(c)

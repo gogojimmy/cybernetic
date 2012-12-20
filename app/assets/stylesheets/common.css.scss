@@ -1,7 +1,3 @@
-@import "bootstrap-setting";
-@import "twitter/bootstrap";
-@import "bootstrap-override";
-
 .social{
    float:left;
    width: 90px;
@@ -53,18 +49,40 @@ ul#mega-menu {
 
 #main-nav {
   .navbar-inner {
-    background: #11608F;
+    background: #1570A6;
     li > a {
       color: white !important;
     }
     .dropdown-menu {
       li > a {
         color: #666 !important;
+        &:hover {
+          color: white !important;
+        }
       }
     }
     a:hover {
-      background: #005580 !important;
+      background: #1570A6 !important;
       color: white !important;
+      text-decoration: none;
     }
   }
+}
+
+#categories, #products {
+  .category, .product {
+    text-align: center;
+    border: 1px solid white;
+    &:hover {
+      border: 1px solid #11608F;
+    }
+  }
+}
+
+ul.nav li.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+.navbar .dropdown-menu {
+ margin-top: 0px;
 }

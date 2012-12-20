@@ -15,6 +15,8 @@ set :use_sudo, false
 
 set :stages, %(staging production)
 set :default_stage, "production"
+set :shared_children, shared_children + %w{public/uploads}
+
 #set :rails_env, "production" #added for delayed job
 
 default_run_options[:pty] = true
