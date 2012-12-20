@@ -1,0 +1,6 @@
+.widget
+  h4 最新促銷訊息
+  ul
+    - @on_sales.each do |post|
+      li= link_to post.title, post_path(post)
+
