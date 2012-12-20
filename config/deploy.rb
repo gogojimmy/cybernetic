@@ -3,7 +3,6 @@ require 'bundler/capistrano'
 require 'capistrano_colors'
 #$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 require "rvm/capistrano"
-load 'deploy/assets'
 
 set :rvm_ruby_string, ENV['GEM_HOME'].gsub(/.*\//,"")
 
