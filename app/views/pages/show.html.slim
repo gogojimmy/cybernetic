@@ -1,0 +1,21 @@
+.blog
+  .row
+    .span12
+      /! Blog Posts
+      .row
+        .span8
+          .posts
+            .entry
+              h2= @page.title
+              /! Meta detail
+              = simple_format @page.content
+              hr
+        .span4
+          .sidebar
+            .widget
+              h4 最新消息
+              ul
+                li= link_to "blah", "#"
+                li= link_to "blah", "#"
+                li= link_to "blah", "#"
+                li= link_to "blah", "#"

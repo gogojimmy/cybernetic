@@ -5,7 +5,7 @@
         span 目錄
       .nav-collapse.collapse
         ul.nav
-          li= link_to "關於嘉亨", "#"
+          li= link_to "關於嘉亨", page_path("關於嘉亨")
           li.dropdown
             = link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
               | 產品資訊
@@ -22,7 +22,7 @@
                           .span9
                             h4= a.title
                             - a.children.each do |child|
-                              = link_to child.title, "#"
+                              = link_to child.title, category_path(child)
                       - if b.present?
                         td
                           .row-fluid
@@ -31,7 +31,7 @@
                             .span9
                               h4= b.title
                               - b.children.each do |child|
-                                = link_to child.title, "#"
+                                = link_to child.title, category_path(child)
                       - if c.present?
                         td
                           .row-fluid
@@ -40,7 +40,7 @@
                             .span9
                               h4= c.title
                               - c.children.each do |child|
-                                = link_to child.title, "#"
+                                = link_to child.title, category_path(child)
                       - if d.present?
                         td
                           .row-fluid
@@ -49,7 +49,7 @@
                             .span9
                               h4= d.title
                               - d.children.each do |child|
-                                = link_to child.title, "#"
+                                = link_to child.title, category_path(child)
           li.dropdown
             =link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
               | 最新消息
@@ -62,16 +62,16 @@
               | 經銷資訊
               b.caret
             ul.dropdown-menu
-              li= link_to "獨立店", "#"
-              li= link_to "3C賣場", "#"
-              li= link_to "生活賣場", "#"
-              li= link_to "網路賣場", "#"
+              li= link_to "獨立店", page_path("獨立店")
+              li= link_to "3C賣場", page_path("3C賣場")
+              li= link_to "生活賣場", page_path("生活賣場")
+              li= link_to "網路賣場", page_path("網路賣場")
           li.dropdown
             =link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
               | 客戶服務
               b.caret
             ul.dropdown-menu
-              li= link_to "產品註冊", "#"
-              li= link_to "聯絡客服", "#"
-              li= link_to "下載中心", "#"
-              li= link_to "常見問題", "#"
+              li= link_to "產品註冊", page_path("產品註冊")
+              li= link_to "聯絡客服", page_path("聯絡客服")
+              li= link_to "下載中心", page_path("下載中心")
+              li= link_to "常見問題", page_path("常見問題")
