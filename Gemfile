@@ -55,13 +55,14 @@ group :assets do
 end
 
 group :development do
-  gem "capistrano"
-  gem "capistrano-ext"
-  gem 'capistrano_colors'
-  gem 'rvm-capistrano'
   gem "magic_encoding"
   gem "annotate"
 end
+
+gem 'capistrano'
+gem 'capistrano-ext'
+gem 'capistrano_colors'
+gem 'rvm-capistrano'
 
 
 # To use ActiveModel has_secure_password
