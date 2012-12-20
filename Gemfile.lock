@@ -205,9 +205,6 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     truncate_html (0.5.5)
-    turbo-sprockets-rails3 (0.2.13)
-      railties (>= 3.1.0, < 3.2.9)
-      sprockets (>= 2.0.0)
     twitter-stream (0.1.16)
       eventmachine (>= 0.12.8)
       http_parser.rb (~> 0.5.1)
@@ -257,6 +254,5 @@ DEPENDENCIES
   tinymce-rails
   tinymce-rails-langs
   truncate_html
-  turbo-sprockets-rails3
   uglifier (>= 1.0.3)
   will_paginate (= 3.0.3)

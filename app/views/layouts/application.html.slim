@@ -1,9 +1,8 @@
 doctype html
 html
   head
-    = csrf_meta_tag
     = stylesheet_link_tag "application"
-    = yield :stylesheets
+    = csrf_meta_tag
   body
     /! header starts
     header
@@ -30,4 +29,3 @@ html
     = render :partial => "common/bootstrap_modal"
     = render :partial => "common/google_analytics"
     = javascript_include_tag "application"
-    = yield :javascripts

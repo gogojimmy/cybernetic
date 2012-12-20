@@ -10,17 +10,16 @@ gem 'mysql2'
 
 # Gems used only for assets and not required
 # in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+gem 'sass-rails',   '~> 3.2.3'
+gem 'coffee-rails', '~> 3.2.1'
 
-  gem 'uglifier', '>= 1.0.3'
-  gem 'slim'
-end
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+# gem 'therubyracer', :platforms => :ruby
 
+gem 'uglifier', '>= 1.0.3'
+gem 'slim'
+gem "compass-rails"
 gem 'jquery-rails'
 gem 'devise'
 
@@ -48,11 +47,6 @@ gem "tinymce-rails"
 gem "tinymce-rails-langs"
 gem "globalize3", :git => 'git://github.com/svenfuchs/globalize3.git', :branch => 'attr_accessible_locale'
 
-gem "turbo-sprockets-rails3"
-
-group :assets do
-  gem "compass-rails"
-end
 
 group :development do
   gem "magic_encoding"

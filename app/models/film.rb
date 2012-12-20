@@ -5,6 +5,6 @@ class Film < ActiveRecord::Base
   belongs_to :user
 
   def self.random_film
-    all.sample.url
+    all.sample.try(:url)
   end
 end
