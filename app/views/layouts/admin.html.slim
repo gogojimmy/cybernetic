@@ -13,6 +13,12 @@ html
           a.brand href="/" 嘉亨科技網站管理平台
     .container
       .row
+        .span12
+          - flash.each do |name, msg|
+            div{class="alert alert-#{name == :notice ? "success" : "error"} fade in"}
+              a.close data-dismiss="alert" &times;
+              = simple_format(msg)
+      .row
         .span3
           = render 'admin/common/sidebar'
         .span9
