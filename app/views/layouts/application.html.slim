@@ -1,4 +1,4 @@
-doctype
+doctype html
 html
   head
     = render_page_title_tag
@@ -18,8 +18,7 @@ html
         .row
           .span4
             .logo
-              = image_tag(asset_path("logo.png"))
-              .hmeta 嘉亨科技
+              = link_to image_tag(asset_path("logo-03.jpg")), "/"
           .span4
             /= link_to_unless_current "中文", locale: "zh_tw"
             /= link_to_unless_current "English", locale: "en"

@@ -4,3 +4,4 @@
 //= require jquery-ui
 //= require twitter/bootstrap/alert
 //= require tinymce-jquery
+//= require cocoon

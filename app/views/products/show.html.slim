@@ -1,0 +1,34 @@
+.row
+  .span3
+    = render 'common/categories_menu'
+  .span9
+    .row
+      .span6
+        = image_tag @product.feature_image(:large)
+      .span3
+        h1= @product.name
+        = simple_format @product.description
+    .row
+      .span9
+        ul.nav.nav-tabs.button#product-tab
+          - if @product.test.present?
+            li
+              a href="#test" data-toggle="tab" 產品測試報告
+          - if @product.knowledge.present?
+            li
+              a href="#knowledge" data-toggle="tab" 產品小知識
+          - if @product.feature.present?
+            li
+              a href="#feature" data-toggle="tab" 產品特色
+          - if @product.feature.present?
+            li
+              a href="#spec" data-toggle="tab" 產品規格
+        .tab-content
+          .tab-pane.fade#test
+            = simple_format @product.test
+          .tab-pane.fade#knowledge
+            = simple_format @product.knowledge
+          .tab-pane.fade#feature
+            = simple_format @product.feature
+          .tab-pane.fade#spec
+            = simple_format @product.spec

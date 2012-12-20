@@ -90,10 +90,6 @@ fifth_first_c = Category.create(title: '台灣適用', parent_id: fifth_c)
 Category.create(title: '插電', parent_id: fifth_first_c)
 Category.create(title: '不插電', parent_id: fifth_first_c)
 
-fifth_first_c = Category.create(title: '台灣適用', parent_id: fifth_c)
-Category.create(title: '插電', parent_id: fifth_first_c)
-Category.create(title: '不插電', parent_id: fifth_first_c)
-
 fifth_second_c = Category.create(title: '韓國適用', parent_id: fifth_c)
 Category.create(title: '插電', parent_id: fifth_second_c)
 Category.create(title: '不插電', parent_id: fifth_second_c)

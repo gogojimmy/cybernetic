@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121219194702) do
+ActiveRecord::Schema.define(:version => 20121219220807) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -47,6 +47,31 @@ ActiveRecord::Schema.define(:version => 20121219194702) do
 
   add_index "pages", ["title"], :name => "index_pages_on_title"
   add_index "pages", ["user_id"], :name => "index_pages_on_user_id"
+
+  create_table "product_images", :force => true do |t|
+    t.string   "p_image"
+    t.integer  "product_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "product_images", ["product_id"], :name => "index_product_images_on_product_id"
+
+  create_table "products", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.text     "test"
+    t.text     "knowledge"
+    t.text     "feature"
+    t.text     "spec"
+    t.integer  "user_id"
+    t.integer  "category_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "products", ["category_id"], :name => "index_products_on_category_id"
+  add_index "products", ["user_id"], :name => "index_products_on_user_id"
 
   create_table "sliders", :force => true do |t|
     t.string   "title"

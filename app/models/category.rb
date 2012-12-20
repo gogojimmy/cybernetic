@@ -3,6 +3,7 @@ class Category < ActiveRecord::Base
   mount_uploader :c_image, CImageUploader
   validates_presence_of :title
   belongs_to :user
+  has_many :products
 
   has_ancestry
 end
