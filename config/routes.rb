@@ -7,12 +7,14 @@ Cybernetic::Application.routes.draw do
   resources :pages, only: [:index, :show]
   resources :categories, only: [:show]
   resources :products, only: [:index, :show]
+  resources :posts, only: [:index, :show]
 
   namespace :admin do
     resources :pages, only: [:index, :show, :edit, :update]
     resources :sliders
     resources :categories
     resources :products
+    resources :posts
   end
   #end
 

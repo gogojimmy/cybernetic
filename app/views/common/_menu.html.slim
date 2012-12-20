@@ -55,8 +55,8 @@
               | 最新消息
               b.caret
             ul.dropdown-menu
-              li= link_to "最新消息", "#"
-              li= link_to "促銷活動", "#"
+              li= link_to "最新消息", posts_path(category: "最新消息")
+              li= link_to "促銷活動", posts_path(category: "促銷活動")
           li.dropdown
             =link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
               | 經銷資訊

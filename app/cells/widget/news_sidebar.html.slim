@@ -1,0 +1,5 @@
+.widget
+  h4 最新消息
+  ul
+    - @news.each do |post|
+      li= link_to post.title, post_path(post)

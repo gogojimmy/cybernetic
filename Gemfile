@@ -33,6 +33,10 @@ gem "carrierwave-meta"
 gem 'exception_notification'
 gem "ancestry"
 gem 'cocoon'
+gem "cells"
+gem "nokogiri"
+gem "htmlentities"
+gem "truncate_html"
 
 gem "settingslogic"
 
