@@ -50,3 +50,21 @@ ul#mega-menu {
 .carousel {
   height: 294px;
 }
+
+#main-nav {
+  .navbar-inner {
+    background: #11608F;
+    li > a {
+      color: white !important;
+    }
+    .dropdown-menu {
+      li > a {
+        color: #666 !important;
+      }
+    }
+    a:hover {
+      background: #005580 !important;
+      color: white !important;
+    }
+  }
+}
