@@ -1,0 +1,22 @@
+h2= @category
+h4
+  .blog
+    .row
+      .span12
+        /! Blog posts
+        .row
+          .span8
+            .posts
+              - @posts.each do |post|
+                .entry
+                  h2= link_to post.title, post_path(post)
+                  = restrict_content post.content
+                  .button
+                    = link_to "閱讀全文", post_path(post)
+                  .clearfix
+              .paging
+                = will_paginate(@posts)
+              .clearfix
+          .span4
+            = render 'common/post_sidebar'
+  .border

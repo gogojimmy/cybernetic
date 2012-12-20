@@ -1,4 +1,4 @@
-doctype
+doctype html
 html
   head
     = render_page_title_tag
@@ -16,11 +16,13 @@ html
     header
       .container
         .row
-          .span6
+          .span4
             .logo
-              = image_tag(asset_path("logo.png"))
-              .hmeta 嘉亨科技
-          .span6
+              = link_to image_tag(asset_path("logo-03.jpg")), "/"
+          .span4
+            /= link_to_unless_current "中文", locale: "zh_tw"
+            /= link_to_unless_current "English", locale: "en"
+          .span4
             .form
               = form_tag '/posts', id: 'search-form', class: 'form-search' do
                 = text_field_tag 'search', nil, class: 'input-medium'
@@ -30,6 +32,7 @@ html
     .content
       .container
         = yield
+        .border
     = render :partial => "common/footer"
     = render :partial => "common/bootstrap_modal"
     = render :partial => "common/google_analytics"

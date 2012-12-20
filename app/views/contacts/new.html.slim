@@ -1,0 +1,32 @@
+h2 聯絡客服
+hr
+.contact
+  .row
+    .span12
+      .gmap
+        iframe frameborder="100%" height="350" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?f=q&source=s_q&hl=zh-TW&geocode=&q=%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%92%8C%E5%8D%80%E5%BB%BA%E4%B8%80%E8%B7%AF150%E8%99%9F4%E6%A8%93&aq=&sll=25.083502,121.590375&sspn=0.190142,0.149345&ie=UTF8&hq=&hnear=235%E5%8F%B0%E7%81%A3%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%92%8C%E5%8D%80%E5%BB%BA%E4%B8%80%E8%B7%AF150%E8%99%9F&t=m&ll=24.999439,121.48716&spn=0.027226,0.036478&z=14&output=embed&iwloc=&amp" width="425"
+  .row
+    .span6
+      .cwell
+        h5 聯絡我們
+        .form
+          = simple_form_for @contact, html: { class: 'form-horizontal' } do |f|
+            = f.input :name, label: "姓名", input_html: { class: 'span5' }
+            = f.input :email, label: "Email", input_html: { class: 'input-medium' }
+            = f.input :content, label: "您的意見", input_html: { class: 'span5', rows: 10 }
+            .form-actions
+              = f.submit "送出", class: 'btn'
+    .span6
+      .cwell
+        h5 關於我們
+        .address
+          address
+            h6 嘉亨科技
+            br
+              | 新北市中和區建一路150號4樓
+              br
+              abbr title="Phone"
+              | (02)22672415轉53
+          address
+            a href="mailto:#" service@cybernetic.com.tw
+

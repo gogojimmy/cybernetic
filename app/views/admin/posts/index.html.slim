@@ -1,0 +1,19 @@
+header.page-header
+  h1 所有文章
+= link_to "新增文章", new_admin_post_path, class: 'btn btn-primary pull-right'
+.clearfix
+table.table
+  thead
+    tr
+      th 分類
+      th 文章
+      th 更新於
+      th 更新者
+  tbody
+    - @posts.each do |post|
+      tr
+        td= post.category
+        td= link_to post.title, edit_admin_post_path(post)
+        td= l post.updated_at, format: :short
+        td= post.user_email
+= will_paginate @posts

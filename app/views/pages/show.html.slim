@@ -1,0 +1,14 @@
+.blog
+  .row
+    .span12
+      /! Blog Posts
+      .row
+        .span8
+          .posts
+            .entry
+              h2= @page.title
+              /! Meta detail
+              = raw @page.content
+              hr
+        .span4
+          = render 'common/post_sidebar'

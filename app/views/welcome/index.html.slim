@@ -1,4 +1,29 @@
 .row
   .span12
     /! Slider (Parallax Slider)
-    = image_tag("http://placekitten.com/940/300")
+    #slider.carousel.slide data-interval="3000"
+      .carousel-inner
+        - @sliders.each do |slider|
+          .item
+            = image_tag(slider.image_url(:normal))
+            - if slider.title.present?
+              .carousel-caption
+                h4= slider.title
+                = simple_format slider.description
+      /! Carousel nav
+      a.carousel-control.left href="#slider" data-slide="prev" &lsaquo;
+      a.carousel-control.right href="#slider" data-slide="next" &rsaquo;
+.row
+  .span6
+    .sidebar
+      .widget
+        h4 推薦影片
+        = raw Film.random_film
+  .span6
+    .sidebar
+      .widget
+        h4 最新消息
+        ul
+          - @news.each do |post|
+            li= link_to post.title, post_path(post)
+

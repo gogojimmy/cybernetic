@@ -1,0 +1,8 @@
+.row
+  .span9
+    - if @category.has_children?
+      = render 'categories'
+    - else
+      = render 'products'
+  .span3
+    = render 'common/categories_menu'
