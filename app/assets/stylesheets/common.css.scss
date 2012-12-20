@@ -72,6 +72,7 @@ ul#mega-menu {
 #categories, #products {
   .category, .product {
     text-align: center;
+    .c_image, p_image { min-height: 300px; }
     border: 1px solid white;
     &:hover {
       border: 1px solid #11608F;
