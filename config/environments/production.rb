@@ -69,7 +69,7 @@ Cybernetic::Application.configure do
 
 end
 
-Itaste::Application.config.middleware.use ExceptionNotifier,
+Cybernetic::Application.config.middleware.use ExceptionNotifier,
   :email_prefix => "[嘉亨爆炸了] ",
   :sender_address => %{"notifier" <jimmy@gogojimmy.net>},
   :exception_recipients => %w{jimmy@gogojimmy.net}
