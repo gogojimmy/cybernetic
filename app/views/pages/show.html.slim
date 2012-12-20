@@ -8,7 +8,7 @@
             .entry
               h2= @page.title
               /! Meta detail
-              = simple_format @page.content
+              = raw @page.content
               hr
         .span4
           = render 'common/post_sidebar'

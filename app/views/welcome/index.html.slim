@@ -13,3 +13,17 @@
       /! Carousel nav
       a.carousel-control.left href="#slider" data-slide="prev" &lsaquo;
       a.carousel-control.right href="#slider" data-slide="next" &rsaquo;
+.row
+  .span6
+    .sidebar
+      .widget
+        h4 推薦影片
+        = raw Film.random_film
+  .span6
+    .sidebar
+      .widget
+        h4 最新消息
+        ul
+          - @news.each do |post|
+            li= link_to post.title, post_path(post)
+

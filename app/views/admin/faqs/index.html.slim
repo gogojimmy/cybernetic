@@ -1,0 +1,16 @@
+header.page-header
+  h1 常見問題列表
+= link_to '新增問題', new_admin_faq_path, class: 'btn btn-primary pull-right'
+.clearfix
+table.table
+  thead
+    tr
+      th 問題
+      th 更新於
+      th 更新者
+  tbody
+    - @faqs.each do |faq|
+      tr
+        td= link_to faq.question, edit_admin_faq_path(faq)
+        td= l faq.updated_at, format: :short
+        td= faq.user_email

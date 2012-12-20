@@ -8,6 +8,8 @@ Cybernetic::Application.routes.draw do
   resources :categories, only: [:show]
   resources :products, only: [:index, :show]
   resources :posts, only: [:index, :show]
+  resources :contacts, only: [:new, :create]
+  resources :faqs, only: [:index]
 
   namespace :admin do
     resources :pages, only: [:index, :show, :edit, :update]
@@ -15,6 +17,9 @@ Cybernetic::Application.routes.draw do
     resources :categories
     resources :products
     resources :posts
+    resources :contacts
+    resources :faqs
+    resources :films
   end
   #end
 
