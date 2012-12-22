@@ -17,11 +17,11 @@ blockquote{
 }
 
 .color{
-	color: #1570a6;	
+	color: #1570a6;
 }
 
 .navbar .btn{
-background:#1570a6 !important;  
+background:#1570a6 !important;
 }
 
 .navbar .btn:hover{
@@ -39,7 +39,7 @@ background:#11608f !important;
 
 .da-slide .da-link{
 	background: #1570a6;
-}	
+}
 
 .da-slide .da-link:hover{
 	background: #11608f;
@@ -71,7 +71,7 @@ background:#11608f !important;
 }
 
 .social-links{
-	background: #1570a6;	
+	background: #1570a6;
 }
 
 .social-links i{
@@ -88,7 +88,7 @@ background:#11608f !important;
 
 .button a:hover{
 	background: #11608f;
-}	
+}
 
 .paging a:hover{
 	background: #1570a6;
