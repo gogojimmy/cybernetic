@@ -3,5 +3,7 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require twitter/bootstrap/alert
+//= require twitter/bootstrap/tooltip
+//= require twitter/bootstrap/popover
 //= require tinymce-jquery
 //= require cocoon

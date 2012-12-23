@@ -12,8 +12,10 @@
 #
 
 class Category < ActiveRecord::Base
-  attr_accessible :c_image, :title, :user, :user_id, :parent_id
+  attr_accessible :c_image, :title, :user, :user_id, :parent_id, :large_image
   mount_uploader :c_image, CImageUploader
+  mount_uploader :large_image, LargeImageUploader
+
   validates_presence_of :title
   belongs_to :user
   has_many :products
