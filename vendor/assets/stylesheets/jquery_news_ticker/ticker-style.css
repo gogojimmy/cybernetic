@@ -39,7 +39,7 @@
 	line-height: 1.2em;
 }
 .ticker-content:focus {
-	none;
+	outline: none;
 }
 .ticker-content a {
 	text-decoration: none;
@@ -127,17 +127,11 @@
 	padding: 10px 0px 0px 45px;
 	color: #F8F0DB;
 }
-.left .ticker-swipe {
-	/*left: 80px;*/
-}
 .left .ticker-controls, .left .ticker-content, .left .ticker-title, .left .ticker {
     float: left;
 }
 .left .ticker-controls {
     padding-left: 6px;
-}
-.right .ticker-swipe {
-	/*right: 80px;*/
 }
 .right .ticker-controls, .right .ticker-content, .right .ticker-title, .right .ticker {
     float: right;
