@@ -5,7 +5,7 @@
       .carousel-inner
         - @sliders.each do |slider|
           .item
-            = image_tag(slider.image_url(:normal))
+            = image_tag(slider.image_url(:slider_normal))
             - if slider.title.present?
               .carousel-caption
                 h4= slider.title
@@ -14,16 +14,9 @@
       a.carousel-control.left href="#slider" data-slide="prev" &lsaquo;
       a.carousel-control.right href="#slider" data-slide="next" &rsaquo;
 .row
-  .span6
-    .sidebar
-      .widget
-        h4 推薦影片
-        = raw Film.random_film
-  .span6
-    .sidebar
-      .widget
-        h4 最新消息
-        ul
-          - @news.each do |post|
-            li= link_to post.title, post_path(post)
-
+  .span4
+    = render_cell :widget, :block_ad, "首頁左下區塊"
+  .span4
+    = render_cell :widget, :block_ad, "首頁中下區塊"
+  .span4
+    = render_cell :widget, :block_ad, "首頁右下區塊"

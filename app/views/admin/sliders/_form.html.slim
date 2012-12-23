@@ -1,6 +1,6 @@
 = simple_form_for [:admin, @slider], html: { class: 'form-horizontal' } do |f|
-  = f.input :title, label: '圖片標題'
-  = f.input :description, label: '圖片敘述', input_html: { class: 'span6', rows: 15 }
-  = f.input :image, label: '圖片', hint: '尺寸需固定為960x300'
+  = f.input :image, label: '圖片', hint: '首頁橫幅廣告大小需為940x300，其他類型廣告大小需為200x200'
+  = f.input :position, label: '廣告位置', as: :select, include_blank: false, collection: Slider::POSITION
+  = f.input :target, label: '廣告連結目標'
   .form-actions
     = f.submit "送出", class: 'btn btn-primary'

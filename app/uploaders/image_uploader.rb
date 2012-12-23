@@ -23,17 +23,31 @@ class ImageUploader < CarrierWave::Uploader::Base
     asset_path("fallback/" + [version_name, "default.png"].compact.join('_'))
   end
 
-  version :normal do
+  version :slider_normal do
     process :fix_exif_rotation
     process :strip
     process :resize_to_limit => [960, 300]
     process :quality => 100
   end
 
-  version :thumb do
+  version :slider_thumb do
     process :fix_exif_rotation
     process :strip
     process :resize_to_limit => [320, 100]
+    process :quality => 100
+  end
+
+  version :block_normal do
+    process :fix_exif_rotation
+    process :strip
+    process :resize_to_limit => [300, 300]
+    process :quality => 100
+  end
+
+  version :block_thumb do
+    process :fix_exif_rotation
+    process :strip
+    process :resize_to_limit => [100, 100]
     process :quality => 100
   end
 end

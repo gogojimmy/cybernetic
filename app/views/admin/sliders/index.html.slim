@@ -5,18 +5,24 @@ header.page-header
 table.table
   thead
     tr
-      th 圖片
-      th 標題
-      th 文字內容
+      th 廣告圖片
+      th 廣告位置
+      th 連結位置
       th 更新於
       th 更新者
+      th 操作
   tbody
     - @sliders.each do |slider|
       tr
-        td= image_tag(slider.image_url(:thumb))
-        td= link_to slider.title, edit_admin_slider_path(slider)
-        td= slider.description
+        td= image_tag(slider.render_image("thumb"))
+        td= slider.position
+        td= link_to "連結", slider.target, target: "_blank"
         td= l slider.updated_at, format: :short
         td= slider.user_email
+        td.btn-group
+          = link_to edit_admin_slider_path(slider), class: 'btn' do
+            i.icon-edit
+          = link_to admin_slider_path(slider), data: { confirm: "確定刪除該廣告嗎？" }, class: 'btn btn-danger', method: :delete do
+            i.icon-remove
 = will_paginate @sliders
 

@@ -119,3 +119,20 @@ ul.nav li.dropdown:hover .dropdown-menu{
 .navbar .dropdown-menu {
  margin-top: 0px;
 }
+
+.block_ad {
+  min-height: 200px;
+  text-align: center;
+}
+
+.email-marketing {
+  margin-top: 10px;
+  background: #1570A6;
+  padding: 5px 0 5px 0;
+  color: white;
+  form {
+    margin-bottom: 0px;
+  }
+}
+
+#slider { background: asset-url("loading.gif", image) no-repeat center; }

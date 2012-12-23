@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121220072230) do
+ActiveRecord::Schema.define(:version => 20121222150327) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -115,6 +115,8 @@ ActiveRecord::Schema.define(:version => 20121220072230) do
     t.integer  "user_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "position"
+    t.string   "target"
   end
 
   add_index "sliders", ["user_id"], :name => "index_sliders_on_user_id"
