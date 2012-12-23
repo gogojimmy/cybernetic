@@ -34,6 +34,7 @@
 }
 
 #main-nav {
+  margin-bottom: 5px;
   .navbar-inner {
     background: #1e5799; /* Old browsers */
     background: #207cca; /* Old browsers */
@@ -135,4 +136,22 @@ ul.nav li.dropdown:hover .dropdown-menu{
   }
 }
 
-#slider { background: asset-url("loading.gif", image) no-repeat center; }
+#slider, #categories-slider { background: asset-url("loading.gif", image) no-repeat center; }
+#slider { margin-bottom: 5px; }
+
+#categories-menu {
+  li { padding: 0; }
+}
+
+#news-block {
+  .ticker-title {
+    width: 52px;
+  }
+  ul > li {
+    padding: 0px;
+  }
+
+  .ticker-controls {
+    float: right;
+  }
+}

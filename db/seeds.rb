@@ -1,10 +1,10 @@
 #encoding: utf-8
 
-pages = %w( 關於嘉亨 獨立店 3C賣場 生活賣場 網路賣場 產品註冊 聯絡客服 常見問題 下載中心 )
-pages.each do |page|
-  Page.create(title: page)
-end
-admin = User.create(email: 'jimmy@gogojimmy.net', password: '0975519929')
+#pages = %w( 關於嘉亨 獨立店 3C賣場 生活賣場 網路賣場 產品註冊 聯絡客服 常見問題 下載中心 )
+#pages.each do |page|
+  #Page.create(title: page)
+#end
+#admin = User.create(email: 'jimmy@gogojimmy.net', password: '0975519929')
 
 first_c = Category.create(title: '手機配件')
 
@@ -19,8 +19,8 @@ Category.create(title: '英規', parent_id: first_first_c)
 
 Category.create(title: '車充', parent_id: first_c)
 first_second_c = Category.create(title: '行動電源', parent_id: first_c)
-Category.create(title: '手機用', parent_id: first_first_c)
-Category.create(title: '平板電腦用', parent_id: first_first_c)
+Category.create(title: '手機用', parent_id: first_second_c)
+Category.create(title: '平板電腦用', parent_id: first_second_c)
 
 first_third_c = Category.create(title: '保護套', parent_id: first_c)
 Category.create(title: '手機用', parent_id: first_third_c)

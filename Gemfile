@@ -46,11 +46,13 @@ gem "will_paginate", "3.0.3"
 gem "tinymce-rails"
 gem "tinymce-rails-langs"
 gem "globalize3", :git => 'git://github.com/svenfuchs/globalize3.git', :branch => 'attr_accessible_locale'
+gem "gon"
 
 
 group :development do
-  gem "magic_encoding"
   gem "annotate"
+  gem "better_errors"
+  gem "binding_of_caller"
 end
 
 gem 'capistrano'

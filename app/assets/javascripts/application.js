@@ -8,3 +8,4 @@
 //= require twitter/bootstrap/carousel
 //= require twitter/bootstrap/tab
 //= require_tree ./common
+//= require jquery_news_ticker/jquery.ticker

@@ -22,4 +22,19 @@ class WidgetCell < Cell::Rails
     render
   end
 
+  def main_nav
+    @categories = Category.roots
+    render
+  end
+
+  def categories_sidebar
+    @categories = Category.roots
+    render
+  end
+
+  def categories_ads(categories)
+    @categories = categories
+    render
+  end
+
 end

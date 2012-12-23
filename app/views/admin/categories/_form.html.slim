@@ -1,6 +1,7 @@
 = simple_form_for [:admin, @category], html: { class: 'form-horizontal' } do |f|
   = f.input :parent_id, as: :hidden
   = f.input :title, label: '分類標題'
-  = f.input :c_image, label: '分類圖示'
+  = f.input :c_image, label: '分類小圖示', hint: "長寬比需為正方形，最小長寬需為80x80"
+  = f.input :large_image, label: '分類長圖示', hint: "長寬比需為700x300"
   .form-actions
     = f.submit '送出', class: 'btn btn-primary'

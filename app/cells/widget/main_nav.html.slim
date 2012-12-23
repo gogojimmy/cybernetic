@@ -1,0 +1,82 @@
+.navbar#main-nav
+  .navbar-inner
+    .container
+      a.btn.btn-navbar data-toggle="collapse" data-target=".nav-collapse"
+        span 目錄
+      .nav-collapse.collapse
+        ul.nav
+          li= link_to "關於嘉亨", page_path("關於嘉亨")
+          li.dropdown
+            = link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
+              | 產品資訊
+            ul.dropdown-menu#mega-menu
+              table
+                tbody
+                  - @categories.each_slice(5) do |a, b, c, d, e|
+                    tr
+                      td
+                        .row-fluid
+                          .span3
+                            = image_tag a.c_image_url(:normal)
+                          .span9
+                            h4= a.title
+                            - a.children.each do |child|
+                              = link_to child.title, category_path(child)
+                      - if b.present?
+                        td
+                          .row-fluid
+                            .span3
+                              = image_tag b.c_image_url(:normal)
+                            .span9
+                              h4= b.title
+                              - b.children.each do |child|
+                                = link_to child.title, category_path(child)
+                      - if c.present?
+                        td
+                          .row-fluid
+                            .span3
+                              = image_tag c.c_image_url(:normal)
+                            .span9
+                              h4= c.title
+                              - c.children.each do |child|
+                                = link_to child.title, category_path(child)
+                      - if d.present?
+                        td
+                          .row-fluid
+                            .span3
+                              = image_tag d.c_image_url(:normal)
+                            .span9
+                              h4= d.title
+                              - d.children.each do |child|
+                                = link_to child.title, category_path(child)
+                      - if e.present?
+                        td
+                          .row-fluid
+                            .span3
+                              = image_tag e.c_image_url(:normal)
+                            .span9
+                              h4= e.title
+                              - e.children.each do |child|
+                                = link_to child.title, category_path(child)
+          li.dropdown
+            =link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
+              | 最新消息
+            ul.dropdown-menu
+              li= link_to "最新消息", posts_path(category: "最新消息")
+              li= link_to "促銷活動", posts_path(category: "促銷活動")
+          li.dropdown
+            =link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
+              | 經銷資訊
+            ul.dropdown-menu
+              li= link_to "獨立店", page_path("獨立店")
+              li= link_to "3C賣場", page_path("3C賣場")
+              li= link_to "生活賣場", page_path("生活賣場")
+              li= link_to "網路賣場", page_path("網路賣場")
+          li.dropdown
+            =link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
+              | 客戶服務
+            ul.dropdown-menu
+              li= link_to "產品註冊", page_path("產品註冊")
+              li= link_to "聯絡客服", new_contact_path
+              li= link_to "下載中心", page_path("下載中心")
+              li= link_to "常見問題", faqs_path
