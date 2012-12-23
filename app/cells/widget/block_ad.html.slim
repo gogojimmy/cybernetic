@@ -1,2 +1,5 @@
 .block_ad
-  = link_to(image_tag(@ad.render_image("normal")), @ad.target)
+  - if @ad.present?
+    = link_to(image_tag(@ad.render_image("normal")), @ad.target)
+  - else
+    = image_tag(asset_path("fallback/large_default.gif"))
