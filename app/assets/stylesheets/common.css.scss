@@ -105,7 +105,7 @@
 #categories, #products {
   .category, .product {
     text-align: center;
-    .c_image, p_image { min-height: 200px; }
+    .c_image, p_image { line-height: 300px; }
     border: 1px solid white;
     &:hover {
       border: 1px solid #11608F;
@@ -127,6 +127,7 @@ ul.nav li.dropdown:hover .dropdown-menu{
 .block_ad {
   min-height: 200px;
   text-align: center;
+  line-height: 300px;
 }
 
 .email-marketing {
