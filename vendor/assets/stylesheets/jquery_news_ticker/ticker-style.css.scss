@@ -81,7 +81,7 @@
 	display: block;
 }
 .ticker-controls li.jnt-play-pause {
-	background-image: url('../controls.png');
+	background-image: url(asset-path("controls.png", image));
 	background-position: 32px 16px;
 }
 .ticker-controls li.jnt-play-pause.over {
@@ -91,7 +91,7 @@
 	background-position: 32px 0px;
 }
 .ticker-controls li.jnt-play-pause.paused {
-	background-image: url('../controls.png');
+	background-image: url(asset-path('controls.png', image));
 	background-position: 48px 16px;
 }
 .ticker-controls li.jnt-play-pause.paused.over {
@@ -101,7 +101,7 @@
 	background-position: 48px 0px;
 }
 .ticker-controls li.jnt-prev {
-	background-image: url('../controls.png');
+	background-image: url(asset-path('controls.png', image));
 	background-position: 0px 16px;
 }
 .ticker-controls li.jnt-prev.over {
@@ -111,7 +111,7 @@
 	background-position: 0px 0px;
 }
 .ticker-controls li.jnt-next {
-	background-image: url('../controls.png');
+	background-image: url(asset-path('controls.png', image));
 	background-position: 16px 16px;
 }
 .ticker-controls li.jnt-next.over {
