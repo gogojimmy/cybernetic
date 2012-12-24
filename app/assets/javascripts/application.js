@@ -9,3 +9,5 @@
 //= require twitter/bootstrap/tab
 //= require_tree ./common
 //= require jquery_news_ticker/jquery.ticker
+//= require jquery_msg/jquery.center.min
+//= require jquery_msg/jquery.msg

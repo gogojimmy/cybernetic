@@ -5,10 +5,11 @@ ul#categories
   - @category.children.each_slice(3) do |a, b, c|
     .row
       li.span3
-        .category
-          .c_image
-            = link_to image_tag(a.c_image_url(:large)), category_path(a)
-          = link_to a.title, category_path(a)
+        =link_to category_path(a) do
+          .category
+            .c_image
+              = image_tag(a.c_image_url(:large))
+            = link_to a.title, category_path(a)
       - if b
         li.span3
           .category

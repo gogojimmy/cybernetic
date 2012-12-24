@@ -1,8 +1,8 @@
 .row
+  .span3
+    = render_cell :widget, :categories_sidebar
   .span9
     - if @category.has_children?
       = render 'categories'
     - else
       = render 'products'
-  .span3
-    = render_cell :widget, :categories_sidebar

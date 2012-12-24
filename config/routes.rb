@@ -10,6 +10,7 @@ Cybernetic::Application.routes.draw do
   resources :posts, only: [:index, :show]
   resources :contacts, only: [:new, :create]
   resources :faqs, only: [:index]
+  resources :marketings, only: [:create]
 
   namespace :admin do
     resources :pages, only: [:index, :show, :edit, :update]

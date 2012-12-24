@@ -1,4 +1,6 @@
 .row
+  .span3
+    = render_cell :widget, :categories_sidebar
   .span9
     .row
       .span6
@@ -30,5 +32,3 @@
             = simple_format @product.feature
           .tab-pane.fade.in#spec
             = simple_format @product.spec
-  .span3
-    = render_cell :widget, :categories_sidebar

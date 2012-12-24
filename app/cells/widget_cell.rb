@@ -37,4 +37,9 @@ class WidgetCell < Cell::Rails
     render
   end
 
+  def marketing_footer
+    @marketing = Marketing.new
+    render
+  end
+
 end

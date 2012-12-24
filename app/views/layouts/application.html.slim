@@ -24,15 +24,7 @@ html
     .content
       .container
         = yield
-    .email-marketing
-      .container
-        .row
-          .span12
-            = form_tag "/email", class: 'form-inline' do
-              = label_tag "訂閱嘉亨電子報"
-              '
-              = text_field_tag 'email'
-              = submit_tag "送出", class: 'btn btn-success'
+    = render_cell :widget, :marketing_footer
     = render :partial => "common/footer"
     = render :partial => "common/bootstrap_modal"
     = render :partial => "common/google_analytics"

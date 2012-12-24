@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121223010052) do
+ActiveRecord::Schema.define(:version => 20121224044417) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -49,6 +49,14 @@ ActiveRecord::Schema.define(:version => 20121223010052) do
   end
 
   add_index "films", ["user_id"], :name => "index_films_on_user_id"
+
+  create_table "marketings", :force => true do |t|
+    t.string   "email"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "marketings", ["email"], :name => "index_marketings_on_email"
 
   create_table "page_translations", :force => true do |t|
     t.integer  "page_id"

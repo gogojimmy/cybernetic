@@ -17,3 +17,5 @@
                               = link_to c.title, category_path(c), id: "category-#{c.id}"
                   - else
                     = link_to child.title, category_path(child), id: "category-#{child.id}"
+  .film
+    = raw Film.random_film
