@@ -8,7 +8,7 @@
 	-webkit-border-radius: 15px;
 	-moz-border-radius: 15px;
 	border-radius: 15px;
-	background-color: #f8f0db;
+	background-color: #2974B1;
 	font-size: 0.75em;
 }
 .ticker {
@@ -17,13 +17,13 @@
 	display: block;
 	position: relative;
 	overflow: hidden;
-	background-color: #f8f0db;
+	background-color: #2974B1;
 }
 .ticker-title {
 	padding-top: 9px;
-	color: #990000;
+	color: #00E0FF;
 	font-weight: bold;
-	background-color: #f8f0db;
+	background-color: #2974B1;
 	text-transform: uppercase;
   line-height: 1.2em;
 }
@@ -31,9 +31,9 @@
 	margin: 0px;
 	padding-top: 9px;
 	position: absolute;
-	color: #1F527B;
+	color: #2974B1;
 	font-weight: bold;
-	background-color: #f8f0db;
+	background-color: #2974B1;
 	overflow: hidden;
 	white-space: nowrap;
 	line-height: 1.2em;
@@ -43,25 +43,25 @@
 }
 .ticker-content a {
 	text-decoration: none;
-	color: #1F527B;
+	color: #fff;
 }
 .ticker-content a:hover {
 	text-decoration: underline;
-	color: #0D3059;
+	/*color: #0D3059;*/
 }
 .ticker-swipe {
 	padding-top: 9px;
 	position: absolute;
 	top: 0px;
-	background-color: #f8f0db;
+	background-color: #2974B1;
 	display: block;
 	width: 800px;
 	height: 23px;
 }
 .ticker-swipe span {
 	margin-left: 1px;
-	background-color: #f8f0db;
-	border-bottom: 1px solid #1F527B;
+	background-color: #2974B1;
+	border-bottom: 1px solid #2974B1;
 	height: 12px;
 	width: 7px;
 	display: block;
@@ -125,7 +125,7 @@
 }
 .no-js-news {
 	padding: 10px 0px 0px 45px;
-	color: #F8F0DB;
+	color: #2974B1;
 }
 .left .ticker-controls, .left .ticker-content, .left .ticker-title, .left .ticker {
     float: left;
