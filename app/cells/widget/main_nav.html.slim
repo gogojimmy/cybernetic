@@ -12,7 +12,7 @@
             ul.dropdown-menu#mega-menu
               table
                 tbody
-                  - @categories.each_slice(5) do |a, b, c, d, e|
+                  - @categories.each_slice(5) do |a, b, c, d|
                     tr
                       td
                         .row-fluid
@@ -48,15 +48,6 @@
                             .span9
                               h4= d.title
                               - d.children.each do |child|
-                                = link_to child.title, category_path(child)
-                      - if e.present?
-                        td
-                          .row-fluid
-                            .span3
-                              = image_tag e.c_image_url(:normal)
-                            .span9
-                              h4= e.title
-                              - e.children.each do |child|
                                 = link_to child.title, category_path(child)
           li.dropdown
             =link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
