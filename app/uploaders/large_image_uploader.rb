@@ -33,7 +33,7 @@ class LargeImageUploader < CarrierWave::Uploader::Base
   version :thumb do
     process :fix_exif_rotation
     process :strip
-    process :resize_to_limit => [700, 300]
+    process :resize_to_limit => [210, 90]
     process :quality => 100
   end
 
