@@ -1,6 +1,6 @@
 .row
   .span9
-    = render_cell :widget, :categories_ads, @category.children
+    = render_cell :widget, :categories_ads, [@category]
 ul#categories
   - @category.children.each_slice(3) do |a, b, c|
     .row

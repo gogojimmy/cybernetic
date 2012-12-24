@@ -122,7 +122,12 @@ Category.create(title: 'Ultra 鋰電池', parent_id: seventh_c)
 Category.create(title: '鈕扣電池', parent_id: seventh_c)
 Category.create(title: '充電電池', parent_id: seventh_c)
 Category.create(title: '電池充電器', parent_id: seventh_c)
-Category.create(title: '手電筒', parent_id: seventh_c)
+
+media_c = Category.create(title: '儲存媒體 ')
+Category.create(title: '隨身碟', patent_id: media_c)
+Category.create(title: '記憶卡 ', patent_id: media_c)
+Category.create(title: '固態硬碟(SSD)', patent_id: media_c)
+Category.create(title: '光碟片', patent_id: media_c)
 
 eighth_c = Category.create(title: '耳機')
 Category.create(title: '耳罩式耳機', parent_id: eighth_c)
