@@ -33,6 +33,11 @@
   height: 294px;
 }
 
+header {
+  form { margin: 0; }
+  .locale { padding-left: 45px; }
+}
+
 #main-nav {
   /*margin-bottom: 5px;*/
   .navbar-inner {

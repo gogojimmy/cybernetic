@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121224044417) do
+ActiveRecord::Schema.define(:version => 20121224165638) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -26,6 +26,17 @@ ActiveRecord::Schema.define(:version => 20121224044417) do
   add_index "categories", ["ancestry"], :name => "index_categories_on_ancestry"
   add_index "categories", ["user_id"], :name => "index_categories_on_user_id"
 
+  create_table "category_translations", :force => true do |t|
+    t.integer  "category_id"
+    t.string   "locale"
+    t.string   "title"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "category_translations", ["category_id"], :name => "index_category_translations_on_category_id"
+  add_index "category_translations", ["locale"], :name => "index_category_translations_on_locale"
+
   create_table "contacts", :force => true do |t|
     t.string   "name"
     t.string   "email"
@@ -33,6 +44,18 @@ ActiveRecord::Schema.define(:version => 20121224044417) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "faq_translations", :force => true do |t|
+    t.integer  "faq_id"
+    t.string   "locale"
+    t.text     "answer"
+    t.text     "question"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "faq_translations", ["faq_id"], :name => "index_faq_translations_on_faq_id"
+  add_index "faq_translations", ["locale"], :name => "index_faq_translations_on_locale"
 
   create_table "faqs", :force => true do |t|
     t.string   "question"
@@ -81,6 +104,18 @@ ActiveRecord::Schema.define(:version => 20121224044417) do
   add_index "pages", ["title"], :name => "index_pages_on_title"
   add_index "pages", ["user_id"], :name => "index_pages_on_user_id"
 
+  create_table "post_translations", :force => true do |t|
+    t.integer  "post_id"
+    t.string   "locale"
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "post_translations", ["locale"], :name => "index_post_translations_on_locale"
+  add_index "post_translations", ["post_id"], :name => "index_post_translations_on_post_id"
+
   create_table "posts", :force => true do |t|
     t.string   "title"
     t.text     "content"
@@ -100,6 +135,19 @@ ActiveRecord::Schema.define(:version => 20121224044417) do
   end
 
   add_index "product_images", ["product_id"], :name => "index_product_images_on_product_id"
+
+  create_table "product_translations", :force => true do |t|
+    t.integer  "product_id"
+    t.string   "locale"
+    t.text     "description"
+    t.text     "feature"
+    t.text     "knowledge"
+    t.string   "name"
+    t.text     "spec"
+    t.text     "test"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "products", :force => true do |t|
     t.string   "name"

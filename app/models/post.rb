@@ -23,4 +23,6 @@ class Post < ActiveRecord::Base
   scope :news, where(category: "最新消息")
   scope :on_sale, where(category: "促銷活動")
   default_scope order('created_at desc')
+
+  translates :title, :content
 end

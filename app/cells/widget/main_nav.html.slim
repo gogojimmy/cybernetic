@@ -65,9 +65,9 @@
               li= link_to "網路賣場", page_path("網路賣場")
           li.dropdown
             =link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
-              | 客戶服務
+              | #{I18n.t("welcome.customer")}
             ul.dropdown-menu
-              li= link_to "產品註冊", page_path("產品註冊")
-              li= link_to "聯絡客服", new_contact_path
-              li= link_to "下載中心", page_path("下載中心")
-              li= link_to "常見問題", faqs_path
+              li= link_to I18n.t("welcome.registration"), page_path("產品註冊")
+              li= link_to I18n.t("welcome.contact_us"), new_contact_path
+              li= link_to I18n.t("welcome.downloads"), page_path("下載中心")
+              li= link_to I18n.t("welcome.faq"), faqs_path

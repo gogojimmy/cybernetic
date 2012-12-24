@@ -202,3 +202,39 @@ zh_tw:
   activerecord:
     errors:
       <<: *errors
+    attributes:
+      category:
+        title: "產品分類名稱"
+        c_image: "產品小圖"
+        large_image: "產品大圖"
+      contact:
+        name: '姓名'
+        email: 'Email'
+        content: '意見內容'
+      faq:
+        answer: '答案'
+        question: '問題'
+      film:
+        url: '影片網址'
+      marketing:
+        email: 'Email'
+      page:
+        title: '頁面標題'
+        content: '內容'
+      post:
+        category: '分類'
+        title: '文章標題'
+        content: '文章內容'
+      product:
+        description: '產品描述'
+        feature: '產品特徵'
+        knowledge: '產品小知識'
+        name: '產品名稱'
+        spec: '產品規格'
+        test: '測試報告'
+        category: '產品分類'
+      slider:
+        position: '廣告位置'
+        target: '連結目標網址'
+        description: '描述'
+        title: '標題'

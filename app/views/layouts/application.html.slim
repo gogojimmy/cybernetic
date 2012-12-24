@@ -12,13 +12,17 @@ html
             .logo
               = link_to image_tag(asset_path("logo-50.png")), "/"
           .span4
-            /= link_to_unless_current "中文", locale: "zh_tw"
-            /= link_to_unless_current "English", locale: "en"
           .span4
             .form
               = form_tag '/posts', id: 'search-form', class: 'form-search' do
                 = text_field_tag 'search', nil, class: 'input-medium'
                 = submit_tag '搜尋', class: 'btn btn-primary'
+            .locale
+              = link_to_unless_current "中文", locale: "zh_tw"
+              '
+              ' |
+              '
+              = link_to_unless_current "English", locale: "en"
     /! Navigation bar starts
     = render_cell :widget, :main_nav
     .content

@@ -15,4 +15,5 @@ class Faq < ActiveRecord::Base
   delegate :email, to: :user, prefix: true, allow_nil: true
   validates_presence_of :answer, :question
 
+  translates :answer, :question
 end
