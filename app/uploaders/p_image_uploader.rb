@@ -25,13 +25,13 @@ class PImageUploader < CarrierWave::Uploader::Base
   end
 
   def default_url
-    asset_path("fallback/" + [version_name, "default.png"].compact.join('_'))
+    asset_path("fallback/" + ["product" + version_name, "default.png"].compact.join('_'))
   end
 
   version :thumb do
     process :fix_exif_rotation
     process :strip
-    process :resize_to_limit => [120, 0]
+    process :resize_to_limit => [60, 0]
     process :quality => 100
   end
 
@@ -45,7 +45,7 @@ class PImageUploader < CarrierWave::Uploader::Base
   version :large do
     process :fix_exif_rotation
     process :strip
-    process :resize_to_limit => [390, 0]
+    process :resize_to_limit => [300, 0]
     process :quality => 100
   end
 

@@ -5,7 +5,7 @@ ul#categories
   - @category.children.each_slice(3) do |a, b, c|
     .row
       li.span3
-        =link_to category_path(a) do
+        = link_to category_path(a) do
           .category
             .c_image
               = image_tag(a.c_image_url(:large))

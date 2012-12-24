@@ -42,3 +42,6 @@ jQuery ->
       $el.width(newWidth).height newWidth * $el.data("aspectRatio")
 
   ).resize()
+
+  $("#product .product_image img").click ->
+    $("#product-main-image img").attr('src', ($(this).data("url")))
