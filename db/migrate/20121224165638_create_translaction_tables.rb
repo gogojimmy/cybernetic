@@ -27,7 +27,12 @@ class CreateTranslactionTables < ActiveRecord::Migration
     }, {
       migrate_data: true
     })
-
+    Slider.create_translation_table!({
+      description: :text,
+      title: :string
+    }, {
+      migrate_data: true
+    })
   end
 
   def down
@@ -35,5 +40,6 @@ class CreateTranslactionTables < ActiveRecord::Migration
     Faq.drop_translation_table! migrate_data: true
     Post.drop_translation_table! migrate_data: true
     Product.drop_translation_table! migrate_data: true
+    Slider.drop_translation_table! migrate_data: true
   end
 end

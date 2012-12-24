@@ -19,7 +19,7 @@ class Slider < ActiveRecord::Base
   belongs_to :user
   delegate :email, to: :user, prefix: true, allow_nil: true
 
-  translates :description, :image
+  translates :description, :title
 
   POSITION = %w(首頁橫幅廣告 首頁左下區塊 首頁中下區塊 首頁右下區塊)
 
