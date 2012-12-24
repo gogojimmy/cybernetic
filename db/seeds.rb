@@ -1,10 +1,10 @@
 #encoding: utf-8
 
-#pages = %w( 關於嘉亨 獨立店 3C賣場 生活賣場 網路賣場 產品註冊 聯絡客服 常見問題 下載中心 )
-#pages.each do |page|
-  #Page.create(title: page)
-#end
-#admin = User.create(email: 'jimmy@gogojimmy.net', password: '0975519929')
+pages = %w( 關於嘉亨 獨立店 3C賣場 生活賣場 網路賣場 產品註冊 聯絡客服 常見問題 下載中心 )
+pages.each do |page|
+  Page.create(title: page)
+end
+admin = User.create(email: 'jimmy@gogojimmy.net', password: '0975519929')
 
 first_c = Category.create(title: '手機配件')
 
@@ -140,3 +140,8 @@ Category.create(title: '電腦式耳機麥克風', parent_id: eighth_c)
 nineth = Category.create(title: '行動影音播放器 ')
 Category.create(title: 'MP3', parent_id: nineth)
 Category.create(title: 'MP4', parent_id: nineth)
+
+tenth = Category.create(title: 'LED 手電筒')
+Category.create(title: '迷你系列', parent_id: tenth)
+Category.create(title: '家用系列', parent_id: tenth)
+Category.create(title: '戶外使用系列', parent_id: tenth)

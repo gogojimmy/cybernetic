@@ -11,6 +11,17 @@ html
       .navbar-inner
         .container
           a.brand href="/" 嘉亨科技網站管理平台
+          ul.nav.pull-right
+            li.dropdown
+              = link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
+                - if I18n.locale == :zh_tw
+                  | 中文
+                - elsif I18n.locale == :en
+                  | English
+                span.caret
+              ul.dropdown-menu
+                li= link_to_unless_current "中文", locale: "zh_tw"
+                li= link_to_unless_current "English", locale: "en"
     .container
       .row
         .span12

@@ -7,6 +7,7 @@
 //= require twitter/bootstrap/collapse
 //= require twitter/bootstrap/carousel
 //= require twitter/bootstrap/tab
+//= require twitter/bootstrap/dropdown
 //= require_tree ./common
 //= require jquery_news_ticker/jquery.ticker
 //= require jquery_msg/jquery.center.min
