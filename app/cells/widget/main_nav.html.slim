@@ -5,7 +5,7 @@
         span 目錄
       .nav-collapse.collapse
         ul.nav
-          li= link_to "關於嘉亨", page_path("關於嘉亨")
+          li= link_to "關於嘉亨", page_path(1)
           li.dropdown
             = link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
               | 產品資訊
@@ -59,15 +59,15 @@
             =link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
               | 經銷資訊
             ul.dropdown-menu
-              li= link_to "獨立店", page_path("獨立店")
-              li= link_to "3C賣場", page_path("3C賣場")
-              li= link_to "生活賣場", page_path("生活賣場")
-              li= link_to "網路賣場", page_path("網路賣場")
+              li= link_to "獨立店", page_path(2)
+              li= link_to "3C賣場", page_path(3)
+              li= link_to "生活賣場", page_path(4)
+              li= link_to "網路賣場", page_path(5)
           li.dropdown
             =link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
               | #{I18n.t("welcome.customer")}
             ul.dropdown-menu
-              li= link_to I18n.t("welcome.registration"), page_path("產品註冊")
+              li= link_to I18n.t("welcome.registration"), page_path(6)
               li= link_to I18n.t("welcome.contact_us"), new_contact_path
-              li= link_to I18n.t("welcome.downloads"), page_path("下載中心")
+              li= link_to I18n.t("welcome.downloads"), page_path(7)
               li= link_to I18n.t("welcome.faq"), faqs_path
