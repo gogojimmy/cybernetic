@@ -10,19 +10,19 @@ html
         .row
           .span4
             .logo
-              = link_to image_tag(asset_path("logo-50.png")), "/"
+              = link_to image_tag(asset_path("logo-45.png")), "/"
           .span4
-          .span4
-            .form
-              = form_tag '/posts', id: 'search-form', class: 'form-search' do
-                = text_field_tag 'search', nil, class: 'input-medium'
-                = submit_tag '搜尋', class: 'btn btn-primary'
-            .locale
+            .locale.pull-right
               = link_to_unless_current "中文", locale: "zh_tw"
               '
               ' |
               '
               = link_to_unless_current "English", locale: "en"
+          #search.span4
+            #search-form.form
+              = form_tag '/posts', id: 'search-form', class: 'form-search' do
+                = text_field_tag 'search', nil, class: 'input-medium'
+                = submit_tag '搜尋', class: 'btn btn-primary'
     /! Navigation bar starts
     = render_cell :widget, :main_nav
     .content
