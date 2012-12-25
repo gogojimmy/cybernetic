@@ -16,7 +16,7 @@
 #
 
 class Product < ActiveRecord::Base
-  attr_accessible :description, :feature, :knowledge, :name, :spec, :test, :user, :category, :product_images_attributes, :category_id
+  attr_accessible :description, :feature, :knowledge, :name, :spec, :test_report, :user, :category, :product_images_attributes, :category_id
   has_many :product_images
   belongs_to :user
   belongs_to :category
@@ -25,7 +25,7 @@ class Product < ActiveRecord::Base
 
   validates_presence_of :name, :category
 
-  translates :description, :feature, :knowledge, :name, :spec, :test
+  translates :description, :feature, :knowledge, :name, :spec, :test_report
 
   def feature_image(version=nil)
     self.product_images.first.try(:p_image_url, version)

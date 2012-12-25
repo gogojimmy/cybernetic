@@ -144,15 +144,18 @@ ActiveRecord::Schema.define(:version => 20121224165638) do
     t.text     "knowledge"
     t.string   "name"
     t.text     "spec"
-    t.text     "test"
+    t.text     "test_report"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
 
+  add_index "product_translations", ["locale"], :name => "index_product_translations_on_locale"
+  add_index "product_translations", ["product_id"], :name => "index_product_translations_on_product_id"
+
   create_table "products", :force => true do |t|
     t.string   "name"
     t.text     "description"
-    t.text     "test"
+    t.text     "test_report"
     t.text     "knowledge"
     t.text     "feature"
     t.text     "spec"
@@ -164,6 +167,18 @@ ActiveRecord::Schema.define(:version => 20121224165638) do
 
   add_index "products", ["category_id"], :name => "index_products_on_category_id"
   add_index "products", ["user_id"], :name => "index_products_on_user_id"
+
+  create_table "slider_translations", :force => true do |t|
+    t.integer  "slider_id"
+    t.string   "locale"
+    t.text     "description"
+    t.string   "title"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "slider_translations", ["locale"], :name => "index_slider_translations_on_locale"
+  add_index "slider_translations", ["slider_id"], :name => "index_slider_translations_on_slider_id"
 
   create_table "sliders", :force => true do |t|
     t.string   "title"

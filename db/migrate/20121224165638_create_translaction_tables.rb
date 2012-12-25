@@ -23,7 +23,7 @@ class CreateTranslactionTables < ActiveRecord::Migration
       knowledge: :text,
       name: :string,
       spec: :text,
-      test: :text
+      test_report: :text
     }, {
       migrate_data: true
     })

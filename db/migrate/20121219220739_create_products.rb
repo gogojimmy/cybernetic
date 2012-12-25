@@ -3,7 +3,7 @@ class CreateProducts < ActiveRecord::Migration
     create_table :products do |t|
       t.string :name
       t.text :description
-      t.text :test
+      t.text :test_report
       t.text :knowledge
       t.text :feature
       t.text :spec
