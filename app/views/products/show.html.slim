@@ -29,11 +29,15 @@
             li
               a href="#spec" data-toggle="tab" 產品規格
         .tab-content
-          .tab-pane.fade.in#test_report
-            = simple_format @product.test_report
-          .tab-pane.fade.in#knowledge
-            = simple_format @product.knowledge
-          .tab-pane.fade.in#feature
-            = simple_format @product.feature
-          .tab-pane.fade.in#spec
-            = simple_format @product.spec
+          - if @product.test_report.present?
+            .tab-pane.fade.in#test_report
+              = simple_format @product.test_report
+          - if @product.knowledge.present?
+            .tab-pane.fade.in#knowledge
+              = simple_format @product.knowledge
+          - if @product.feature.present?
+            .tab-pane.fade.in#feature
+              = simple_format @product.feature
+          - if @product.spec.present?
+            .tab-pane.fade.in#spec
+              = simple_format @product.spec
