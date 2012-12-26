@@ -1,14 +1,12 @@
 /* Ticker Styling */
 .ticker-wrapper.has-js {
 	margin: 0;
-  margin-bottom: 5px;
 	padding: 0px 20px;
 	height: 32px;
 	display: block;
 	/*-webkit-border-radius: 15px;*/
 	/*-moz-border-radius: 15px;*/
 	/*border-radius: 15px;*/
-	background-color: #2974B1;
 	font-size: 0.75em;
 }
 .ticker {
@@ -17,13 +15,12 @@
 	display: block;
 	position: relative;
 	overflow: hidden;
-	background-color: #2974B1;
 }
 .ticker-title {
 	padding-top: 9px;
-	color: #00E0FF;
-	font-weight: bold;
-	background-color: #2974B1;
+	color: #4F4F50;
+	font-weight: bolder;
+	background-color: transparent;
 	text-transform: uppercase;
   line-height: 1.2em;
 }
@@ -31,9 +28,9 @@
 	margin: 0px;
 	padding-top: 9px;
 	position: absolute;
-	color: #2974B1;
+	color: #000;
 	font-weight: bold;
-	background-color: #2974B1;
+	background-color: transparent;
 	overflow: hidden;
 	white-space: nowrap;
 	line-height: 1.2em;
@@ -43,7 +40,7 @@
 }
 .ticker-content a {
 	text-decoration: none;
-	color: #fff;
+	color: #000;
 }
 .ticker-content a:hover {
 	text-decoration: underline;
@@ -53,15 +50,14 @@
 	padding-top: 9px;
 	position: absolute;
 	top: 0px;
-	background-color: #2974B1;
+	background-color: transparent;
 	display: block;
 	width: 800px;
 	height: 23px;
 }
 .ticker-swipe span {
 	margin-left: 1px;
-	background-color: #2974B1;
-	border-bottom: 1px solid #2974B1;
+	background-color: transparent;
 	height: 12px;
 	width: 7px;
 	display: block;

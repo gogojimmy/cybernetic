@@ -28,11 +28,6 @@
   margin-left: 30px;
 }
 
-
-.carousel {
-  height: 294px;
-}
-
 header {
   font-size: 11px;
   form {
@@ -57,17 +52,14 @@ header {
 }
 
 #main-nav {
-  /*margin-bottom: 5px;*/
+  margin-bottom: 0px;
+  border: none;
+  border-bottom: none !important;
+  border-top: none !important;
   .navbar-inner {
-    background: #69c8f4; /* Old browsers */
-    background: -moz-linear-gradient(top,  #69c8f4 0%, #0093c9 5%, #004fa2 50%, #004fa2 93%, #292d5b 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#69c8f4), color-stop(5%,#0093c9), color-stop(50%,#004fa2), color-stop(93%,#004fa2), color-stop(100%,#292d5b)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #69c8f4 0%,#0093c9 5%,#004fa2 50%,#004fa2 93%,#292d5b 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #69c8f4 0%,#0093c9 5%,#004fa2 50%,#004fa2 93%,#292d5b 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #69c8f4 0%,#0093c9 5%,#004fa2 50%,#004fa2 93%,#292d5b 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  #69c8f4 0%,#0093c9 5%,#004fa2 50%,#004fa2 93%,#292d5b 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69c8f4', endColorstr='#292d5b',GradientType=0 ); /* IE6-9 */
-    border: none;
+    background-color: white;
+    background-image: url(asset-path("gradient-34.jpg", image));
+    background-repeat: repeat-x;
     min-height: 20px;
     li {
       line-height: 4px;
@@ -153,16 +145,9 @@ ul.nav li.dropdown:hover .dropdown-menu{
 }
 
 .email-marketing {
-  background: #69c8f4; /* Old browsers */
-  background: -moz-linear-gradient(top,  #69c8f4 0%, #0093c9 5%, #004fa2 50%, #004fa2 93%, #292d5b 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#69c8f4), color-stop(5%,#0093c9), color-stop(50%,#004fa2), color-stop(93%,#004fa2), color-stop(100%,#292d5b)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #69c8f4 0%,#0093c9 5%,#004fa2 50%,#004fa2 93%,#292d5b 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #69c8f4 0%,#0093c9 5%,#004fa2 50%,#004fa2 93%,#292d5b 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #69c8f4 0%,#0093c9 5%,#004fa2 50%,#004fa2 93%,#292d5b 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  #69c8f4 0%,#0093c9 5%,#004fa2 50%,#004fa2 93%,#292d5b 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69c8f4', endColorstr='#292d5b',GradientType=0 ); /* IE6-9 */
+  background-image: url(asset-path("gradient-41.jpg", image));
+  background-repeat: repeat-x;
   border: none;
-  margin-top: 10px;
   padding: 5px 0 5px 0;
   color: white;
   form {
@@ -171,7 +156,10 @@ ul.nav li.dropdown:hover .dropdown-menu{
 }
 
 #slider, #categories-slider { background: asset-url("loading.gif", image) no-repeat center; }
-#slider { margin-bottom: 15px; }
+#slider {
+  margin-bottom: 0px;
+  height: 300px;
+}
 
 #categories-menu {
   li { padding: 0; }
@@ -230,4 +218,10 @@ ul.nav li.dropdown:hover .dropdown-menu{
    min-height: 300px;
    padding: 10px;
  }
+}
+
+#news-block {
+  background-image: url(asset-path("index_news_bg.jpg", image));
+  background-repeat: repeat-x;
+  background-position: left bottom;
 }

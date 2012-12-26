@@ -12,32 +12,32 @@
             = image_tag(image.p_image_url(:thumb), data: { url: image.p_image_url(:normal) })
       .span4
         h2= @product.name
-        = simple_format @product.description
+        = raw @product.description
     .row
       .span9
         ul.nav.nav-tabs#product-tab
-          - if @product.test_report.present?
-            li
-              a href="#test_report" data-toggle="tab" 產品測試報告
-          - if @product.knowledge.present?
-            li
-              a href="#knowledge" data-toggle="tab" 產品小知識
           - if @product.feature.present?
             li
               a href="#feature" data-toggle="tab" 產品特色
           - if @product.spec.present?
             li
               a href="#spec" data-toggle="tab" 產品規格
+          - if @product.test_report.present?
+            li
+              a href="#test_report" data-toggle="tab" 產品測試報告
+          - if @product.knowledge.present?
+            li
+              a href="#knowledge" data-toggle="tab" 產品小知識
         .tab-content
           - if @product.test_report.present?
             .tab-pane.fade.in#test_report
-              = simple_format @product.test_report
+              = raw @product.test_report
           - if @product.knowledge.present?
             .tab-pane.fade.in#knowledge
-              = simple_format @product.knowledge
+              = raw @product.knowledge
           - if @product.feature.present?
             .tab-pane.fade.in#feature
-              = simple_format @product.feature
+              = raw @product.feature
           - if @product.spec.present?
             .tab-pane.fade.in#spec
-              = simple_format @product.spec
+              = raw @product.spec

@@ -5,10 +5,28 @@
     = render 'product_image_fields', f: product_image
   .controls
     = link_to_add_association '新增一張圖片', f, :product_images, class: 'btn btn-success'
-  = f.input :description, label: '產品描述', input_html: { class: 'span6', rows: 10 }
-  = f.input :test_report, label: '產品測試報告', input_html: { class: 'span6', rows: 10 }
-  = f.input :knowledge, label: '產品小知識', input_html: { class: 'span6', rows: 10 }
-  = f.input :feature, label: '產品特色', input_html: { class: 'span6', rows: 10 }
-  = f.input :spec, label: '產品規格', input_html: { class: 'span6', rows: 10 }
+  ul.nav.nav-tabs#product-tab
+    li.active
+      a href="#description" data-toggle="tab" 產品描述
+    li
+      a href="#feature" data-toggle="tab" 產品特色
+    li
+      a href="#test_report" data-toggle="tab" 產品測試報告
+    li
+      a href="#spec" data-toggle="tab" 產品規格
+    li
+      a href="#knowledge" data-toggle="tab" 產品小知識
+  .tab-content
+    .tab-pane.fade.in.active#description
+      = tinymce
+      = f.input :description, label: false, input_html: { class: 'span9 tinymce', rows: 20 }
+    .tab-pane.fade.in#feature
+      = f.input :test_report, label: false, input_html: { class: 'span9 tinymce', rows: 20 }
+    .tab-pane.fade.in#test_report
+      = f.input :knowledge, label: false, input_html: { class: 'span9 tinymce', rows: 20 }
+    .tab-pane.fade.in#spec
+      = f.input :feature, label: false, input_html: { class: 'span9 tinymce', rows: 20 }
+    .tab-pane.fade.in#knowledge
+      = f.input :spec, label: false, input_html: { class: 'span9 tinymce', rows: 20 }
   .form-actions
     = f.submit '送出', class: 'btn btn-primary'
