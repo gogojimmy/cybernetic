@@ -117,10 +117,16 @@ header {
 }
 
 #categories, #products {
+  .row {
+    border-bottom: 2px dotted #ddd;
+  }
   .category, .product {
     text-align: center;
     .c_image, p_image { line-height: 200px; }
     border: 1px solid white;
+    a:hover {
+      text-decoration: none;
+    }
     &:hover {
       border: 1px solid #11608F;
       -moz-box-shadow: 0px 0px 10px #11608F;
@@ -156,6 +162,7 @@ ul.nav li.dropdown:hover .dropdown-menu{
 }
 
 #slider, #categories-slider { background: asset-url("loading.gif", image) no-repeat center; }
+#categories-slider { height: 300px; }
 #slider {
   margin-bottom: 0px;
   height: 300px;
@@ -189,6 +196,9 @@ ul.nav li.dropdown:hover .dropdown-menu{
     font-weight: bold;
     margin-bottom: 20px;
  }
+ #product-description ul li {
+   list-style: disc;
+ }
  #product-main-image {
    padding: 5px;
    border: 1px solid #EEE;
@@ -214,9 +224,14 @@ ul.nav li.dropdown:hover .dropdown-menu{
    border-bottom: none;
  }
  .tab-content {
-   border: 1px solid #ccc;
    min-height: 300px;
    padding: 10px;
+   ul {
+     margin-left: 20px;
+     li {
+       list-style: disc;
+     }
+   }
  }
 }
 

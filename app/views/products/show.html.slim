@@ -10,7 +10,7 @@
         - @product.product_images.each do |image|
           .product_image
             = image_tag(image.p_image_url(:thumb), data: { url: image.p_image_url(:normal) })
-      .span4
+      #product-description.span4
         h2= @product.name
         = raw @product.description
     .row

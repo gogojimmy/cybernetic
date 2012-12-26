@@ -6,18 +6,18 @@ ul#products
     .row
       li.span3
         .product
+          h4= link_to a.name, product_path(a)
           .p_image
             = link_to image_tag(a.feature_image(:large)), product_path(a)
-          = link_to a.name, product_path(a)
       - if b
         li.span3
           .product
+            h4= link_to b.name, product_path(b)
             .p_image
               = link_to image_tag(b.feature_image(:large)), product_path(b)
-            = link_to b.name, product_path(b)
       - if c
         li.span3
           .product
+            h4= link_to c.name, product_path(c)
             .p_image
               = link_to image_tag(c.feature_image(:large)), product_path(c)
-            = link_to c.name, product_path(c)
