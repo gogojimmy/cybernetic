@@ -1,7 +1,7 @@
 jQuery ->
   $(".carousel").carousel()
 
-  $("#product-tab > li:first").addClass "active"
+  $("#product-tab > .navbar-inner > ul.nav > li:first").addClass "active"
   $(".tab-content > .tab-pane:first").addClass "active"
 
   $("#main-nav ul.dropdown-menu").hover ->
@@ -45,3 +45,4 @@ jQuery ->
 
   $("#product .product_image img").click ->
     $("#product-main-image img").attr('src', ($(this).data("url")))
+      ).attr('src', ($(this).data("url")))

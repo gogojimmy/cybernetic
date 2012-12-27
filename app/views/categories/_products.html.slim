@@ -10,13 +10,13 @@ ul#products
           .p_image
             = link_to image_tag(a.feature_image(:large)), product_path(a)
       - if b
-        li.span3
+        li.span3.second
           .product
             h4= link_to b.name, product_path(b)
             .p_image
               = link_to image_tag(b.feature_image(:large)), product_path(b)
       - if c
-        li.span3
+        li.span3.third
           .product
             h4= link_to c.name, product_path(c)
             .p_image

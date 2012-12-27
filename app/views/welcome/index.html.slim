@@ -1,29 +1,31 @@
 = stylesheet_link_tag "welcome"
 #welcome-index
-  .row
-    .span12
-      /! Slider (Parallax Slider)
-      #slider.carousel.slide data-interval="3000"
-        .carousel-inner
-          - @sliders.each do |slider|
-            .item
-              = image_tag(slider.image_url(:slider_normal))
-              - if slider.title.present?
-                .carousel-caption
-                  h4= slider.title
-                  = simple_format slider.description
-        /! Carousel nav
-        /a.carousel-control.left href="#slider" data-slide="prev" &lsaquo;
-        /a.carousel-control.right href="#slider" data-slide="next" &rsaquo;
-  .row
-    #news-block.span12
-      ul#news-index.js-hidden
-        - @news.each do |post|
-          li.news-item= link_to post.title, post_path(post)
-  .row
-    .span4
-      = render_cell :widget, :block_ad, "首頁左下區塊"
-    .span4
-      = render_cell :widget, :block_ad, "首頁中下區塊"
-    .span4
-     = render_cell :widget, :block_ad, "首頁右下區塊"
+  .content
+    .container
+      .row
+        .span12
+          /! Slider (Parallax Slider)
+          #slider.carousel.slide data-interval="3000"
+            .carousel-inner
+              - @sliders.each do |slider|
+                .item
+                  = image_tag(slider.image_url(:slider_normal))
+                  - if slider.title.present?
+                    .carousel-caption
+                      h4= slider.title
+                      = simple_format slider.description
+            /! Carousel nav
+            /a.carousel-control.left href="#slider" data-slide="prev" &lsaquo;
+            /a.carousel-control.right href="#slider" data-slide="next" &rsaquo;
+      .row
+        #news-block.span12
+          ul#news-index.js-hidden
+            - @news.each do |post|
+              li.news-item= link_to post.title, post_path(post)
+      .row
+        .span4
+          = render_cell :widget, :block_ad, "首頁左下區塊"
+        .span4
+          = render_cell :widget, :block_ad, "首頁中下區塊"
+        .span4
+         = render_cell :widget, :block_ad, "首頁右下區塊"
