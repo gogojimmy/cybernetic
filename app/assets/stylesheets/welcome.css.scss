@@ -1,0 +1,10 @@
+body {
+  background-image: url(asset-path("index_bg.jpg", image)) !important;
+  background-repeat: repeat-x;
+  background-position: center;
+}
+.content #welcome-index {
+  background-image: url(asset-path("main_bg.png", image)) !important;
+  background-repeat: repeat-y;
+  background-position: center;
+}
