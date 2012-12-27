@@ -45,4 +45,3 @@ jQuery ->
 
   $("#product .product_image img").click ->
     $("#product-main-image img").attr('src', ($(this).data("url")))
-      ).attr('src', ($(this).data("url")))
