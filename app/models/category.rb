@@ -12,7 +12,7 @@
 #
 
 class Category < ActiveRecord::Base
-  attr_accessible :c_image, :title, :user, :user_id, :parent_id, :large_image
+  attr_accessible :c_image, :title, :user, :user_id, :parent_id, :large_image, :show_description
   mount_uploader :c_image, CImageUploader
   mount_uploader :large_image, LargeImageUploader
 
