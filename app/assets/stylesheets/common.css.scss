@@ -116,22 +116,23 @@ header {
   }
 }
 
-#categories, #products {
-  .product-images {
-    height: 300px;
-    position: relative;
-    background-image: url(asset-path("showcase_divider_700x315.jpg", image));
-    background-repeat: no-repeat;
-    margin-left: 20px;
-    padding: 5px;
-    > li {
-      width: 220px;
-      float: left;
-    }
-    .second, .third {
-      margin-left: 15px;
-    }
+.prodcut-images {
+  height: 300px;
+  position: relative;
+  background-image: url(asset-path("showcase_divider_700x315.jpg", image));
+  background-repeat: no-repeat;
+  margin-left: 20px;
+  padding: 5px;
+  li {
+    width: 220px;
+    float: left;
   }
+  .second, .third {
+    margin-left: 15px;
+  }
+}
+
+#categories, #products {
   .category, .product {
     height: 300px;
     text-align: center;
