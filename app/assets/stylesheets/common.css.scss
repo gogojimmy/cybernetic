@@ -252,6 +252,7 @@ ul.nav li.dropdown:hover .dropdown-menu{
 
 #product {
   margin-top: 15px;
+  margin-bottom: 15px;
   h2 {
     font-weight: bold;
     text-shadow: 1px 1px 0px #DDD;
@@ -388,7 +389,6 @@ ul.nav li.dropdown:hover .dropdown-menu{
   background: white;
   background-image: url(asset-path("showcase_divider.jpg", image));
   background-repeat: no-repeat;
-  margin-bottom: 5px;
 }
 
 #categories-page {
