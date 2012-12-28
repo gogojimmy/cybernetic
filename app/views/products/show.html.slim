@@ -16,10 +16,10 @@
               .product_image
                 = image_tag(image.p_image_url(:thumb), data: { url: image.p_image_url(:xlarge) })
           .clearfix
-      .row
-        #product-description.span9
-          = raw @product.description
-    hr
+      /.row
+        /#product-description.span9
+          /= raw @product.description
+    /hr
     .row
       .span9
         ul.nav.nav-tabs.navbar#product-tab
