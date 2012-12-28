@@ -117,13 +117,36 @@ header {
 }
 
 #categories, #products {
-  .row {
-    border-bottom: 2px dotted #ddd;
+  .product-images {
+    height: 300px;
+    position: relative;
+    background-image: url(asset-path("showcase_divider_700x315.jpg", image));
+    background-repeat: no-repeat;
+    margin-left: 20px;
+    padding: 5px;
+    > li {
+      width: 220px;
+      float: left;
+    }
+    .second, .third {
+      margin-left: 15px;
+    }
   }
   .category, .product {
+    height: 300px;
     text-align: center;
-    .c_image, p_image { line-height: 200px; }
-    border: 1px solid white;
+    h4 { text-shadow: 1px 0px 1px #999; }
+    .c_image, .p_image {
+      height: 200px;
+      img {
+        height: 100%;
+      }
+    }
+    span {
+      font-size: 14px;
+      color: #999;
+    }
+    border: 1px solid transparent;
     a:hover {
       text-decoration: none;
     }
@@ -133,11 +156,6 @@ header {
       -webkit-box-shadow: 0px 0px 10px #11608F;
       box-shadow: 0px 0px 10px #11608F;
     }
-  }
-  .second, .third {
-    margin-left: 10px;
-    border-left: 2px dotted #DDD;
-    padding-left: 8px;
   }
 }
 
@@ -166,7 +184,11 @@ ul.nav li.dropdown:hover .dropdown-menu{
 }
 
 #slider, #categories-slider { background: asset-url("loading.gif", image) no-repeat center; }
-#categories-slider { height: 300px; }
+#categories-slider {
+  margin-top: 5px;
+  margin-bottom: 0px;
+  height: 300px;
+}
 #slider {
   margin-bottom: 0px;
   height: 300px;
@@ -220,13 +242,14 @@ ul.nav li.dropdown:hover .dropdown-menu{
   -khtml-border-radius: 4px 4px 0 0;
 }
 
+.divider {
+  background-image: url(asset-path("showcase_divider.jpg", image));
+  background-repeat: no-repeat;
+  height: 40px;
+}
+
 #product {
   margin-top: 15px;
-  .divider {
-    background-image: url(asset-path("showcase_divider.jpg", image));
-    background-repeat: no-repeat;
-    height: 40px;
-  }
   h2 {
     font-weight: bold;
     text-shadow: 1px 1px 0px #DDD;
@@ -362,4 +385,10 @@ ul.nav li.dropdown:hover .dropdown-menu{
   background: white;
   background-image: url(asset-path("showcase_divider.jpg", image));
   background-repeat: no-repeat;
+  margin-bottom: 5px;
+}
+
+#categories-page {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }

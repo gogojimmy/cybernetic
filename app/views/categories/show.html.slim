@@ -1,7 +1,7 @@
-.row
+.row#categories-page
   .span3
     = render_cell :widget, :categories_sidebar
-  .span9
+  .span9.article-content.rounded
     - if @category.has_children?
       = render 'categories'
     - else

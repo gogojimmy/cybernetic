@@ -16,7 +16,7 @@
 #
 
 class Product < ActiveRecord::Base
-  attr_accessible :description, :feature, :knowledge, :name, :spec, :test_report, :user, :category, :product_images_attributes, :category_id
+  attr_accessible :description, :feature, :knowledge, :name, :spec, :test_report, :user, :category, :product_images_attributes, :category_id, :show_description
   has_many :product_images
   belongs_to :user
   belongs_to :category

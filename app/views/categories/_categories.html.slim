@@ -4,21 +4,22 @@
 ul#categories
   - @category.children.each_slice(3) do |a, b, c|
     .row
-      li.span3
-        = link_to category_path(a) do
-          .category
-            h4= link_to a.title, category_path(a)
-            .c_image
-              = link_to image_tag(a.c_image_url(:large)), category_path(a)
-      - if b
-        li.span3.second
-          .category
-            h4= link_to b.title, category_path(b)
-            .c_image
-              = link_to image_tag(b.c_image_url(:large)), category_path(b)
-      - if c
-        li.span3.third
-          .category
-            h4= link_to c.title, category_path(c)
-            .c_image
-              = link_to image_tag(c.c_image_url(:large)), category_path(c)
+      .product-images
+        li
+          = link_to category_path(a) do
+            .category
+              h4= link_to a.title, category_path(a)
+              .c_image
+                = link_to image_tag(a.c_image_url(:large)), category_path(a)
+        - if b
+          li.second
+            .category
+              h4= link_to b.title, category_path(b)
+              .c_image
+                = link_to image_tag(b.c_image_url(:large)), category_path(b)
+        - if c
+          li.third
+            .category
+              h4= link_to c.title, category_path(c)
+              .c_image
+                = link_to image_tag(c.c_image_url(:large)), category_path(c)

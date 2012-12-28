@@ -45,3 +45,9 @@ jQuery ->
 
   $("#product .product_image img").click ->
     $("#product-main-image img").attr('src', ($(this).data("url")))
+
+  $(".product-images").each ->
+    count = $(this).find("li").length
+    if count == 1
+      $(this).css("background-image", "url('/assets/showcase_divider_700x315-L.jpg')")
+
