@@ -2,18 +2,24 @@
   .span3
     = render_cell :widget, :categories_sidebar
   .span9
-    .row
-      .span8
-        #product-main-image
-          = image_tag @product.feature_image(:xlarge)
-      .span1
-        - @product.product_images.each do |image|
-          .product_image
-            = image_tag(image.p_image_url(:thumb), data: { url: image.p_image_url(:xlarge) })
-    .row
-      #product-description.span12
-        h2= @product.name
-        = raw @product.description
+    .article-content.rounded
+      .row
+        .span9
+          h2= @product.name
+          .divider
+        .clearfix
+        .product-main-block
+          #product-main-image
+            = image_tag @product.feature_image(:xlarge)
+          #images
+            - @product.product_images.each do |image|
+              .product_image
+                = image_tag(image.p_image_url(:thumb), data: { url: image.p_image_url(:xlarge) })
+          .clearfix
+      .row
+        #product-description.span9
+          = raw @product.description
+    hr
     .row
       .span9
         ul.nav.nav-tabs.navbar#product-tab
@@ -31,7 +37,7 @@
               - if @product.knowledge.present?
                 li
                   a href="#knowledge" data-toggle="tab" 產品小知識
-        .tab-content
+        .tab-content#product-tab-contents
           - if @product.test_report.present?
             .tab-pane.fade.in#test_report
               = raw @product.test_report
