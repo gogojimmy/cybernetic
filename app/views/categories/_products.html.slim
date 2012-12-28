@@ -4,7 +4,7 @@
 ul#products
   - @category.products.each_slice(3) do |a, b, c|
     .row
-      .prodcut-images
+      .product-images
         li
           .product
             h4= link_to a.name, product_path(a)
