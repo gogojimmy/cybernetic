@@ -3,7 +3,7 @@
     .row
       .span12
         = simple_form_for @marketing, html: { class: 'form-inline' }, remote: true do |f|
-          = f.label :email, label: "訂閱嘉亨電子報"
+          = f.label :email, label: I18n.t("functions.subscribe")
           '
-          = f.input_field :email, label: "訂閱嘉亨電子報", placeholder: "請輸入您的Email"
-          = f.submit "送出", class: 'btn btn-success'
+          = f.input_field :email, label: I18n.t("functions.subscribe"), placeholder: I18n.t("functions.input_email")
+          = f.submit I18n.t("functions.submit"), class: 'btn btn-success'

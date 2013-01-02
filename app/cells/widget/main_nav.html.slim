@@ -5,10 +5,10 @@
         span 目錄
       .nav-collapse.collapse
         ul.nav
-          li= link_to "關於嘉亨", page_path(1)
+          li= link_to I18n.t("menu.about"), page_path(1)
           li.dropdown
             = link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
-              | 產品資訊
+              | #{I18n.t("menu.products")}
             ul.dropdown-menu#mega-menu
               table
                 tbody
@@ -51,23 +51,27 @@
                                 = link_to child.title, category_path(child)
           li.dropdown
             =link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
-              | 最新消息
+              | #{I18n.t("menu.news")}
             ul.dropdown-menu
-              li= link_to "最新消息", posts_path(category: "最新消息")
-              li= link_to "促銷活動", posts_path(category: "促銷活動")
+              li= link_to I18n.t("menu.news"), posts_path(category: "最新消息")
+              - if is_zh_tw?
+                li= link_to "促銷活動", posts_path(category: "促銷活動")
+          - if is_zh_tw?
+            li.dropdown
+              =link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
+                | 經銷資訊
+              ul.dropdown-menu
+                li= link_to I18n.t("menu.single"), page_path(2)
+                li= link_to I18n.t("menu.3c"), page_path(3)
+                li= link_to I18n.t("menu.normal"), page_path(4)
+                li= link_to I18n.t("menu.internet"), page_path(5)
           li.dropdown
             =link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
-              | 經銷資訊
+              | #{I18n.t("menu.customer")}
             ul.dropdown-menu
-              li= link_to "獨立店", page_path(2)
-              li= link_to "3C賣場", page_path(3)
-              li= link_to "生活賣場", page_path(4)
-              li= link_to "網路賣場", page_path(5)
-          li.dropdown
-            =link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
-              | #{I18n.t("welcome.customer")}
-            ul.dropdown-menu
-              li= link_to I18n.t("welcome.registration"), page_path(6)
-              li= link_to I18n.t("welcome.contact_us"), new_contact_path
-              li= link_to I18n.t("welcome.downloads"), page_path(7)
-              li= link_to I18n.t("welcome.faq"), faqs_path
+              - if is_zh_tw?
+                li= link_to I18n.t("menu.registration"), page_path(6)
+              li= link_to I18n.t("menu.contact_us"), new_contact_path
+              li= link_to I18n.t("menu.downloads"), page_path(7)
+              - if is_zh_tw?
+                li= link_to I18n.t("menu.faq"), faqs_path

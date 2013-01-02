@@ -1,3 +1,4 @@
-.sidebar
+.sidebar.article-content.rounded
   = render_cell :widget, :news_sidebar
-  = render_cell :widget, :on_sale_sidebar
+  - if is_zh_tw?
+    = render_cell :widget, :on_sale_sidebar

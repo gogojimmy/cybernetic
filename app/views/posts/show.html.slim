@@ -3,13 +3,13 @@
     .span12
       /! Blog Posts
       .row
-        .span8
+        .span3
+          = render 'common/post_sidebar'
+        .span9
           .posts
-            .entry
+            .entry.article-content.rounded
               h2= @post.title
               /! Meta detail
               = simple_format @post.content
               hr
-        .span4
-          = render 'common/post_sidebar'
 

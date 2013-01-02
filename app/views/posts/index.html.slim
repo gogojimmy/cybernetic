@@ -1,22 +1,21 @@
-h2= @category
 h4
   .blog
     .row
       .span12
         /! Blog posts
         .row
-          .span8
+          .span3
+            = render 'common/post_sidebar'
+          .span9
             .posts
               - @posts.each do |post|
                 .entry
                   h2= link_to post.title, post_path(post)
                   = restrict_content post.content
                   .button
-                    = link_to "閱讀全文", post_path(post)
+                    = link_to I18n.t("functions.read_more"), post_path(post)
                   .clearfix
               .paging
                 = will_paginate(@posts)
               .clearfix
-          .span4
-            = render 'common/post_sidebar'
   .border

@@ -24,7 +24,7 @@ html
             #search-form.form
               = form_tag '/posts', id: 'search-form', class: 'form-search' do
                 = text_field_tag 'search', nil, class: 'input-medium'
-                = submit_tag '搜尋', class: 'btn btn-primary'
+                = submit_tag I18n.t('functions.search'), class: 'btn btn-primary'
     /! Navigation bar starts
     = render_cell :widget, :main_nav
     = yield

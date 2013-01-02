@@ -1,5 +1,4 @@
-.widget
-  h4 最新消息
-  ul
-    - @news.each do |post|
-      li= link_to post.title, post_path(post)
+h4= I18n.t("menu.news")
+ul
+  - @news.each do |post|
+    li= link_to post.title, post_path(post)

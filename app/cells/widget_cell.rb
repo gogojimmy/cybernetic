@@ -1,5 +1,6 @@
 #encoding: utf-8
 class WidgetCell < Cell::Rails
+  helper ApplicationHelper
 
   def news_sidebar
     @news = Post.news.last(5)
