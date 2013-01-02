@@ -2,7 +2,7 @@ doctype html
 html
   head
     = stylesheet_link_tag "application"
-    /[if IE]
+    /[if lte IE 8]
       = stylesheet_link_tag "ie"
     = csrf_meta_tag
   body
