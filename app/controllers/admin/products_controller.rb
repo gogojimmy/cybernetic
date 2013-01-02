@@ -10,6 +10,7 @@ class Admin::ProductsController < ApplicationController
   def new
     @product = Product.new
     @product.product_images.build
+    @categories = ancestry_options(Category.scoped.arrange) {|i| "#{'-' * i.depth} #{i.title}" }
   end
 
   def create
@@ -24,6 +25,7 @@ class Admin::ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
+    @categories = ancestry_options(Category.scoped.arrange) {|i| "#{'-' * i.depth} #{i.title}" }
   end
 
   def update
@@ -41,5 +43,17 @@ class Admin::ProductsController < ApplicationController
     name = @product.name
     @product.destroy
     redirect_to admin_products_path, notice: "#{name}刪除成功"
+  end
+
+  def ancestry_options(items, &block)
+    return ancestry_options(items){ |i| "#{'-' * i.depth} #{i.name}" } unless block_given?
+
+    result = []
+    items.map do |item, sub_items|
+      result << [yield(item), item.id]
+      #this is a recursive call:
+      result += ancestry_options(sub_items, &block)
+    end
+    result
   end
 end

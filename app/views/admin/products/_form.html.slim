@@ -1,11 +1,12 @@
 = simple_form_for [:admin, @product], html: { class: 'form-horizontal' } do |f|
   = f.input :name, label: '產品名稱'
-  = f.association :category, as: :select, label: '產品分類', include_blank: false
+  = f.association :category, as: :select, collection: @categories, label: '產品分類', include_blank: false
   = f.input :show_description, label: '產品短敘述', hint: '顯示在分類頁面上的短敘述'
   = f.simple_fields_for :product_images do |product_image|
     = render 'product_image_fields', f: product_image
   .controls
-    = link_to_add_association '新增一張圖片', f, :product_images, class: 'btn btn-success'
+    = link_to_add_association '新增一張圖片', f, :product_images, class: 'btn btn-success btn-mini'
+  hr
   ul.nav.nav-tabs#product-tab
     li.active
       a href="#description" data-toggle="tab" 產品描述
@@ -19,7 +20,7 @@
       a href="#knowledge" data-toggle="tab" 產品小知識
   .tab-content
     .tab-pane.fade.in.active#description
-      = tinymce
+      = tinymce :language => "zh_tw"
       = f.input :description, label: false, input_html: { class: 'span9 tinymce', rows: 20 }
     .tab-pane.fade.in#feature
       = f.input :test_report, label: false, input_html: { class: 'span9 tinymce', rows: 20 }

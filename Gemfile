@@ -39,7 +39,7 @@ gem "truncate_html"
 
 gem "settingslogic"
 
-gem "anjlab-bootstrap-rails", ">= 2.1", :require => "bootstrap-rails"
+gem "anjlab-bootstrap-rails", :require => "bootstrap-rails", :git => 'git://github.com/anjlab/bootstrap-rails.git'
 gem "bootstrap_helper", ">= 2.1.2"
 gem "simple_form", "2.0.3"
 gem "will_paginate", "3.0.3"
