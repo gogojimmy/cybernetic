@@ -1,6 +1,6 @@
 = simple_form_for [:admin, @category], html: { class: 'form-horizontal' } do |f|
   = f.input :parent_id, as: :hidden
-  = f.input :show_description, :label: '分類短敘述', hint: '顯示在分類頁面上的短敘述'
+  = f.input :show_description, label: '分類短敘述', hint: '顯示在分類頁面上的短敘述'
   = f.input :title, label: '分類標題'
   = f.input :c_image, label: '分類小圖示', hint: "長寬比需為正方形，最小長寬需為80x80"
   = f.input :large_image, label: '分類長圖示', hint: "長寬比需為700x300"
