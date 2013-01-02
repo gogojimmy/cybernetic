@@ -5,6 +5,7 @@
 //= require twitter/bootstrap/alert
 //= require twitter/bootstrap/tooltip
 //= require twitter/bootstrap/popover
+//= require twitter/bootstrap/dropdown
 //= require twitter/bootstrap/tab
 //= require tinymce-jquery
 //= require cocoon
