@@ -13,6 +13,8 @@ jQuery ->
   if(typeof gon != 'undefined')
     $("#categories-menu a#category-" + gon.active_id).parent("li").addClass "active"
     $("#categories-menu a#category-" + gon.active_id).parent("li").parents(".collapse").collapse "show"
+    if gon.locale == 'not_zh_tw'
+      $("#mega-menu").css("width", "860px")
 
   if $("#news-index").length > 0
     $("#news-index").ticker()
@@ -51,4 +53,3 @@ jQuery ->
     count = $(this).find("li").length
     if count == 1
       $(this).css("background-image", "url('/assets/dotted-02.png')")
-

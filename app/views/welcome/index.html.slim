@@ -28,4 +28,6 @@
         .span4
           = render_cell :widget, :block_ad, "首頁中下區塊"
         .span4
-         = render_cell :widget, :block_ad, "首頁右下區塊"
+          .widget.article-content.rounded.welcome-news
+            = render_cell :widget, :news_sidebar
+            /= render_cell :widget, :block_ad, "首頁右下區塊"
