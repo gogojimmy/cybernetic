@@ -50,5 +50,5 @@ jQuery ->
   $(".product-images").each ->
     count = $(this).find("li").length
     if count == 1
-      $(this).css("background-image", "url('/assets/showcase_divider_700x315-L.jpg')")
+      $(this).css("background-image", "url('/assets/dotted-02.png')")
 

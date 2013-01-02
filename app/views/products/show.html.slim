@@ -27,16 +27,16 @@
             ul.nav
               - if @product.feature.present?
                 li
-                  a href="#feature" data-toggle="tab" 產品特色
+                  a href="#feature" data-toggle="tab" #{I18n.t('products.feature')}
               - if @product.spec.present?
                 li
-                  a href="#spec" data-toggle="tab" 產品規格
+                  a href="#spec" data-toggle="tab" #{I18n.t('products.spec')}
               - if @product.test_report.present?
                 li
-                  a href="#test_report" data-toggle="tab" 產品測試報告
+                  a href="#test_report" data-toggle="tab" #{I18n.t('products.test_report')}
               - if @product.knowledge.present?
                 li
-                  a href="#knowledge" data-toggle="tab" 產品小知識
+                  a href="#knowledge" data-toggle="tab" #{I18n.t('products.knowledge')}
         .tab-content#product-tab-contents
           - if @product.test_report.present?
             .tab-pane.fade.in#test_report

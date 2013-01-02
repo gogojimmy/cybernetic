@@ -5,3 +5,8 @@ en:
     subscribe: 'Email Subscribe'
     submit: 'Submit'
     input_email: 'Please input your email address'
+  products:
+    feature: 'Feauture'
+    spec: 'Spec'
+    test_report: 'Test Report'
+    knowledge: 'Tips'

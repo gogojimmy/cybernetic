@@ -118,13 +118,18 @@ header {
   }
 }
 
+#showcase-divider {
+  background-image: url(asset-path("showcase_divider2.jpg", image));
+  height: 22px;
+}
 
 #categories, #products {
   .product-images {
     height: 300px;
     position: relative;
-    background-image: url(asset-path("showcase_divider_700x315.jpg", image));
+    background-image: url(asset-path("dotted-01.png", image));
     background-repeat: no-repeat;
+    background-position: bottom center;
     margin-left: 20px;
     padding: 5px;
     li {

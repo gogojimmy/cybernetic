@@ -5,4 +5,8 @@ zh_tw:
     subscribe: '訂閱電子報'
     submit: '送出'
     input_email: '請輸入您的 Email'
-
+  products:
+    feature: '產品特色'
+    spec: '產品規格'
+    test_report: '產品測試報告'
+    knowledge: '產品小知識'
