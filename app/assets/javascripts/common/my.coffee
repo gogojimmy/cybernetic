@@ -14,7 +14,8 @@ jQuery ->
     $("#categories-menu a#category-" + gon.active_id).parent("li").addClass "active"
     $("#categories-menu a#category-" + gon.active_id).parent("li").parents(".collapse").collapse "show"
 
-  $("#news-index").ticker()
+  if $("#news-index").length > 0
+    $("#news-index").ticker()
 
   # Find all YouTube videos
   $allVideos = $("iframe[src^='http://www.youtube.com']")

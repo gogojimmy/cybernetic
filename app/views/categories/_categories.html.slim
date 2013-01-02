@@ -6,11 +6,10 @@ ul#categories
     .row
       .product-images
         li
-          = link_to category_path(a) do
-            .category
-              h4= link_to a.title, category_path(a)
-              .c_image
-                = link_to image_tag(a.c_image_url(:large)), category_path(a)
+          .category
+            h4= link_to a.title, category_path(a)
+            .c_image
+              = link_to image_tag(a.c_image_url(:large)), category_path(a)
         - if b
           li.second
             .category

@@ -24,12 +24,22 @@ class WidgetCell < Cell::Rails
   end
 
   def main_nav
-    @categories = Category.roots
+    if I18n.locale == :zh_tw
+      @categories = Category.roots
+    else
+      @categories = Category.roots.to_a
+      @categories = @categories.delete_if { |c| c.title == '耳機' }
+    end
     render
   end
 
   def categories_sidebar
-    @categories = Category.roots
+    if I18n.locale == :zh_tw
+      @categories = Category.roots
+    else
+      @categories = Category.roots.to_a
+      @categories = @categories.delete_if { |c| c.title == '耳機' }
+    end
     render
   end
 
