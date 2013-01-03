@@ -30,8 +30,25 @@
 
 header {
   font-size: 11px;
+  .form {
+    width: 202px !important;
+  }
+  .en-form {
+    width: 216px !important;
+      form {
+        margin: 0px;
+        width: 216px;
+        input#search {
+          padding: 2px;
+      }
+      input[type="submit"].btn {
+        padding: 3px 10px;
+      }
+    }
+  }
   form {
     margin: 0px;
+    width: 202px;
     input#search {
       padding: 2px;
     }
@@ -39,14 +56,8 @@ header {
       padding: 3px 10px;
     }
   }
-  #search {
-    margin-left: 5px;
-    #search-form {
-      margin: 0px;
-    }
-  }
   .locale {
-    padding-left: 45px;
+    padding-right: 5px;
     padding-top: 20px;
   }
 }
@@ -146,7 +157,11 @@ header {
   .category, .product {
     height: 300px;
     text-align: center;
-    h4 { text-shadow: 1px 0px 1px #999; }
+    h2 {
+      font-size: 1.3em;
+      text-shadow: 1px 0px 1px #999;
+      line-height: 1.3em;
+    }
     .c_image, .p_image {
       height: 200px;
       img {
@@ -461,4 +476,12 @@ ul.nav li.dropdown:hover .dropdown-menu{
   -khtml-border-radius: 0 0 4px 4px;
 }
 
-footer { color: #888; }
+footer {
+  margin-top: 5px;
+  padding-top: 15px;
+  background-color: #286FBC !important;
+  color: white;
+  input { margin-bottom: 3px !important; }
+  input#marketing_email { width: 156px; }
+  .unsubscribe-btn { margin-left: 10px; }
+}

@@ -3,10 +3,17 @@ en:
     read_more: 'Read more'
     search: 'Search'
     subscribe: 'Email Subscribe'
+    subscribe_btn: 'Subscribe'
+    unsubscribe_btn: 'Unsubscribe'
     submit: 'Submit'
     input_email: 'Please input your email address'
+    search_instruction: 'Product name or serial no'
   products:
     feature: 'Feauture'
     spec: 'Spec'
     test_report: 'Test Report'
     knowledge: 'Tips'
+  instructions:
+    subscribe_success: 'Thanks for your join'
+    unsubscribe_success: 'Unsubscribe success'
+    cant_find_this_email: "Can't find email"

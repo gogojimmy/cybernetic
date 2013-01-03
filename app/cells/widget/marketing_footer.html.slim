@@ -1,9 +1,7 @@
-.email-marketing
-  .container
-    .row
-      .span12
-        = simple_form_for @marketing, html: { class: 'form-inline' }, remote: true do |f|
-          = f.label :email, label: I18n.t("functions.subscribe")
-          '
-          = f.input_field :email, label: I18n.t("functions.subscribe"), placeholder: I18n.t("functions.input_email")
-          = f.submit I18n.t("functions.submit"), class: 'btn btn-success'
+.pull-right
+  = simple_form_for @marketing, html: { class: 'form-inline' }, remote: true do |f|
+    = f.label :email, label: I18n.t("functions.subscribe")
+    '
+    = f.input_field :email, label: I18n.t("functions.subscribe"), placeholder: I18n.t("functions.input_email")
+    = f.submit I18n.t("functions.subscribe_btn"), class: 'btn btn-success'
+    = f.submit I18n.t("functions.unsubscribe_btn"), class: 'btn btn-inverse unsubscribe-btn'

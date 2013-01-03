@@ -1,8 +1,10 @@
 footer
   .container
     .row
-      .span12
+      .span4
         .copy
           p
             | Copyright © #{Time.now.year} #{I18n.t('brand')} #{I18n.t('right_reserve')}
+      .span8
+        = render_cell :widget, :marketing_footer
     .clearfix

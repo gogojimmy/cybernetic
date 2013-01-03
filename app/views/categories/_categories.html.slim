@@ -8,18 +8,18 @@ ul#categories
       .product-images
         li
           .category
-            h4= link_to a.title, category_path(a)
+            h2= link_to a.title, category_path(a)
             .c_image
               = link_to image_tag(a.c_image_url(:large)), category_path(a)
         - if b
           li.second
             .category
-              h4= link_to b.title, category_path(b)
+              h2= link_to b.title, category_path(b)
               .c_image
                 = link_to image_tag(b.c_image_url(:large)), category_path(b)
         - if c
           li.third
             .category
-              h4= link_to c.title, category_path(c)
+              h2= link_to c.title, category_path(c)
               .c_image
                 = link_to image_tag(c.c_image_url(:large)), category_path(c)

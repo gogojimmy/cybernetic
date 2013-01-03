@@ -10,28 +10,27 @@ html
     header
       .container
         .row
-          .span4
+          .span6
             .logo
               - if is_zh_tw?
                 = link_to image_tag(asset_path("logo.png")), "/"
               - else
                 = link_to image_tag(asset_path("logo_en.png")), "/"
-          .span4
+          #search.span6
+            #search-form.form.pull-right
+              = form_tag '/posts', id: 'search-form', class: 'form-search' do
+                = text_field_tag 'search', nil, class: 'input-medium', placeholder: I18n.t('functions.search_instruction')
+                = submit_tag I18n.t('functions.search'), class: 'btn btn-primary'
             .locale.pull-right
               = link_to_unless_current "中文", locale: "zh_tw"
               '
               ' |
               '
               = link_to_unless_current "English", locale: "en"
-          #search.span4
-            #search-form.form
-              = form_tag '/posts', id: 'search-form', class: 'form-search' do
-                = text_field_tag 'search', nil, class: 'input-medium'
-                = submit_tag I18n.t('functions.search'), class: 'btn btn-primary'
     /! Navigation bar starts
     = render_cell :widget, :main_nav
     = yield
-    = render_cell :widget, :marketing_footer
+    /= render_cell :widget, :marketing_footer
     = render :partial => "common/footer"
     = render :partial => "common/bootstrap_modal"
     = render :partial => "common/google_analytics"

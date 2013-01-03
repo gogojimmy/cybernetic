@@ -28,7 +28,7 @@ class WidgetCell < Cell::Rails
       @categories = Category.roots
     else
       @categories = Category.roots.to_a
-      @categories = @categories.delete_if { |c| c.title == '耳機' }
+      @categories = @categories.delete_if { |c| c.title == '耳機' || c.title == '行動影音播放器' }
     end
     render
   end
@@ -39,6 +39,7 @@ class WidgetCell < Cell::Rails
     else
       @categories = Category.roots.to_a
       @categories = @categories.delete_if { |c| c.title == '耳機' }
+      @categories = @categories.delete_if { |c| c.title == '耳機' || c.title == '行動影音播放器' }
     end
     render
   end

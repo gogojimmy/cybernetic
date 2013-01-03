@@ -15,6 +15,10 @@ jQuery ->
     $("#categories-menu a#category-" + gon.active_id).parent("li").parents(".collapse").collapse "show"
     if gon.locale == 'not_zh_tw'
       $("#mega-menu").css("width", "860px")
+      $("header .form").addClass("en-form")
+    else
+      $("header .form").removeClass("en-form")
+
 
   if $("#news-index").length > 0
     $("#news-index").ticker()
