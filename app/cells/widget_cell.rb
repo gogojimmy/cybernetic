@@ -53,4 +53,9 @@ class WidgetCell < Cell::Rails
     render
   end
 
+  def welcome_news
+    @news = Post.news.last(10)
+    render
+  end
+
 end

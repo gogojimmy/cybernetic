@@ -422,9 +422,34 @@ ul.nav li.dropdown:hover .dropdown-menu{
   }
 }
 
-.welcome-news {
-  padding: 5px;
+#welcome-news {
   height: 190px;
+  font-size: 12px;
+  h4 {
+    margin-left: 5px;
+    color: #DA5422;
+  }
+  ul {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+  }
+  li {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    line-height: 1.3em;
+    border-bottom: 1px dotted #DDD;
+  }
+  table {
+    width: 100%;
+    td.icon-caret-right { width: 5%; }
+    td.date { width: 25%; }
+    td.news {
+      width: 70%;
+      a {
+        font-weight: bold;
+      }
+    }
+  }
 }
 
 .roundedbottom {

@@ -1,0 +1,11 @@
+h4= I18n.t("menu.news")
+ul
+  - @news.each do |post|
+    li
+      table
+        tbody
+          tr
+            td.icon-caret-right
+            td.date= l post.created_at, format: '%Y-%m-%d'
+            td.news= link_to post.title, post_path(post)
+
