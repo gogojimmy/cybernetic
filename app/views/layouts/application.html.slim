@@ -13,9 +13,9 @@ html
           .span4
             .logo
               - if is_zh_tw?
-                = link_to image_tag(asset_path("logo-45.png")), "/"
+                = link_to image_tag(asset_path("LOGO.png")), "/"
               - else
-                = link_to image_tag(asset_path("logo-en-45.png")), "/"
+                = link_to image_tag(asset_path("LOGO-en.png")), "/"
           .span4
             .locale.pull-right
               = link_to_unless_current "中文", locale: "zh_tw"
