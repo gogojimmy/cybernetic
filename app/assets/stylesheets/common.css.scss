@@ -161,6 +161,7 @@ header {
       font-size: 1.3em;
       text-shadow: 1px 0px 1px #999;
       line-height: 1.3em;
+      color: #286FBC;
     }
     .c_image, .p_image {
       height: 200px;
@@ -478,9 +479,10 @@ ul.nav li.dropdown:hover .dropdown-menu{
 
 footer {
   margin-top: 5px;
-  padding-top: 15px;
+  padding-top: 5px;
   background-color: #286FBC !important;
   color: white;
+  form { margin-bottom: 0px; }
   input { margin-bottom: 3px !important; }
   input#marketing_email { width: 156px; }
   .unsubscribe-btn { margin-left: 10px; }
