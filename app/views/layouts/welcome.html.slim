@@ -20,7 +20,7 @@ html
             #search-form.form.pull-right
               = form_tag '/posts', id: 'search-form', class: 'form-search' do
                 = text_field_tag 'search', nil, class: 'input-medium', placeholder: I18n.t('functions.search_instruction')
-                = submit_tag I18n.t('functions.search'), class: 'btn btn-primary'
+                .icon-search
             .locale.pull-right
               = link_to_unless_current "中文", locale: "zh_tw"
               '

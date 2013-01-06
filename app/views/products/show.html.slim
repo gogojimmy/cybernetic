@@ -1,21 +1,37 @@
 #product.row
   .span3
     = render_cell :widget, :categories_sidebar
-  .span9
-    .article-content.rounded
-      .row
-        .span9
+  .span9.article-content.rounded
+    .row
+      .span1
+        #images
+          - @product.product_images.each do |image|
+            .product_image
+              = image_tag(image.p_image_url(:thumb), data: { url: image.p_image_url(:large) })
+      .span5
+        #product-main-image
+          = image_tag @product.feature_image(:xlarge)
+      .span3
+        #title-description
           h2= @product.name
-          .divider
-        .clearfix
-        .product-main-block
-          #product-main-image
-            = image_tag @product.feature_image(:xlarge)
-          #images
-            - @product.product_images.each do |image|
-              .product_image
-                = image_tag(image.p_image_url(:thumb), data: { url: image.p_image_url(:xlarge) })
-          .clearfix
+          = raw @product.description
+          /#p-images
+            /- @product.product_images.each do |image|
+              /.product_image
+                /= image_tag(image.p_image_url(:thumb), data: { url: image.p_image_url(:large) })
+
+        /.span9
+          /h2= @product.name
+          /.divider
+        /.clearfix
+        /.product-main-block
+          /#product-main-image
+            /= image_tag @product.feature_image(:xlarge)
+          /#images
+            /- @product.product_images.each do |image|
+              /.product_image
+                /= image_tag(image.p_image_url(:thumb), data: { url: image.p_image_url(:xlarge) })
+          /.clearfix
       /.row
         /#product-description.span9
           /= raw @product.description

@@ -36,6 +36,8 @@ gem "cells"
 gem "nokogiri"
 gem "htmlentities"
 gem "truncate_html"
+gem "mini_magick"
+gem "redactor-rails"
 
 gem "settingslogic"
 
@@ -43,8 +45,6 @@ gem "anjlab-bootstrap-rails", :require => "bootstrap-rails", :git => 'git://gith
 gem "bootstrap_helper", ">= 2.1.2"
 gem "simple_form", "2.0.3"
 gem "will_paginate", "3.0.3"
-gem "tinymce-rails"
-gem "tinymce-rails-langs"
 gem "globalize3", :git => 'git://github.com/svenfuchs/globalize3.git', :branch => 'attr_accessible_locale'
 gem "gon"
 
