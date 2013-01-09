@@ -1,11 +1,11 @@
-h2 常見問題
+h2= I18n.t("menu.faq")
 hr
 .accordion#accordion2
   - @faqs.each do |faq|
-    .accordion-group
+    .accordion-group.article-content
       .accordion-heading
         a.accordion-toggle data-toggle="collapse" data-parent="#accordion2" href="#collapse-#{faq.id}" data-target="#collapse-#{faq.id}"
-          h4= faq.question
+          h4.question= faq.question
       div.accordion-body.collapse id="collapse-#{faq.id}"
         .accordion-inner
           = simple_format faq.answer
