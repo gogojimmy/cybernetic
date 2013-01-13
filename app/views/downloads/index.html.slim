@@ -1,0 +1,25 @@
+.blog
+  .row
+    .span12
+      /! Blog Posts
+      .row
+        .span3
+          = render 'common/post_sidebar'
+        .span9
+          .posts
+            .entry.article-content.rounded
+              h2= I18n.t('menu.downloads')
+              table.table.table-bordered.table-striped.table-hover.table-condensed.download-list
+                thead
+                  tr
+                    th= Download.human_attribute_name('name')
+                    th= Download.human_attribute_name('description')
+                    th= Download.human_attribute_name('download')
+                tbody
+                  - @downloads.each do |download|
+                    tr
+                      td= download.name
+                      td= download.description
+                      td.download
+                        = link_to download.file.url do
+                          span.icon-cloud-download

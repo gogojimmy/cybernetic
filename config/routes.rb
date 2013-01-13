@@ -1,4 +1,5 @@
 Cybernetic::Application.routes.draw do
+
   mount RedactorRails::Engine => '/redactor_rails'
 
   scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
@@ -13,6 +14,8 @@ Cybernetic::Application.routes.draw do
     resources :contacts, only: [:new, :create]
     resources :faqs, only: [:index]
     resources :marketings, only: [:create]
+    resources :downloads, only: [:index]
+    resources :stores, only: [:show]
 
     namespace :admin do
       resources :pages, only: [:index, :show, :edit, :update]
@@ -23,6 +26,8 @@ Cybernetic::Application.routes.draw do
       resources :contacts
       resources :faqs
       resources :films
+      resources :downloads
+      resources :stores
     end
   end
   match '*path', to: redirect("/#{I18n.default_locale}/%{path}"), constraints: lambda { |req| !req.path.starts_with? "/#{I18n.default_locale}/" }

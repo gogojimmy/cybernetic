@@ -239,3 +239,7 @@ zh_tw:
         target: '連結目標網址'
         description: '描述'
         title: '標題'
+      download:
+        name: '檔案名稱'
+        link: '下載位置'
+        description: '檔案描述'

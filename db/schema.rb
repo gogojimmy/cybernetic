@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130106161935) do
+ActiveRecord::Schema.define(:version => 20130110154917) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -44,6 +44,24 @@ ActiveRecord::Schema.define(:version => 20130106161935) do
     t.text     "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "download_translations", :force => true do |t|
+    t.integer  "download_id"
+    t.string   "locale"
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "download_translations", ["download_id"], :name => "index_download_translations_on_download_id"
+  add_index "download_translations", ["locale"], :name => "index_download_translations_on_locale"
+
+  create_table "downloads", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "file"
   end
 
   create_table "faq_translations", :force => true do |t|
@@ -210,6 +228,17 @@ ActiveRecord::Schema.define(:version => 20130106161935) do
   end
 
   add_index "sliders", ["user_id"], :name => "index_sliders_on_user_id"
+
+  create_table "stores", :force => true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "tel"
+    t.string   "url"
+    t.string   "email"
+    t.string   "store_type"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

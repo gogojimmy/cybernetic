@@ -549,3 +549,14 @@ h4.question {
   color: #2D6CA0;
   font-size: 18px;
 }
+
+table.download-list {
+  th, td.download { text-align: center; }
+  td.download {
+    width: 25%;
+    span {
+      font-size: 1.4em;
+    }
+  }
+
+}

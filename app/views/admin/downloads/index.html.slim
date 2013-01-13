@@ -1,0 +1,16 @@
+header.page-header
+  h1 產品列表
+= link_to '新增檔案', new_admin_download_path, class: 'btn btn-primary pull-right'
+.clearfix
+table.table.table-borded.table-striped.table-hover.table-condensed
+  thead
+    tr
+      th= Download.human_attribute_name('name')
+      th= Download.human_attribute_name('description')
+      th= Download.human_attribute_name('download')
+  tbody
+    - @downloads.each do |download|
+      td= download.name
+      td= download.description
+      td
+= will_paginate @downloads

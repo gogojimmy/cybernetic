@@ -1,0 +1,27 @@
+.blog
+  .row
+    .span12
+      /! Blog Posts
+      .row
+        .span3
+          = render 'common/post_sidebar'
+        .span9
+          .posts
+            .entry.article-content.rounded
+              h2= params[:id]
+              table.table.table-striped.table-bordered.table-hover.table-condensed
+                thead
+                  th 賣場名稱
+                  th 地址
+                  th 電話
+                tbody
+                  - @stores.each do |store|
+                    tr
+                      - if store.url.present?
+                        td= link_to store.name, store.url, target: '_blank'
+                      - else
+                        td= store.name
+                      - if store.address.present?
+                        td= link_to store.address, "https://maps.google.com/?q=#{store.address}"
+                      td= store.tel
+
