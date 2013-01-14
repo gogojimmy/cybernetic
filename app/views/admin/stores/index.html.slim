@@ -8,12 +8,13 @@ table.table.table-borded.table-striped.table-hover.table-condensed
       th= Store.human_attribute_name('tel')
   tbody
     - @stores.each do |store|
-      - if store.url.present?
-        td= link_to store.name, store.url, target: '_blank'
-      - else
-        td= store.name
-      - if store.address.present?
-        td= link_to store.address, "https://maps.google.com/?q=#{store.address}", target: '_blank'
-      td= store.tel
+      tr
+        - if store.url.present?
+          td= link_to store.name, store.url, target: '_blank'
+        - else
+          td= store.name
+        - if store.address.present?
+          td= link_to store.address, "https://maps.google.com/?q=#{store.address}", target: '_blank'
+        td= store.tel
 = will_paginate @stores
 

@@ -243,3 +243,9 @@ zh_tw:
         name: '檔案名稱'
         link: '下載位置'
         description: '檔案描述'
+      store:
+        name: '賣場名稱'
+        url: '賣場網址'
+        address: '賣場地址'
+        store_type: '賣場類型'
+        tel: '賣場電話'
