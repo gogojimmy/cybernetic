@@ -558,5 +558,13 @@ table.download-list {
       font-size: 1.4em;
     }
   }
+}
 
+.posts .entry {
+  ul {
+    margin-left: 25px;
+    li {
+      list-style: disc;
+    }
+  }
 }

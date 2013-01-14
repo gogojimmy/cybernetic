@@ -57,3 +57,5 @@ jQuery ->
     count = $(this).find("li").length
     if count == 1
       $(this).css("background-image", "url('/assets/dotted-02.png')")
+
+  $(".posts .entry table").addClass("table table-striped table-bordered")
