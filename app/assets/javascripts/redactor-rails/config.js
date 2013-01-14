@@ -10,7 +10,6 @@ $(document).ready(
     { "imageUpload":"/redactor_rails/pictures?" + params,
       "imageGetJson":"/redactor_rails/pictures",
       "path":"/assets/redactor-rails",
-      "css":"style.css",
-      "lang":'zh_tw' }
+      "css":"style.css" }
   );
 });
