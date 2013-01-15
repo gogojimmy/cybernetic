@@ -19,7 +19,7 @@ class Admin::PagesController < ApplicationController
     @page = Page.find(params[:id])
     @page.user = current_user
     if @page.update_attributes(params[:page])
-      redirect_to admin_page_path(@page), notice: "成功更新了#{@page.title}"
+      redirect_to admin_pages_path, notice: "成功更新了#{@page.title}"
     else
       render :edit
     end
