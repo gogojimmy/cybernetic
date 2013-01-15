@@ -21,7 +21,7 @@ class Slider < ActiveRecord::Base
 
   translates :description, :title
 
-  POSITION = %w(首頁橫幅廣告 首頁左下區塊 首頁中下區塊 首頁右下區塊)
+  POSITION = %w(首頁橫幅廣告 首頁左下區塊 首頁中下區塊)
 
   def render_image(version)
     if self.position == "首頁橫幅廣告"

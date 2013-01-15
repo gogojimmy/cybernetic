@@ -2,7 +2,7 @@
   = f.input :parent_id, as: :hidden
   = f.input :show_description, label: '分類短敘述', hint: '顯示在分類頁面上的短敘述'
   = f.input :title, label: '分類標題'
-  = f.input :c_image, label: '分類小圖示', hint: "長寬比需為正方形，最小長寬需為80x80"
-  = f.input :large_image, label: '分類長圖示', hint: "長寬比需為700x300"
+  = f.input :c_image, as: :image_preview, label: '分類小圖示', hint: "長寬比需為正方形，最小長寬需為80x80"
+  = f.input :large_image, as: :image_preview, label: '分類長圖示', hint: "長寬比需為700x300"
   .form-actions
     = f.submit '送出', class: 'btn btn-primary'

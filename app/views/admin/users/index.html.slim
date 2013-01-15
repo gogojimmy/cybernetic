@@ -1,0 +1,25 @@
+table.table
+  thead
+    tr
+      th 使用者帳號
+      th 身分
+      th 操作
+  tbody
+    - @users.each do |user|
+      tr
+        td= user.email
+        td
+          - if user.approved?
+            | 管理員
+          - else
+            | 待確認
+        td
+          - if user.approved?
+            = link_to admin_user_unapprove_path(user), class: 'btn btn-danger', method: :put do
+              i.icon-remove
+              | 降級
+          - else
+            = link_to admin_user_approve_path(user), class: 'btn btn-success', method: :put do
+              i.icon-ok
+              | 提昇
+= will_paginate @users

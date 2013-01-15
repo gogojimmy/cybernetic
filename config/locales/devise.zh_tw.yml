@@ -10,14 +10,16 @@ zh_tw:
         other: "有 %{count} 個錯誤導致%{resource}不能被儲存："
   devise:
     failure:
-      already_authenticated: '你已經登入。'
-      unauthenticated: '您需要先註冊，登入後才能繼續。'
-      unconfirmed: '您的帳號需需要經過確認後，才能繼續。'
-      locked: '您的帳號已被鎖定。'
-      invalid: 'Email 或密碼是無效的。'
-      invalid_token: '無效的認證代碼。'
-      timeout: '您的登入時效過期，請重新登入，才能繼續。'
-      inactive: '您的帳號尚未被啟用。'
+      user:
+        not_approved: '你的帳號尚未經過管理員審核，請聯絡管理員'
+        unauthenticated: '您需要先註冊，登入後才能繼續。'
+        already_authenticated: '你已經登入。'
+        unconfirmed: '您的帳號需需要經過確認後，才能繼續。'
+        locked: '您的帳號已被鎖定。'
+        invalid: 'Email 或密碼是無效的。'
+        invalid_token: '無效的認證代碼。'
+        timeout: '您的登入時效過期，請重新登入，才能繼續。'
+        inactive: '您的帳號尚未被啟用。'
     sessions:
       signed_in: '成功登入了。'
       signed_out: '成功登出了。'
@@ -38,6 +40,8 @@ zh_tw:
       updated: '您已經成功的更新帳號資訊。'
       update_needs_confirmation: "您已經成功的更新帳號資訊，但我們仍需確認您的電子信箱，請至新信箱收信並點擊連結以確認您的新電子郵件帳號。"
       destroyed: '再會！您的帳號已被取消。有緣再會。'
+      user:
+        signed_up_but_not_approved: '你已經註冊成功，但你的帳號尚未經過管理員審核，請聯絡管理員'
     unlocks:
       send_instructions: '您將在幾分鐘後收到一封電子郵件，內有將帳號解除鎖定的步驟說明。'
       unlocked: '您的帳號已被解鎖，現在請重新登入。'

@@ -1,6 +1,6 @@
 = simple_form_for [:admin, @post], html: { class: 'form-horizontal' } do |f|
-  = f.input :title, label: '標題', input_html: { class: 'span8' }
+  = f.input :title, label: '標題', input_html: { class: 'span7' }
   = f.input :content, label: '內容', input_html: { class: 'span8 redactor' }
-  = f.input :category, label: '分類', as: :select, collection: Post::CATEGORY, include_blank: false
+  = f.input :category, label: '分類', as: :radio_buttons, collection: Post::CATEGORY, include_blank: false
   .form-actions
     = f.submit "送出", class: 'btn btn-primary'

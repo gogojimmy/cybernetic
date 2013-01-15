@@ -28,6 +28,10 @@ Cybernetic::Application.routes.draw do
       resources :films
       resources :downloads
       resources :stores
+      resources :users do
+        put '/approve', to: 'users#approve'
+        put '/unapprove', to: 'users#unapprove'
+      end
     end
   end
   match '*path', to: redirect("/#{I18n.default_locale}/%{path}"), constraints: lambda { |req| !req.path.starts_with? "/#{I18n.default_locale}/" }

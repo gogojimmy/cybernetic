@@ -8,9 +8,19 @@ table.table.table-borded.table-striped.table-hover.table-condensed
       th= Download.human_attribute_name('name')
       th= Download.human_attribute_name('description')
       th= Download.human_attribute_name('download')
+      th 操作
   tbody
     - @downloads.each do |download|
-      td= download.name
-      td= download.description
-      td
+      tr
+        td= download.name
+        td= download.description
+        td.download
+          = link_to download.file.url do
+            span.icon-cloud-download
+        td.btn-group
+          = link_to edit_admin_download_path(download), class: 'btn' do
+            i.icon-edit
+          = link_to admin_download_path(download), data: { confirm: "確定刪除該檔案嗎？" }, class: 'btn btn-danger', method: :delete do
+            i.icon-remove
+
 = will_paginate @downloads

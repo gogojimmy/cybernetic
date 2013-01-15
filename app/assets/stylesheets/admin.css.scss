@@ -2,6 +2,7 @@
 *= require_self
 *= require twitter/bootstrap
 *= require redactor-rails
+*= require font-awesome/font-awesome
 */
 
 body {
@@ -27,3 +28,9 @@ body {
 select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
   height: 30px !important;
 }
+
+.admin-sidebar .icon-chevron-right {
+  opacity: .25;
+}
+
+td.film { width: 40%; }

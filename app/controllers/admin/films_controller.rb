@@ -15,7 +15,7 @@ class Admin::FilmsController < ApplicationController
     @film = Film.new(params[:film])
     @film.user = current_user
     if @film.save
-      redirect_to admin_films_path(@film), notice: "成功新增影片"
+      redirect_to admin_films_path, notice: "成功新增影片"
     else
       render :new
     end
@@ -33,6 +33,12 @@ class Admin::FilmsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @film = Film.find(params[:id])
+    @film.destroy
+    redirect_to admin_films_path, notice: '成功刪除影片'
   end
 
 end

@@ -2,10 +2,13 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
+//= require twitter/bootstrap/transition
 //= require twitter/bootstrap/alert
 //= require twitter/bootstrap/tooltip
 //= require twitter/bootstrap/popover
 //= require twitter/bootstrap/dropdown
 //= require twitter/bootstrap/tab
+//= require twitter/bootstrap/collapse
 //= require redactor-rails
 //= require cocoon
+//= require_tree ./admin

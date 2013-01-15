@@ -31,6 +31,12 @@ html
     = render_cell :widget, :main_nav
     .content
       .container
+        .row
+          .span12
+            - flash.each do |name, msg|
+              div{class="alert alert-#{name == :notice ? "success" : "error"} fade in"}
+                a.close data-dismiss="alert" &times;
+                = simple_format(msg)
         = yield
     /= render_cell :widget, :marketing_footer
     = render :partial => "common/footer"
