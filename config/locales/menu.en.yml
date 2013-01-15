@@ -4,8 +4,8 @@
 en:
   menu:
     about: 'About us'
-    products: 'Products'
+    products: 'Product'
     news: 'News'
-    customer: 'Services'
-    downloads: 'Downloads'
+    customer: 'Service'
+    downloads: 'Download'
     contact_us: 'Contact us'
