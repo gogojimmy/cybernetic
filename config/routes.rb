@@ -28,6 +28,8 @@ Cybernetic::Application.routes.draw do
       resources :films
       resources :downloads
       resources :stores
+      resources :marketings
+      resources :contacts
       resources :users do
         put '/approve', to: 'users#approve'
         put '/unapprove', to: 'users#unapprove'

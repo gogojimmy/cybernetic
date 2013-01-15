@@ -1,0 +1,15 @@
+= link_to "下載Excel", admin_marketings_path(format: 'xls'), class: 'btn btn-primary pull-right'
+.clearfix
+hr
+table.table
+  thead
+    tr
+      th Email
+      th 加入時間
+  tbody
+    - @marketings.each do |marketing|
+      tr
+        td= marketing.email
+        td= l marketing.updated_at, format: :short
+= will_paginate @marketings
+
