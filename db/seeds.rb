@@ -1,11 +1,11 @@
 #encoding: utf-8
 path = "#{Rails.root}/app/assets/images/seeds/"
 
-pages = %w( 關於嘉亨 獨立店 3C賣場 生活賣場 網路賣場 產品註冊 下載中心 )
+pages = %w( 關於嘉亨 產品註冊 )
 pages.each do |page|
   Page.create(title: page)
 end
-admin = User.create(email: 'jimmy@gogojimmy.net', password: '0975519929')
+admin = User.create(email: 'admin@cybernetic.com.tw', password: '123456', approved: true )
 
 first_c = Category.create(title: '手機配件')
 
