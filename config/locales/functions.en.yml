@@ -8,6 +8,7 @@ en:
     submit: 'Submit'
     input_email: 'Please input your email address'
     search_instruction: 'Product name or serial no'
+    download_original_image: 'Download full size image'
   products:
     feature: 'Feauture'
     spec: 'Spec'

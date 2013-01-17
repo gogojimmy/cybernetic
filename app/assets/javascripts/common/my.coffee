@@ -52,6 +52,8 @@ jQuery ->
 
   $("#product .product_image img").click ->
     $("#product-main-image img").attr('src', ($(this).data("url")))
+    $("#modal-download-image img").attr('src', ($(this).data("url")))
+    $("#modal-download-image a").attr('href', ($(this).data("large-url")))
 
   $(".product-images").each ->
     count = $(this).find("li").length

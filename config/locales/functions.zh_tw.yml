@@ -8,6 +8,7 @@ zh_tw:
     submit: '送出'
     input_email: '請輸入您的 Email'
     search_instruction: '請輸入產品名稱或型號'
+    download_original_image: '下載原尺寸圖片'
   products:
     feature: '產品特色'
     spec: '產品規格'

@@ -7,10 +7,15 @@
         #images
           - @product.product_images.each do |image|
             .product_image
-              = image_tag(image.p_image_url(:thumb), data: { url: image.p_image_url(:large) })
+              = image_tag(image.p_image_url(:thumb), data: { url: image.p_image_url(:large), large_url: image.p_image_url })
       .span5
         #product-main-image
-          = image_tag @product.feature_image(:xlarge)
+          = link_to image_tag(@product.feature_image(:xlarge)), "#", data: { toggle: "modal", target: "#modal-download-image" }
+      #modal-download-image.modal.hide.fade
+        .modal-body
+          .image
+            = image_tag(@product.feature_image(:large))
+          = link_to I18n.t("functions.download_original_image"), @product.feature_image, target: '_blank', class: 'btn'
       .span3
         #title-description
           h2= @product.name
