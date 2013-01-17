@@ -17,4 +17,10 @@
                 - else
                   = link_to child.title, category_path(child), id: "category-#{child.id}"
   .film
-    = raw Film.random_film
+    .overlay
+      = image_tag("play.png")
+    = link_to image_tag(@thumbnail_image), "#", data: { toggle: "modal", target: "#modal-film" }
+  #modal-film.modal.hide.fade
+    .modal-body
+      #film
+        = raw @film

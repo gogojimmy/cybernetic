@@ -25,3 +25,9 @@ jQuery ->
       $el.width(newWidth).height newWidth * $el.data("aspectRatio")
 
   ).resize()
+
+  $('#sliders').sortable(
+    axis: 'y'
+    update: ->
+      $.post($(this).data('update-url'), $(this).sortable('serialize'))
+  )

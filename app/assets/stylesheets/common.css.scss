@@ -240,6 +240,26 @@ ul.nav li.dropdown:hover .dropdown-menu{
 #slider {
   margin-bottom: 0px;
   height: 300px;
+  position: relative;
+  .slider-pager {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    a {
+      padding: 5px;
+      color: white;
+      background-color: #000;
+      margin-right: 5px;
+      /* support Safari, Chrome */
+      -webkit-border-radius: 5px;
+      /* support firefox */
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 #categories-menu {
@@ -568,3 +588,17 @@ table.download-list {
     }
   }
 }
+
+.film { position: relative; }
+
+.film .overlay { display: none; }
+
+.film .overlay img {
+	width:50px;
+	height:50px;
+	position:absolute;
+	top:60px;
+	left:80px;
+}
+
+#modal-film .modal-body { text-align: center; }

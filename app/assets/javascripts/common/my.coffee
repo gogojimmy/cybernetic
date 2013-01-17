@@ -24,16 +24,16 @@ jQuery ->
     $("#news-index").ticker()
 
   # Find all YouTube videos
-  $allVideos = $("iframe[src^='http://www.youtube.com']")
+  #$allVideos = $("iframe[src^='http://www.youtube.com']")
 
-  # The element that is fluid width
-  $fluidEl = $(".film")
+  ## The element that is fluid width
+  #$fluidEl = $("#film")
 
-  # Figure out and save aspect ratio for each video
-  $allVideos.each ->
+  ## Figure out and save aspect ratio for each video
+  #$allVideos.each ->
 
-    # and remove the hard coded width/height
-    $(this).data("aspectRatio", @height / @width).removeAttr("height").removeAttr "width"
+    ## and remove the hard coded width/height
+    #$(this).data("aspectRatio", @height / @width).removeAttr("height").removeAttr "width"
 
 
   # When the window is resized
@@ -42,13 +42,13 @@ jQuery ->
   # Resize all videos according to their own aspect ratio
 
   # Kick off one resize to fix all videos on page load
-  $(window).resize(->
-    newWidth = $fluidEl.width()
-    $allVideos.each ->
-      $el = $(this)
-      $el.width(newWidth).height newWidth * $el.data("aspectRatio")
+  #$(window).resize(->
+    #newWidth = $fluidEl.width()
+    #$allVideos.each ->
+      #$el = $(this)
+      #$el.width(newWidth).height newWidth * $el.data("aspectRatio")
 
-  ).resize()
+  #).resize()
 
   $("#product .product_image img").click ->
     $("#product-main-image img").attr('src', ($(this).data("url")))
@@ -59,3 +59,20 @@ jQuery ->
       $(this).css("background-image", "url('/assets/dotted-02.png')")
 
   $(".posts .entry table").addClass("table table-striped table-bordered")
+
+  slider = $("#slider").carousel(interval: 3000).bind("slid", ->
+    index = $(this).find(".active").index()
+    $(this).find("a").removeClass("pager- \nactive").eq(index).addClass "pager-active"
+  )
+  $("#slider .slider-pager a").click (e) ->
+    index = $(this).index()
+    slider.carousel index
+    e.preventDefault()
+
+  $(".film").hover (->
+    $(this).find(".overlay").show()
+    $(this).find(".overlay").next().css opacity: 0.1
+  ), ->
+    $(this).find(".overlay").hide()
+    $(this).find(".overlay").next().css opacity: 1
+

@@ -47,6 +47,7 @@ gem "simple_form", "2.0.3"
 gem "will_paginate", "3.0.3"
 gem "globalize3", :git => 'git://github.com/svenfuchs/globalize3.git', :branch => 'attr_accessible_locale'
 gem "gon"
+gem "acts_as_list"
 
 
 group :development do

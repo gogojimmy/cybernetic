@@ -1,27 +1,48 @@
-= link_to '新增圖片', new_admin_slider_path, class: 'btn btn-primary pull-right'
+= link_to '新增廣告', new_admin_slider_path, class: 'btn btn-primary pull-right'
 .clearfix
 hr
-table.table
-  thead
-    tr
-      th 廣告圖片
-      th 廣告位置
-      th 連結位置
-      th 更新於
-      th 更新者
-      th 操作
-  tbody
-    - @sliders.each do |slider|
-      tr
-        td= image_tag(slider.render_image("thumb"))
-        td= slider.position
-        td= link_to "連結", slider.target, target: "_blank"
-        td= l slider.updated_at, format: :short
-        td= slider.user_email
-        td.btn-group
-          = link_to edit_admin_slider_path(slider), class: 'btn' do
-            i.icon-edit
-          = link_to admin_slider_path(slider), data: { confirm: "確定刪除該廣告嗎？" }, class: 'btn btn-danger', method: :delete do
-            i.icon-remove
-= will_paginate @sliders
-
+header.page-header
+  h2 首頁橫幅廣告
+ul#sliders data-update-url="#{ sort_admin_sliders_url }"
+  - @width_sliders.each do |slider|
+    = content_tag_for :li, slider do
+      .well
+        .row-fluid
+          .span4
+            = image_tag(slider.render_image("thumb"))
+          .span2
+            = slider.block
+          .span1
+            = link_to "連結", slider.target, target: "_blank"
+          .span2
+            = l slider.updated_at, format: :short
+          .span2
+            = slider.user_email
+          .span2
+            = link_to edit_admin_slider_path(slider), class: 'btn' do
+              i.icon-edit
+            = link_to admin_slider_path(slider), data: { confirm: "確定刪除該廣告嗎？" }, class: 'btn btn-danger', method: :delete do
+              i.icon-remove
+hr
+header.page-header
+  h2 其他廣告
+ul#other-sliders data-update-url="#{ sort_admin_sliders_url }"
+  - @sliders.each do |slider|
+    = content_tag_for :li, slider do
+      .well
+        .row-fluid
+          .span4
+            = image_tag(slider.render_image("thumb"))
+          .span2
+            = slider.block
+          .span1
+            = link_to "連結", slider.target, target: "_blank"
+          .span2
+            = l slider.updated_at, format: :short
+          .span2
+            = slider.user_email
+          .span2
+            = link_to edit_admin_slider_path(slider), class: 'btn' do
+              i.icon-edit
+            = link_to admin_slider_path(slider), data: { confirm: "確定刪除該廣告嗎？" }, class: 'btn btn-danger', method: :delete do
+              i.icon-remove

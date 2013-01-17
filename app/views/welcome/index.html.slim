@@ -14,9 +14,9 @@
                     .carousel-caption
                       h4= slider.title
                       = simple_format slider.description
-            /! Carousel nav
-            /a.carousel-control.left href="#slider" data-slide="prev" &lsaquo;
-            /a.carousel-control.right href="#slider" data-slide="next" &rsaquo;
+            .slider-pager
+              - @sliders.each_with_index do |slider, index|
+                a href="#slider" #{index + 1}
       .row
         #news-block.span12
           ul#news-index.js-hidden

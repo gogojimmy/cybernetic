@@ -19,7 +19,9 @@ Cybernetic::Application.routes.draw do
 
     namespace :admin do
       resources :pages, only: [:index, :show, :edit, :update]
-      resources :sliders
+      resources :sliders do
+        collection { post :sort }
+      end
       resources :categories
       resources :products
       resources :posts

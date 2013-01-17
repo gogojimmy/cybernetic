@@ -41,6 +41,9 @@ class WidgetCell < Cell::Rails
       @categories = @categories.delete_if { |c| c.title == '耳機' }
       @categories = @categories.delete_if { |c| c.title == '耳機' || c.title == '行動影音播放器' }
     end
+    @film = Film.random_film
+    film_id = /d\/\S*\"/.match(@film).to_s.delete("d/").delete("\"")
+    @thumbnail_image = "http://img.youtube.com/vi/#{film_id}/0.jpg"
     render
   end
 

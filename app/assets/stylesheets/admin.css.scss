@@ -34,3 +34,8 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 }
 
 td.film { width: 40%; }
+
+ul#sliders li, ul#other-sliders {
+  list-style: none;
+  cursor: move;
+}

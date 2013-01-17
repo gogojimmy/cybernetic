@@ -3,7 +3,8 @@ class Admin::SlidersController < ApplicationController
   before_filter :authenticate_user!
   layout 'admin'
   def index
-    @sliders = Slider.paginate(page: params[:page])
+    @width_sliders = Slider.where(block: "首頁橫幅廣告").order("position")
+    @sliders = Slider.where("block != ?", "首頁橫幅廣告")
   end
 
   def new
@@ -37,5 +38,12 @@ class Admin::SlidersController < ApplicationController
     @slider = Slider.find(params[:id])
     @slider.destroy
     redirect_to admin_sliders_path, notice: '刪除成功'
+  end
+
+  def sort
+    params[:slider].each_with_index do |id, index|
+      Slider.update_all({position: index + 1}, {id: id})
+    end
+    render nothing: true
   end
 end
