@@ -62,9 +62,9 @@ jQuery ->
 
   $(".posts .entry table").addClass("table table-striped table-bordered")
 
-  slider = $("#slider").carousel(interval: 3000).bind("slid", ->
+  slider = $("#slider").carousel(interval: 5000).bind("slid", ->
     index = $(this).find(".active").index()
-    $(this).find("a").removeClass("pager- \nactive").eq(index).addClass "pager-active"
+    $(this).find("a").removeClass("pager-active").eq(index).addClass "pager-active"
   )
   $("#slider .slider-pager a").click (e) ->
     index = $(this).index()
