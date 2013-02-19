@@ -22,12 +22,12 @@
     .tab-pane.fade.in.active#description
       = f.input :description, label: false, input_html: { class: 'span9 redactor', rows: 40 }
     .tab-pane.fade.in#feature
-      = f.input :test_report, label: false, input_html: { class: 'span9 redactor', rows: 40 }
-    .tab-pane.fade.in#test_report
-      = f.input :knowledge, label: false, input_html: { class: 'span9 redactor', rows: 40 }
-    .tab-pane.fade.in#spec
       = f.input :feature, label: false, input_html: { class: 'span9 redactor', rows: 40 }
-    .tab-pane.fade.in#knowledge
+    .tab-pane.fade.in#test_report
+      = f.input :test_report, label: false, input_html: { class: 'span9 redactor', rows: 40 }
+    .tab-pane.fade.in#spec
       = f.input :spec, label: false, input_html: { class: 'span9 redactor', rows: 40 }
+    .tab-pane.fade.in#knowledge
+      = f.input :knowledge, label: false, input_html: { class: 'span9 redactor', rows: 40 }
   .form-actions
     = f.submit '送出', class: 'btn btn-primary'
