@@ -18,7 +18,7 @@ html
                 = link_to image_tag(asset_path("logo_en.png")), "/"
           #search.span6
             #search-form.form.pull-right
-              = form_tag '/posts', id: 'search-form', class: 'form-search' do
+              = form_tag products_path, id: 'search-form', class: 'form-search', method: 'get' do
                 = text_field_tag 'search', nil, class: 'input-medium search-query', placeholder: I18n.t('functions.search_instruction')
                 .icon-search
             .locale.pull-right
@@ -32,7 +32,6 @@ html
     = yield
     /= render_cell :widget, :marketing_footer
     = render :partial => "common/footer"
-    = render :partial => "common/bootstrap_modal"
     = render :partial => "common/google_analytics"
     = include_gon
     = javascript_include_tag "application"

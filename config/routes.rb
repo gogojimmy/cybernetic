@@ -6,6 +6,7 @@ Cybernetic::Application.routes.draw do
     devise_for :users
 
     root :to => 'welcome#index'
+    get '/search', to: 'search#index'
 
     resources :pages, only: [:index, :show]
     resources :categories, only: [:show]

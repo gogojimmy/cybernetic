@@ -1,0 +1,30 @@
+.row#categories-page
+  .span3
+    = render_cell :widget, :categories_sidebar
+  .span9.article-content.rounded
+    - if @products.empty?
+      h3= t('functions.no_results')
+    ul#products
+      - @products.each_slice(3) do |a, b, c|
+        .row
+          .product-images
+            li
+              .product
+                h2= link_to a.name, product_path(a)
+                .p_image
+                  = link_to image_tag(a.feature_image(:large)), product_path(a)
+                span= simple_format a.show_description
+            - if b
+              li.second
+                .product
+                  h2= link_to b.name, product_path(b)
+                  .p_image
+                    = link_to image_tag(b.feature_image(:large)), product_path(b)
+                  span= simple_format b.show_description
+            - if c
+              li.third
+                .product
+                  h2= link_to c.name, product_path(c)
+                  .p_image
+                    = link_to image_tag(c.feature_image(:large)), product_path(c)
+                  span= simple_format c.show_description

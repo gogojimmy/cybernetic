@@ -30,4 +30,12 @@ class Product < ActiveRecord::Base
   def feature_image(version=nil)
     self.product_images.first.try(:p_image_url, version)
   end
+
+  def self.search(search)
+    if search
+      where("name like ? or show_description like ?", "%#{search}%", "%#{search}%")
+    else
+      []
+    end
+  end
 end

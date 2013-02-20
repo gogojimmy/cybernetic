@@ -9,6 +9,7 @@ en:
     input_email: 'Please input your email address'
     search_instruction: 'Product name or serial no'
     download_original_image: 'Download full size image'
+    no_results: 'No results'
   products:
     feature: 'Feauture'
     spec: 'Spec'

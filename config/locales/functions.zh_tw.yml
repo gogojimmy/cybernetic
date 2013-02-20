@@ -9,6 +9,7 @@ zh_tw:
     input_email: '請輸入您的 Email'
     search_instruction: '請輸入產品名稱或型號'
     download_original_image: '下載原尺寸圖片'
+    no_results: '沒有搜尋到任何產品'
   products:
     feature: '產品特色'
     spec: '產品規格'

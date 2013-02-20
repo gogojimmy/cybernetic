@@ -4,4 +4,8 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     gon.active_id = @product.category.id
   end
+
+  def index
+    @products = Product.search(params[:search])
+  end
 end
