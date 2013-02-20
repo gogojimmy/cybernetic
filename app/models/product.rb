@@ -25,7 +25,7 @@ class Product < ActiveRecord::Base
 
   validates_presence_of :name, :category
 
-  translates :description, :feature, :knowledge, :name, :spec, :test_report
+  translates :description, :feature, :knowledge, :name, :spec, :test_report, :show_description
 
   def feature_image(version=nil)
     self.product_images.first.try(:p_image_url, version)
