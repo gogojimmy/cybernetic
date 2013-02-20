@@ -5,6 +5,7 @@ table.table
     tr
       th 圖片
       th 產品名稱
+      th 短敘述
       th 更新於
       th 更新者
   tbody
@@ -12,6 +13,7 @@ table.table
       tr
         td= image_tag(product.feature_image(:thumb))
         td= link_to product.name, edit_admin_product_path(product)
+        td= product.show_description
         td= l product.updated_at, format: :short
         td= product.user_email
 = will_paginate @products
