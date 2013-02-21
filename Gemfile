@@ -22,6 +22,7 @@ gem 'slim'
 gem "compass-rails"
 gem 'jquery-rails'
 gem 'devise'
+gem 'chosen-rails'
 
 gem "seo_helper", "~> 1.0"
 gem "open_graph_helper"
@@ -43,6 +44,7 @@ gem "settingslogic"
 
 gem "anjlab-bootstrap-rails", :require => "bootstrap-rails", :git => 'git://github.com/anjlab/bootstrap-rails.git'
 gem "bootstrap_helper", ">= 2.1.2"
+gem "font-awesome-sass-rails"
 gem "simple_form", "2.0.3"
 gem "will_paginate", "3.0.3"
 gem "globalize3", :git => 'git://github.com/svenfuchs/globalize3.git', :branch => 'attr_accessible_locale'

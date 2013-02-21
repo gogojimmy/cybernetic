@@ -1,23 +1,24 @@
-= link_to "新增影片", new_admin_film_path, class: 'btn btn-primary pull-right'
-.clearfix
-hr
-table.table
-  thead
-    tr
-      th 影片
-      th 更新於
-      th 更新者
-      th 操作
-  tbody
-    - @films.each do |film|
+- content_for :page_title do
+  h2.page-title.muted
+    i.micon-film
+    | 影片列表
+.row-fluid
+  table.table.table-striped.table-bordered.table-condensed
+    thead
       tr
-        td.film= raw(film.url)
-        td= l film.updated_at, format: :short
-        td= film.user_email
-        td.btn-group
-          = link_to edit_admin_film_path(film), class: 'btn' do
-            i.icon-edit
-          = link_to admin_film_path(film), data: { confirm: "確定刪除該影片嗎？" }, class: 'btn btn-danger', method: :delete do
-            i.icon-remove
-= will_paginate @films
-
+        th 影片
+        th 更新於
+        th 更新者
+        th 操作
+    tbody
+      - @films.each do |film|
+        tr
+          td.film= raw(film.url)
+          td= l film.updated_at, format: :short
+          td= film.user_email
+          td.btn-group
+            = link_to edit_admin_film_path(film), class: 'btn' do
+              i.icon-edit
+            = link_to admin_film_path(film), data: { confirm: "確定刪除該影片嗎？" }, class: 'btn btn-danger', method: :delete do
+              i.icon-remove
+  = will_paginate @films

@@ -1,23 +1,26 @@
-= link_to "新增文章", new_admin_post_path, class: 'btn btn-primary pull-right'
-.clearfix
-table.table
-  thead
-    tr
-      th 分類
-      th 文章
-      th 更新於
-      th 更新者
-      th 操作
-  tbody
-    - @posts.each do |post|
+- content_for :page_title do
+  h2.page-title.muted
+    i.micon-newspaper
+    | 文章列表
+.row-fluid
+  table.table.table-striped.table-bordered.table-condensed
+    thead
       tr
-        td= post.category
-        td= link_to post.title, edit_admin_post_path(post)
-        td= l post.updated_at, format: :short
-        td= post.user_email
-        td.btn-group
-          = link_to edit_admin_post_path(post), class: 'btn' do
-            i.icon-edit
-          = link_to admin_post_path(post), data: { confirm: "確定刪除該文章嗎？" }, class: 'btn btn-danger', method: :delete do
-            i.icon-remove
-= will_paginate @posts
+        th 分類
+        th 文章
+        th 更新於
+        th 更新者
+        th 操作
+    tbody
+      - @posts.each do |post|
+        tr
+          td= post.category
+          td= link_to post.title, edit_admin_post_path(post)
+          td= l post.updated_at, format: :short
+          td= post.user_email
+          td.btn-group
+            = link_to edit_admin_post_path(post), class: 'btn' do
+              i.icon-edit
+            = link_to admin_post_path(post), data: { confirm: "確定刪除該文章嗎？" }, class: 'btn btn-danger', method: :delete do
+              i.icon-remove
+  = will_paginate @posts

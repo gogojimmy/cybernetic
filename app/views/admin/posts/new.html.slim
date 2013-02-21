@@ -1,2 +1,6 @@
-h1 新增文章
-= render 'form'
+- content_for :page_title do
+  h2.page-title.muted
+    i.micon-newspaper
+    | 新增文章
+.row-fluid
+  = render 'form'

@@ -1,4 +1,8 @@
-= link_to '新增問題', new_admin_faq_path, class: 'btn btn-primary pull-right'
-.clearfix
-hr
-= render 'form'
+- content_for :page_title do
+  h2.page-title.muted
+    i.micon-help
+    | 編輯問與答
+.row-fluid
+  = render 'form'
+
+

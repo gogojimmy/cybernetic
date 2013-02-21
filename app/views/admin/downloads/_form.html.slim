@@ -1,7 +1,7 @@
 = simple_form_for [:admin, @download], html: { class: 'form-horizontal' } do |f|
   = f.input :name, label: '檔案名稱', input_html: { class: 'span6' }
   = f.input :description, label: '檔案描述', input_html: { class: 'span6', rows: 20 }
-  = f.input :file, label: '檔案'
+  = f.input :file, label: '檔案', input_html: { class: 'fancy span5' }
   .form-actions
-    = f.submit "送出", class: 'btn btn-primary'
+    = f.submit "送出", class: 'btn btn-primary btn-flat'
 

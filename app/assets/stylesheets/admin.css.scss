@@ -1,41 +1,20 @@
 /*
-*= require_self
-*= require twitter/bootstrap
-*= require redactor-rails
-*= require font-awesome/font-awesome
-*/
+ *= require_self
+ *= require redactor-rails
+ *= require chosen
+ *= require_tree ./admin
+ */
 
-body {
-  padding-top: 60px;
-}
+@import "twitter/bootstrap";
+@import "twitter/bootstrap-responsive";
+@import "font-awesome";
+@import "compass";
 
 .nested_categories {
   margin-left: 30px;
 }
 
-.category {
-  .well {
-    margin-bottom: 0px;
-  }
-}
-
-.tab-pane {
-  .controls {
-    margin-left: 0px !important;
-  }
-}
-
-select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
-  height: 30px !important;
-}
-
-.admin-sidebar .icon-chevron-right {
-  opacity: .25;
-}
-
-td.film { width: 40%; }
-
-ul#sliders li, ul#other-sliders {
-  list-style: none;
-  cursor: move;
+.category > .well {
+  margin-bottom: 0;
+  padding: 5px;
 }

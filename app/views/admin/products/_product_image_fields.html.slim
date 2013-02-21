@@ -1,4 +1,3 @@
 .nested-fields.well
-  = f.input :p_image, as: :image_preview, label: '產品圖片', input_html: { preview_version: :thumb }
-  .controls
-    = link_to_remove_association '移除這張圖片', f, class: 'btn btn-danger btn-mini'
+  = f.input :p_image, as: :image_preview, label: false, input_html: { preview_version: :thumb, class: 'fancy' }
+  = link_to_remove_association '移除這張圖片', f, class: 'btn btn-danger btn-mini'

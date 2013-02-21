@@ -22,6 +22,11 @@ class Admin::CategoriesController < ApplicationController
     end
   end
 
+  def show
+    @category = Category.find(params[:id])
+    @products = @category.products.paginate(page: params[:page])
+  end
+
   def edit
     @category = Category.find(params[:id])
   end

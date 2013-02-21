@@ -11,3 +11,9 @@ en:
     customer: 'Services'
     downloads: 'Downloads'
     contact_us: 'Contact us'
+  simple_form:
+    "yes": 'Yes'
+    "no": 'No'
+    required:
+      text: 'required'
+      mark: '*'

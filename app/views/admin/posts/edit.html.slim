@@ -1,4 +1,6 @@
-= link_to "新增文章", new_admin_post_path, class: 'btn btn-primary pull-right'
-.clearfix
-hr
-= render 'form'
+- content_for :page_title do
+  h2.page-title.muted
+    i.micon-newspaper
+    | 編輯文章
+.row-fluid
+  = render 'form'

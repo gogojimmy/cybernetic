@@ -1,3 +1,7 @@
-header.page-header
-  h1 新增產品
-= render 'form'
+- content_for :page_title do
+  h2.page-title.muted
+    i.micon-product
+    | 新增產品
+.row-fluid
+  = render 'form'
+

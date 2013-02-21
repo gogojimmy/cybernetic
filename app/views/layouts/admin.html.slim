@@ -1,43 +1,51 @@
-doctype
-html
+doctype html
+html lang="ZH"
   head
-    title 嘉亨科技主控台
-    = csrf_meta_tag
-    = stylesheet_link_tag "admin"
-    = javascript_include_tag "admin"
-    = yield :stylesheets
+    title 嘉亨科技網站管理平台
+    /![if IE]
+      | <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    = stylesheet_link_tag    "admin"
+    = csrf_meta_tags
+    meta name="viewport" content="width=device-width" initial-scale="1.0"
+    meta charset="UTF-8"
   body
-    nav.navbar.navbar-inverse.navbar-fixed-top
+    #header.navbar
       .navbar-inner
-        .container
-          a.brand href="/" 嘉亨科技網站管理平台
-          ul.nav.pull-right
-            li.dropdown
-              = link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
-                - if I18n.locale == :zh_tw
-                  | 中文
-                - elsif I18n.locale == :en
-                  | English
-                span.caret
-              ul.dropdown-menu
-                li= link_to "中文", locale: "zh_tw"
-                li= link_to "English", locale: "en"
-            li.dropdown
-              = link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
-                | #{current_user.email}
-                span.caret
-              ul.dropdown-menu
-                li= link_to '登出', destroy_user_session_path, method: :delete
-    .container
-      .row
-        .span12
-          - flash.each do |name, msg|
-            div{class="alert alert-#{name == :notice ? "success" : "error"} fade in"}
-              a.close data-dismiss="alert" &times;
-              = simple_format(msg)
-      .row
-        .span3
-          = render 'admin/common/sidebar'
-        .span9
+        a.brand.hidden-phone href="#" 嘉亨科技網站管理平台
+        ul.nav
+          li.dropdown
+            = link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
+              - if I18n.locale == :zh_tw
+                | 中文
+              - elsif I18n.locale == :en
+                | English
+              span.caret
+            ul.dropdown-menu
+              li= link_to "中文", locale: "zh_tw"
+              li= link_to "English", locale: "en"
+          li.dropdown
+            = link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
+              | #{current_user.email}
+              span.caret
+            ul.dropdown-menu
+              li= link_to '登出', destroy_user_session_path, method: :delete
+
+    #left_layout
+      /!-- main content --
+      #main_content.container-fluid
+        /!-- page heading --
+        .page-heading
+          = yield :page_title
+        .row-fluid
+          - if flash.any?
+            .c-alert.pillow-emboss
+              - flash.each do |name, msg|
+                div{class="alert-message #{name == :notice ? "info" : "error"}"}
+                  a.close href="#"
+                    i.icon-large.icon-remove-circle
+                  = simple_format(msg)
           = yield
+      ul#sidebar.nav.nav-pills.nav-stacked
+        = render 'admin/common/sidebar'
     = yield :javascripts
+    = javascript_include_tag "admin"

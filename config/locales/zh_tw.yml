@@ -1,4 +1,10 @@
 zh_tw:
+  simple_form:
+    "yes": '是'
+    "no": '否'
+    required:
+      text: '必填'
+      mark: '  *必填*'
   brand: '嘉亨科技'
   right_reserve: '保留一切權利。'
   will_paginate:

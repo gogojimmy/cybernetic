@@ -1,3 +1,7 @@
-header.page-header
-  h1 新增問題
-= render 'form'
+- content_for :page_title do
+  h2.page-title.muted
+    i.micon-help
+    | 新增問與答
+.row-fluid
+  = render 'form'
+

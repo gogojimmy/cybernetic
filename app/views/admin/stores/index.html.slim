@@ -1,26 +1,29 @@
-= link_to '新增經銷資訊', new_admin_store_path, class: 'btn btn-primary pull-right'
-.clearfix
-table.table.table-borded.table-striped.table-hover.table-condensed
-  thead
-    tr
-      th= Store.human_attribute_name('store_type')
-      th= Store.human_attribute_name('name')
-      th= Store.human_attribute_name('url')
-      th= Store.human_attribute_name('address')
-      th= Store.human_attribute_name('tel')
-  tbody
-    - @stores.each do |store|
+- content_for :page_title do
+  h2.page-title.muted
+    i.micon-flag
+    | 經銷列表
+.row-fluid
+  table.table.table-borded.table-striped.table-hover.table-condensed
+    thead
       tr
-        td= store.store_type
-        td= link_to store.name, edit_admin_store_path(store)
-        - if store.url.present?
-          td= link_to '連結', store.url, target: '_blank'
-        - else
-          td
-        - if store.address.present?
-          td= link_to store.address, "https://maps.google.com/?q=#{store.address}", target: '_blank'
-        - else
-          td
-        td= store.tel
-= will_paginate @stores
+        th= Store.human_attribute_name('store_type')
+        th= Store.human_attribute_name('name')
+        th= Store.human_attribute_name('url')
+        th= Store.human_attribute_name('address')
+        th= Store.human_attribute_name('tel')
+    tbody
+      - @stores.each do |store|
+        tr
+          td= store.store_type
+          td= link_to store.name, edit_admin_store_path(store)
+          - if store.url.present?
+            td= link_to '連結', store.url, target: '_blank'
+          - else
+            td
+          - if store.address.present?
+            td= link_to store.address, "https://maps.google.com/?q=#{store.address}", target: '_blank'
+          - else
+            td
+          td= store.tel
+  = will_paginate @stores
 

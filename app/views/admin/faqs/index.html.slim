@@ -1,14 +1,17 @@
-= link_to '新增問題', new_admin_faq_path, class: 'btn btn-primary pull-right'
-.clearfix
-table.table
-  thead
-    tr
-      th 問題
-      th 更新於
-      th 更新者
-  tbody
-    - @faqs.each do |faq|
+- content_for :page_title do
+  h2.page-title.muted
+    i.micon-help
+    | 問與答列表
+.row-fluid
+  table.table.table.table.table-striped.table-bordered.table-condensed
+    thead
       tr
-        td= link_to faq.question, edit_admin_faq_path(faq)
-        td= l faq.updated_at, format: :short
-        td= faq.user_email
+        th 問題
+        th 更新於
+        th 更新者
+    tbody
+      - @faqs.each do |faq|
+        tr
+          td= link_to faq.question, edit_admin_faq_path(faq)
+          td= l faq.updated_at, format: :short
+          td= faq.user_email

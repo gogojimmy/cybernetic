@@ -1,37 +1,92 @@
-ul.nav.nav-tabs.nav-stacked.admin-sidebar.affix
-  li= link_to admin_pages_path do
-    | 靜態頁面管理
-    i.icon-chevron-right.pull-right
-  li= link_to admin_sliders_path do
-    | 廣告管理
-    i.icon-chevron-right.pull-right
-  li= link_to admin_categories_path do
-    | 產品分類管理
-    i.icon-chevron-right.pull-right
-  li= link_to admin_products_path do
-    | 產品管理
-    i.icon-chevron-right.pull-right
-  li= link_to admin_posts_path do
-    | 最新消息與優惠活動管理
-    i.icon-chevron-right.pull-right
-  li= link_to admin_faqs_path do
-    | 問與答管理
-    i.icon-chevron-right.pull-right
-  li= link_to admin_films_path do
-    | 影片管理
-    i.icon-chevron-right.pull-right
-  li= link_to admin_downloads_path do
-    | 檔案管理
-    i.icon-chevron-right.pull-right
-  li= link_to admin_stores_path do
-    | 經銷管理
-    i.icon-chevron-right.pull-right
-  li= link_to admin_users_path do
-    | 管理員帳號管理
-    i.icon-chevron-right.pull-right
-  li= link_to admin_contacts_path do
-    | 用戶意見
-    i.icon-chevron-right.pull-right
-  li= link_to admin_marketings_path do
-    | 電子報訂閱名單
-    i.icon-chevron-right.pull-right
+li= link_to admin_pages_path do
+  i.micon-paper
+  span.hidden-phone 頁面
+li.dropdown
+  a.dropdown-toggle data-toggle="dropdown" href="#"
+    i.micon-broadcast
+    span.hidden-phone 廣告
+  ul.dropdown-menu
+    li= link_to admin_sliders_path do
+      i.icon-large.icon-th-list
+      | 廣告列表
+    li= link_to new_admin_slider_path do
+      i.icon-large.icon-plus
+      | 新增廣告
+li= link_to admin_categories_path do
+  i.micon-folder
+  span.hidden-phone 分類
+li.dropdown
+  a.dropdown-toggle data-toggle="dropdown" href="#"
+    i.micon-basket
+    span.hidden-phone 產品
+  ul.dropdown-menu
+    li= link_to admin_products_path do
+      i.icon-large.icon-th-list
+      | 產品列表
+    li= link_to new_admin_product_path do
+      i.icon-large.icon-plus
+      | 新增產品
+li.dropdown
+  a.dropdown-toggle data-toggle="dropdown" href="#"
+    i.micon-newspaper
+    span.hidden-phone 最新消息與優惠活動
+  ul.dropdown-menu
+    li= link_to admin_posts_path do
+      i.icon-large.icon-th-list
+      | 文章列表
+    li= link_to new_admin_post_path do
+      i.icon-large.icon-plus
+      | 新增文章
+li.dropdown
+  a.dropdown-toggle data-toggle="dropdown" href="#"
+    i.micon-help
+    span.hidden-phone 問與答
+  ul.dropdown-menu
+    li= link_to admin_faqs_path do
+      i.icon-large.icon-th-list
+      | 問答列表
+    li= link_to new_admin_faq_path do
+      i.icon-large.icon-plus
+      | 新增問與答
+li.dropdown
+  a.dropdown-toggle data-toggle="dropdown" href="#"
+    i.micon-film
+    span.hidden-phone 影片
+  ul.dropdown-menu
+    li= link_to admin_films_path do
+      i.icon-large.icon-th-list
+      | 影片列表
+    li= link_to new_admin_film_path do
+      i.icon-large.icon-plus
+      | 新增影片
+li.dropdown
+  a.dropdown-toggle data-toggle="dropdown" href="#"
+    i.micon-copy
+    span.hidden-phone 檔案
+  ul.dropdown-menu
+    li= link_to admin_downloads_path do
+      i.icon-large.icon-th-list
+      | 檔案列表
+    li= link_to new_admin_download_path do
+      i.icon-large.icon-plus
+      | 新增檔案
+li.dropdown
+  a.dropdown-toggle data-toggle="dropdown" href="#"
+    i.micon-flag
+    span.hidden-phone 經銷資訊
+  ul.dropdown-menu
+    li= link_to admin_stores_path do
+      i.icon-large.icon-th-list
+      | 經銷資訊列表
+    li= link_to new_admin_store_path do
+      i.icon-large.icon-plus
+      | 新增經銷
+li= link_to admin_users_path do
+  i.micon-user
+  span.hidden-phone 管理員
+li= link_to admin_contacts_path do
+  i.micon-comments
+  span.hidden-phone 用戶意見
+li= link_to admin_marketings_path do
+  i.micon-mail
+  span.hidden-phone 電子報名單

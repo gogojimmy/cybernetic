@@ -1,3 +1,6 @@
-= link_to '新增產品', new_admin_product_path, class: 'btn btn-primary pull-right'
-.clearfix
-= render 'form'
+- content_for :page_title do
+  h2.page-title.muted
+    i.micon-product
+    | 編輯產品
+.row-fluid
+  = render 'form'

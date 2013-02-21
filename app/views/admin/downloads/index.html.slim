@@ -1,25 +1,27 @@
-= link_to '新增檔案', new_admin_download_path, class: 'btn btn-primary pull-right'
-.clearfix
-hr
-table.table.table-borded.table-striped.table-hover.table-condensed
-  thead
-    tr
-      th= Download.human_attribute_name('name')
-      th= Download.human_attribute_name('description')
-      th= Download.human_attribute_name('download')
-      th 操作
-  tbody
-    - @downloads.each do |download|
+- content_for :page_title do
+  h2.page-title.muted
+    i.micon-copy
+    | 檔案列表
+.row-fluid
+  table.table.table-borded.table-striped.table-hover.table-condensed
+    thead
       tr
-        td= download.name
-        td= download.description
-        td.download
-          = link_to download.file.url do
-            span.icon-cloud-download
-        td.btn-group
-          = link_to edit_admin_download_path(download), class: 'btn' do
-            i.icon-edit
-          = link_to admin_download_path(download), data: { confirm: "確定刪除該檔案嗎？" }, class: 'btn btn-danger', method: :delete do
-            i.icon-remove
+        th= Download.human_attribute_name('name')
+        th= Download.human_attribute_name('description')
+        th= Download.human_attribute_name('download')
+        th 操作
+    tbody
+      - @downloads.each do |download|
+        tr
+          td= download.name
+          td= download.description
+          td.download
+            = link_to download.file.url do
+              span.icon-cloud-download
+          td.btn-group
+            = link_to edit_admin_download_path(download), class: 'btn' do
+              i.icon-edit
+            = link_to admin_download_path(download), data: { confirm: "確定刪除該檔案嗎？" }, class: 'btn btn-danger', method: :delete do
+              i.icon-remove
 
-= will_paginate @downloads
+  = will_paginate @downloads

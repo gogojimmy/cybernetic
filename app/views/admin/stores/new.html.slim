@@ -1,2 +1,6 @@
-h1 新增經銷資訊
-= render 'form'
+- content_for :page_title do
+  h2.page-title.muted
+    i.micon-flag
+    | 新增經銷
+.row-fluid
+  = render 'form'

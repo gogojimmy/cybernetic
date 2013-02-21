@@ -1,5 +1,6 @@
-= link_to "新增經銷資訊", new_admin_store_path, class: 'btn btn-primary pull-right'
-.clearfix
-hr
-= render 'form'
-
+- content_for :page_title do
+  h2.page-title.muted
+    i.micon-flag
+    | 編輯經銷
+.row-fluid
+  = render 'form'
