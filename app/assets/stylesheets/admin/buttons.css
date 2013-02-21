@@ -2,7 +2,7 @@
  * full width button
  * ===============================================*/
 .button-action .btn, .btn.c-drop1 {
-	display:block;	
+	display:block;
 	position:relative;
 }
 .button-action .btn, .btn.c-drop1.btn-large {
@@ -18,7 +18,7 @@
 	width:58px;
 }
 .btn-group.io .btn.c-drop1.btn-medium {
-	width:40px;	
+	width:40px;
 }
 .btn-group.io.open .btn.c-drop1.btn-medium {
 	z-index:3000;
@@ -156,13 +156,13 @@
 	display: block;
 	background-color: #ffffff;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#d7d7d7));
-	background-image: -webkit-linear-gradient(top, #ffffff, #d7d7d7); 
-	background-image: -moz-linear-gradient(top, #ffffff, #d7d7d7); 
-	background-image: -ms-linear-gradient(top, #ffffff, #d7d7d7); 
-	background-image: -o-linear-gradient(top, #ffffff, #d7d7d7); 
+	background-image: -webkit-linear-gradient(top, #ffffff, #d7d7d7);
+	background-image: -moz-linear-gradient(top, #ffffff, #d7d7d7);
+	background-image: -ms-linear-gradient(top, #ffffff, #d7d7d7);
+	background-image: -o-linear-gradient(top, #ffffff, #d7d7d7);
 	color: #c3c3c3;
 	position: relative;
-	text-align: center;		
+	text-align: center;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	border-radius: 50%;
@@ -175,7 +175,7 @@
 	font-weight:bold;
 	margin:10px;
 }
-	
+
 /*==================================================
  * big rounded buttons
  * ===============================================*/
@@ -198,13 +198,13 @@
 	display: block;
 	background-color: #ffffff;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#d7d7d7));
-	background-image: -webkit-linear-gradient(top, #ffffff, #d7d7d7); 
-	background-image: -moz-linear-gradient(top, #ffffff, #d7d7d7); 
-	background-image: -ms-linear-gradient(top, #ffffff, #d7d7d7); 
-	background-image: -o-linear-gradient(top, #ffffff, #d7d7d7); 
+	background-image: -webkit-linear-gradient(top, #ffffff, #d7d7d7);
+	background-image: -moz-linear-gradient(top, #ffffff, #d7d7d7);
+	background-image: -ms-linear-gradient(top, #ffffff, #d7d7d7);
+	background-image: -o-linear-gradient(top, #ffffff, #d7d7d7);
 	color: #c3c3c3;
 	position: relative;
-	text-align: center;		
+	text-align: center;
 	-webkit-border-radius: 20%;
 	-moz-border-radius: 20%;
 	border-radius: 20%;
@@ -217,7 +217,7 @@
 	font-weight:bold;
 	margin:10px;
 }
-	
+
 /*==================================================
  * big boxed buttons
  * ===============================================*/
@@ -241,13 +241,13 @@
 	display: block;
 	background-color: #ffffff;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#d7d7d7));
-	background-image: -webkit-linear-gradient(top, #ffffff, #d7d7d7); 
-	background-image: -moz-linear-gradient(top, #ffffff, #d7d7d7); 
-	background-image: -ms-linear-gradient(top, #ffffff, #d7d7d7); 
-	background-image: -o-linear-gradient(top, #ffffff, #d7d7d7); 
+	background-image: -webkit-linear-gradient(top, #ffffff, #d7d7d7);
+	background-image: -moz-linear-gradient(top, #ffffff, #d7d7d7);
+	background-image: -ms-linear-gradient(top, #ffffff, #d7d7d7);
+	background-image: -o-linear-gradient(top, #ffffff, #d7d7d7);
 	color: #c3c3c3;
 	position: relative;
-	text-align: center;		
+	text-align: center;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
@@ -259,85 +259,85 @@
 	font-size:14px;
 	font-weight:bold;
 }
-	
+
 /**** important *****/
 .btn-circle.important a, .btn-rounded.important a, .btn-boxed.important a, li.important a {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#bdddff));
-	background-image: -webkit-linear-gradient(top, #ffffff, #bdddff); 
-	background-image: -moz-linear-gradient(top, #ffffff, #bdddff); 
-	background-image: -ms-linear-gradient(top, #ffffff, #bdddff); 
-	background-image: -o-linear-gradient(top, #ffffff, #bdddff); 
+	background-image: -webkit-linear-gradient(top, #ffffff, #bdddff);
+	background-image: -moz-linear-gradient(top, #ffffff, #bdddff);
+	background-image: -ms-linear-gradient(top, #ffffff, #bdddff);
+	background-image: -o-linear-gradient(top, #ffffff, #bdddff);
 	box-shadow:  0px 3px 8px #9dc8f3, inset 0px 2px 3px #fff;
 	-webkit-box-shadow:  0px 3px 8px #9dc8f3, inset 0px 2px 3px #fff;
 	-moz-box-shadow:  0px 3px 8px #9dc8f3, inset 0px 2px 3px #fff;
 	text-shadow: #fff 1px 2px 3px;
 }
-	
+
 /**** info *****/
 .btn-circle.info a,.btn-rounded.info a,.btn-boxed.info a , li.info a {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#c8f2ff));
-	background-image: -webkit-linear-gradient(top, #ffffff, #c8f2ff); 
-	background-image: -moz-linear-gradient(top, #ffffff, #c8f2ff); 
-	background-image: -ms-linear-gradient(top, #ffffff, #c8f2ff); 
-	background-image: -o-linear-gradient(top, #ffffff, #c8f2ff); 
+	background-image: -webkit-linear-gradient(top, #ffffff, #c8f2ff);
+	background-image: -moz-linear-gradient(top, #ffffff, #c8f2ff);
+	background-image: -ms-linear-gradient(top, #ffffff, #c8f2ff);
+	background-image: -o-linear-gradient(top, #ffffff, #c8f2ff);
 	box-shadow:  0px 3px 8px #60c5e3, inset 0px 2px 3px #fff;
 	-webkit-box-shadow:  0px 3px 8px #60c5e3, inset 0px 2px 3px #fff;
 	-moz-box-shadow:  0px 3px 8px #60c5e3, inset 0px 2px 3px #fff;
 	text-shadow: #fff 1px 2px 3px;
 }
-	
+
 /**** success *****/
 .btn-circle.success a, .btn-rounded.success a, .btn-boxed.success a, li.success a {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#c7ffc7));
-	background-image: -webkit-linear-gradient(top, #ffffff, #c7ffc7); 
-	background-image: -moz-linear-gradient(top, #ffffff, #c7ffc7); 
-	background-image: -ms-linear-gradient(top, #ffffff, #c7ffc7); 
-	background-image: -o-linear-gradient(top, #ffffff, #c7ffc7); 
+	background-image: -webkit-linear-gradient(top, #ffffff, #c7ffc7);
+	background-image: -moz-linear-gradient(top, #ffffff, #c7ffc7);
+	background-image: -ms-linear-gradient(top, #ffffff, #c7ffc7);
+	background-image: -o-linear-gradient(top, #ffffff, #c7ffc7);
 	box-shadow:  0px 3px 8px #5fe35f, inset 0px 2px 3px #fff;
 	-webkit-box-shadow:  0px 3px 8px #5fe35f, inset 0px 2px 3px #fff;
 	-moz-box-shadow:  0px 3px 8px #5fe35f, inset 0px 2px 3px #fff;
 	text-shadow: #fff 1px 2px 3px;
 }
-	
+
 /**** warning *****/
 .btn-circle.warning a, .btn-rounded.warning a, .btn-boxed.warning a, li.warning a {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ffe8c7));
-	background-image: -webkit-linear-gradient(top, #ffffff, #ffe8c7); 
-	background-image: -moz-linear-gradient(top, #ffffff, #ffe8c7); 
-	background-image: -ms-linear-gradient(top, #ffffff, #ffe8c7); 
-	background-image: -o-linear-gradient(top, #ffffff, #ffe8c7); 
+	background-image: -webkit-linear-gradient(top, #ffffff, #ffe8c7);
+	background-image: -moz-linear-gradient(top, #ffffff, #ffe8c7);
+	background-image: -ms-linear-gradient(top, #ffffff, #ffe8c7);
+	background-image: -o-linear-gradient(top, #ffffff, #ffe8c7);
 	box-shadow:  0px 3px 8px #e3ac5f, inset 0px 2px 3px #fff;
 	-webkit-box-shadow:  0px 3px 8px #e3ac5f, inset 0px 2px 3px #fff;
 	-moz-box-shadow:  0px 3px 8px #e3ac5f, inset 0px 2px 3px #fff;
 	text-shadow: #fff 1px 2px 3px;
 }
-	
+
 /**** danger *****/
 .btn-circle.danger a,.btn-rounded.danger a,.btn-boxed.danger a,  li.danger a {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ffcac7));
-	background-image: -webkit-linear-gradient(top, #ffffff, #ffcac7); 
-	background-image: -moz-linear-gradient(top, #ffffff, #ffcac7); 
-	background-image: -ms-linear-gradient(top, #ffffff, #ffcac7); 
-	background-image: -o-linear-gradient(top, #ffffff, #ffcac7); 
+	background-image: -webkit-linear-gradient(top, #ffffff, #ffcac7);
+	background-image: -moz-linear-gradient(top, #ffffff, #ffcac7);
+	background-image: -ms-linear-gradient(top, #ffffff, #ffcac7);
+	background-image: -o-linear-gradient(top, #ffffff, #ffcac7);
 	box-shadow:  0px 3px 8px #e3665f, inset 0px 2px 3px #fff;
 	-webkit-box-shadow:  0px 3px 8px #e3665f, inset 0px 2px 3px #fff;
 	-moz-box-shadow:  0px 3px 8px #e3665f, inset 0px 2px 3px #fff;
 	text-shadow: #fff 1px 2px 3px;
 }
-	
+
 /**** inverse *****/
 .btn-circle.inverse a, .btn-rounded.inverse a, .btn-boxed.inverse a,  li.inverse a {
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#918f8f));
-	background-image: -webkit-linear-gradient(top, #ffffff, #918f8f); 
-	background-image: -moz-linear-gradient(top, #ffffff, #918f8f); 
-	background-image: -ms-linear-gradient(top, #ffffff, #918f8f); 
-	background-image: -o-linear-gradient(top, #ffffff, #918f8f); 
+	background-image: -webkit-linear-gradient(top, #ffffff, #918f8f);
+	background-image: -moz-linear-gradient(top, #ffffff, #918f8f);
+	background-image: -ms-linear-gradient(top, #ffffff, #918f8f);
+	background-image: -o-linear-gradient(top, #ffffff, #918f8f);
 	box-shadow:  0px 3px 8px #626161, inset 0px 2px 3px #fff;
 	-webkit-box-shadow:  0px 3px 8px #626161, inset 0px 2px 3px #fff;
 	-moz-box-shadow:  0px 3px 8px #626161, inset 0px 2px 3px #fff;
 	text-shadow: #fff 1px 2px 3px;
 }
-	
+
 /********** +++++  ***************/
 .btn-circle, .btn-rounded, .btn-boxed {
 	margin:0px;
@@ -367,7 +367,7 @@
 	background: rgba(255,255,255,0.4);
 }
 
-.btn-circle a:focus, .btn-rounded a:focus, .btn-boxed a:focus { 
+.btn-circle a:focus, .btn-rounded a:focus, .btn-boxed a:focus {
 	outline: none;
 }
 
@@ -382,7 +382,7 @@
 	top:10px;
 	right:-10px;
 }
-	
+
 /*==================================================
  * buttons, custom colors
  * ===============================================*/
@@ -992,7 +992,7 @@
   background-image: -webkit-linear-gradient(top, #3c4b25, #050603);
   background-image: -o-linear-gradient(top, #3c4b25, #050603);
   background-image: linear-gradient(#3c4b25, #050603);
-  border-color: #050603 #050603 hsl(83, 34%, -3%);
+  border-color: #050603 #050603 hsl(83, 34%, 3%);
   color: #fff !important;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
   -webkit-font-smoothing: antialiased;
@@ -1077,7 +1077,7 @@
   background-image: -webkit-linear-gradient(top, #523d28, #0d0a06);
   background-image: -o-linear-gradient(top, #523d28, #0d0a06);
   background-image: linear-gradient(#523d28, #0d0a06);
-  border-color: #0d0a06 #0d0a06 hsl(31, 34%, -1%);
+  border-color: #0d0a06 #0d0a06 hsl(31, 34%, 1%);
   color: #fff !important;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
   -webkit-font-smoothing: antialiased;
