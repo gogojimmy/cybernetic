@@ -29,6 +29,9 @@ html lang="ZH"
               span.caret
             ul.dropdown-menu
               li= link_to '登出', destroy_user_session_path, method: :delete
+        = form_tag admin_products_path, class: 'navbar-search pull-right hidden-phone', method: 'get' do
+          = text_field_tag 'search', nil, class: 'search-query', placeholder: I18n.t('functions.search_instruction')
+
 
     #left_layout
       /!-- main content --

@@ -1,20 +1,21 @@
-.category.span6
-  .well
-    .row-fluid
-      .span1
-        = image_tag category.c_image_url(:thumb), rel: 'tooltip', data: { url: category.c_image_url(:normal), html: "true", trigger: "hover", content: "#{image_tag(category.c_image_url(:normal))}", placement: "bottom" }
-      .span3
-        = image_tag category.large_image_url(:thumb), rel: 'popover', data: { url: category.large_image_url(:normal), html: "true", trigger: "hover", content: "#{image_tag(category.large_image_url(:normal))}", placement: "bottom" }
-      .span3
-        = category.title
-      .actions.span5
-        = link_to "新增子分類", new_admin_category_path(parent_id: category)
-        '
-        | |
-        '
-        = link_to "編輯", edit_admin_category_path(category)
-        '
-        | |
-        '
-        = link_to "刪除", admin_category_path(category), confirm: '確定刪除該分類？', method: :delete
-.clearfix
+.row-fluid
+  .category.span6
+    .well
+      .row-fluid
+        .span1
+          = image_tag category.c_image_url(:thumb), rel: 'tooltip', data: { url: category.c_image_url(:normal), html: "true", trigger: "hover", content: "#{image_tag(category.c_image_url(:normal))}", placement: "bottom" }
+        .span3
+          = image_tag category.large_image_url(:thumb), rel: 'popover', data: { url: category.large_image_url(:normal), html: "true", trigger: "hover", content: "#{image_tag(category.large_image_url(:normal))}", placement: "bottom" }
+        .span3
+          = category.title
+        .actions.span5
+          = link_to "新增子分類", new_admin_category_path(parent_id: category)
+          '
+          | |
+          '
+          = link_to "編輯", edit_admin_category_path(category)
+          '
+          | |
+          '
+          = link_to "刪除", admin_category_path(category), confirm: '確定刪除該分類？', method: :delete
+  .clearfix

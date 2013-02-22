@@ -51,7 +51,6 @@ gem "globalize3", :git => 'git://github.com/svenfuchs/globalize3.git', :branch =
 gem "gon"
 gem "acts_as_list"
 
-
 group :development do
   gem "annotate"
   gem "better_errors"
