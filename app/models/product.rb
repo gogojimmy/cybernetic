@@ -31,11 +31,11 @@ class Product < ActiveRecord::Base
     self.product_images.first.try(:p_image_url, version)
   end
 
-  def self.search(search)
-    if search
-      where("name like ? or show_description like ?", "%#{search}%", "%#{search}%")
+  def self.search(params)
+    if params[:search]
+      where("name like ? or show_description like ?", "%#{params[:search]}%", "%#{params[:search]}%").paginate(page: params[:page])
     else
-      []
+      self.paginate(page: params[:page])
     end
   end
 end
