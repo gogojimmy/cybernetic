@@ -15,7 +15,10 @@
     tbody
       - @products.each do |product|
         tr
-          td= image_tag(product.feature_image(:thumb))
+          - if product.product_images.count != 0
+            td= image_tag(product.feature_image(:thumb))
+          - else
+            td
           td= link_to product.name, edit_admin_product_path(product)
           td= link_to product.category.title, admin_category_path(product.category)
           td= product.show_description

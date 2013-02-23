@@ -1,3 +1,4 @@
+# encoding: utf-8
 # == Schema Information
 #
 # Table name: products
@@ -24,6 +25,11 @@ class Product < ActiveRecord::Base
   delegate :email, to: :user, prefix: true, allow_nil: true
 
   validates_presence_of :name, :category
+  validate :at_least_one_image
+
+  def at_least_one_image
+    errors.add(:product_images, "至少要有一張產品圖片") if product_images.length == 0
+  end
 
   translates :description, :feature, :knowledge, :name, :spec, :test_report, :show_description
 
