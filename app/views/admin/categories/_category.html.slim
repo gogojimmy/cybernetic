@@ -7,7 +7,7 @@
         .span3
           = image_tag category.large_image_url(:thumb), rel: 'popover', data: { url: category.large_image_url(:normal), html: "true", trigger: "hover", content: "#{image_tag(category.large_image_url(:normal))}", placement: "bottom" }
         .span3
-          = category.title
+          = link_to "#{category.title} (#{category.products.length})", admin_category_path(category)
         .actions.span5
           = link_to "新增子分類", new_admin_category_path(parent_id: category)
           '
