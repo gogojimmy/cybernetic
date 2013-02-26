@@ -41,8 +41,9 @@ class Admin::ProductsController < ApplicationController
   def destroy
     @product = Product.find(params[:id])
     name = @product.name
+    category = @product.category
     @product.destroy
-    redirect_to admin_products_path, notice: "#{name}刪除成功"
+    redirect_to admin_category_path(category), notice: "#{name}刪除成功"
   end
 
   def ancestry_options(items, &block)
