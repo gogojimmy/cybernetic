@@ -2,28 +2,60 @@
   h2.page-title.muted
     i.micon-basket
     | 產品列表
-.row-fluid
-  table.table.table-striped.table-bordered.table-condensed
-    thead
-      tr
-        th 圖片
-        th 產品名稱
-        th 分類
-        th 短敘述
-        th 更新於
-        th 更新者
-        th 操作
-    tbody
-      - @products.each do |product|
+- if @products
+  .row-fluid
+    table.table.table-striped.table-bordered.table-condensed
+      thead
         tr
-          - if product.product_images.count != 0
-            td= image_tag(product.feature_image(:thumb))
-          - else
-            td
-          td= link_to product.name, edit_admin_product_path(product)
-          td= link_to product.category.try(:title), admin_category_path(product.category)
-          td= product.show_description
-          td= l product.updated_at, format: :short
-          td= product.user_email
-          td= link_to '刪除', admin_product_path(product), method: :delete, confirm: '是否確定刪除？', class: 'btn btn-danger btn-flat'
-  = will_paginate @products
+          th 圖片
+          th 產品名稱
+          th 分類
+          th 短敘述
+          th 更新於
+          th 更新者
+          th 操作
+      tbody
+        - @products.each do |product|
+          tr
+            - if product.product_images.count != 0
+              td= image_tag(product.feature_image(:thumb))
+            - else
+              td
+            td= link_to product.name, edit_admin_product_path(product)
+            td= show_admin_product_link(product)
+            td= product.show_description
+            td= l product.updated_at, format: :short
+            td= product.user_email
+            td= link_to '刪除', admin_product_path(product), method: :delete, confirm: '是否確定刪除？', class: 'btn btn-danger btn-flat btn-mini'
+  = will_paginate(@products)
+- else
+  .tabbable.tabs-custom.tabs-left
+    ul.nav.nav-tabs
+      - Category.roots.each do |category|
+        li= link_to "#{category.title} (#{category.products.length})", "#category-#{category.id}", data: { 'toggle' => 'tab' }
+    .tab-content
+      - Category.roots.each do |category|
+        .tab-pane id="category-#{category.id}"
+          table.table.table-striped.table-bordered.table-condensed
+            thead
+              tr
+                th 圖片
+                th 產品名稱
+                th 分類
+                th 短敘述
+                th 更新於
+                th 更新者
+                th 操作
+            tbody
+              - category.products.each do |product|
+                tr
+                  - if product.product_images.count != 0
+                    td= image_tag(product.feature_image(:thumb))
+                  - else
+                    td
+                  td= link_to product.name, edit_admin_product_path(product)
+                  td= link_to product.category.try(:title), admin_category_path(product.category)
+                  td= product.show_description
+                  td= l product.updated_at, format: :short
+                  td= product.user_email
+                  td= link_to '刪除', admin_product_path(product), method: :delete, confirm: '是否確定刪除？', class: 'btn btn-danger btn-flat btn-mini'

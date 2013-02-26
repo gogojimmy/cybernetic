@@ -4,7 +4,10 @@ class Admin::ProductsController < ApplicationController
   layout 'admin'
 
   def index
-    @products = Product.search(params)
+    if params[:search]
+      @products = Product.search(params)
+    end
+    @categories = Category.roots
   end
 
   def new

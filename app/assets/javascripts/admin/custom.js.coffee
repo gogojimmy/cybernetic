@@ -22,3 +22,6 @@ $(document).ready ->
   $(".fancy").uniform
     fileButtonText: "選擇檔案"
     fileDefaultText: ""
+
+  $("ul.nav-tabs li:first").addClass 'active'
+  $(".tab-content .tab-pane:first").addClass 'active'
