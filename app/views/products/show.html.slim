@@ -38,15 +38,15 @@
                 li
                   a href="#knowledge" data-toggle="tab" #{I18n.t('products.knowledge')}
         .tab-content#product-tab-contents
-          - if @product.test_report.length > 15
-            .tab-pane.fade.in#test_report
-              = raw @product.test_report
-          - if @product.knowledge.length > 15
-            .tab-pane.fade.in#knowledge
-              = raw @product.knowledge
           - if @product.feature.length > 15
             .tab-pane.fade.in#feature
               = raw @product.feature
           - if @product.spec.length > 15
             .tab-pane.fade.in#spec
               = raw @product.spec
+          - if @product.test_report.length > 15
+            .tab-pane.fade.in#test_report
+              = raw @product.test_report
+          - if @product.knowledge.length > 15
+            .tab-pane.fade.in#knowledge
+              = raw @product.knowledge
