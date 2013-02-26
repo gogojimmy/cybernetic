@@ -14,33 +14,30 @@ class WidgetCell < Cell::Rails
 
   def block_ad(position)
     if position == "首頁左下區塊"
-      @ad = Slider.where(position: "首頁左下區塊").first
+      @ad = Slider.where(block: "首頁左下區塊").first
     elsif position == "首頁中下區塊"
-      @ad = Slider.where(position: "首頁中下區塊").first
+      @ad = Slider.where(block: "首頁中下區塊").first
     elsif position == "首頁右下區塊"
-      @ad = Slider.where(position: "首頁右下區塊").first
+      @ad = Slider.where(block: "首頁右下區塊").first
     end
     render
   end
 
   def main_nav
-    if I18n.locale == :zh_tw
-      @categories = Category.roots
-    else
-      @categories = Category.roots.to_a
+    @categories = Category.roots.to_a
+    if I18n.locale != :zh_tw
       @categories = @categories.delete_if { |c| c.title == '耳機' || c.title == '行動影音播放器' }
     end
+    @categories = @categories.delete_if { |c| c.title == '未整理' }
     render
   end
 
   def categories_sidebar
-    if I18n.locale == :zh_tw
-      @categories = Category.roots
-    else
-      @categories = Category.roots.to_a
-      @categories = @categories.delete_if { |c| c.title == '耳機' }
+    @categories = Category.roots.to_a
+    if I18n.locale != :zh_tw
       @categories = @categories.delete_if { |c| c.title == '耳機' || c.title == '行動影音播放器' }
     end
+    @categories = @categories.delete_if { |c| c.title == '未整理' }
     @film = Film.random_film
     film_id = /d\/\S*\"/.match(@film).to_s.delete("d/").delete("\"")
     @thumbnail_image = "http://img.youtube.com/vi/#{film_id}/0.jpg"

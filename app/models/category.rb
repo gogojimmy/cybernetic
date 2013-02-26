@@ -19,8 +19,15 @@ class Category < ActiveRecord::Base
   validates_presence_of :title
   belongs_to :user
   has_many :products
+  before_destroy :set_products_category
 
   translates :title
 
   has_ancestry
+
+  def set_products_category
+    products.each do |product|
+      product.set_category_to_uncategory
+    end
+  end
 end

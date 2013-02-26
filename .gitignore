@@ -21,3 +21,4 @@ vendor/bundler_gems
 config/*.yml
 public/assets/
 public/system/redactor_assets/
+/mysql_backup

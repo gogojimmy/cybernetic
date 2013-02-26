@@ -44,4 +44,9 @@ class Product < ActiveRecord::Base
       self.paginate(page: params[:page])
     end
   end
+
+  def set_category_to_uncategory
+    uncategory = Category.find_by_title('未整理')
+    update_attribute(:category_id, uncategory.id )
+  end
 end
