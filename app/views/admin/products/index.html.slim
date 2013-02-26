@@ -12,6 +12,7 @@
         th 短敘述
         th 更新於
         th 更新者
+        th 操作
     tbody
       - @products.each do |product|
         tr
@@ -24,4 +25,5 @@
           td= product.show_description
           td= l product.updated_at, format: :short
           td= product.user_email
+          td= link_to '刪除', admin_product_path(product), method: :delete, confirm: '是否確定刪除？', class: 'btn btn-danger btn-flat'
   = will_paginate @products
