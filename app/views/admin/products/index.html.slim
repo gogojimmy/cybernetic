@@ -20,7 +20,7 @@
           - else
             td
           td= link_to product.name, edit_admin_product_path(product)
-          td= link_to product.category.title, admin_category_path(product.category)
+          td= link_to product.category.try(:title), admin_category_path(product.category)
           td= product.show_description
           td= l product.updated_at, format: :short
           td= product.user_email

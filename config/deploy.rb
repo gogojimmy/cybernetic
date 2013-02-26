@@ -4,7 +4,7 @@ require 'capistrano_colors'
 #$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 require "rvm/capistrano"
 
-set :rvm_ruby_string, ENV['GEM_HOME'].gsub(/.*\//,"")
+set :rvm_ruby_string, '1.9.3-p362'
 
 set :application, "cybernetic"
 set :repository,  "git@github.com:gogojimmy/cybernetic.git"
