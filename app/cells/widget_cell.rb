@@ -26,7 +26,7 @@ class WidgetCell < Cell::Rails
   def main_nav
     @categories = Category.roots.to_a
     if I18n.locale != :zh_tw
-      @categories = @categories.delete_if { |c| c.title == '耳機' || c.title == '行動影音播放器' }
+      @categories = @categories.delete_if { |c| c.title == 'Headset' || c.title == 'Player' }
     end
     @categories = @categories.delete_if { |c| c.title == '未整理' }
     render
@@ -35,7 +35,7 @@ class WidgetCell < Cell::Rails
   def categories_sidebar
     @categories = Category.roots.to_a
     if I18n.locale != :zh_tw
-      @categories = @categories.delete_if { |c| c.title == '耳機' || c.title == '行動影音播放器' }
+      @categories = @categories.delete_if { |c| c.title == 'Headset' || c.title == 'Player' }
     end
     @categories = @categories.delete_if { |c| c.title == '未整理' }
     @film = Film.random_film
