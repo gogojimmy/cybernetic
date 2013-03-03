@@ -1,5 +1,7 @@
-#categories-slider.carousel data-interval="3000"
-  .carousel-inner
-    - @categories.each do |category|
-      .item
-        = image_tag(category.large_image_url(:normal))
+#categories-slider
+  - @categories.each do |category|
+    - if params[:locale] == 'zh_tw'
+      = image_tag(category.large_image_url(:normal))
+    - else
+      = image_tag(category.en_large_image_url(:normal))
+

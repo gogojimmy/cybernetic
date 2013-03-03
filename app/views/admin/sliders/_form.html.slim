@@ -2,6 +2,7 @@
   = f.input :image, as: :image_preview, label: '圖片', hint: '首頁橫幅廣告大小需為940x300，其他類型廣告大小需為200x200'
   hr
   = f.input :block, label: '廣告位置', as: :radio_buttons, include_blank: false, collection: Slider::BLOCK
+  = f.input :locales, label: '語系', as: :check_boxes, collection: Slider::LOCALES.sort.map {|k,v| [v,k]}
   = f.input :target, label: '廣告連結目標'
   .form-actions
     = f.submit "送出", class: 'btn btn-primary'

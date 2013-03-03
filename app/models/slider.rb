@@ -13,17 +13,23 @@
 #
 
 class Slider < ActiveRecord::Base
-  attr_accessible :description, :image, :title, :user, :user_id, :block, :target
+  attr_accessible :description, :image, :title, :user, :user_id, :block, :target, :locales
   mount_uploader :image, ImageUploader
   validates_presence_of :image, :block, :target
   belongs_to :user
   delegate :email, to: :user, prefix: true, allow_nil: true
+  serialize :locales, Array
 
   acts_as_list
 
   translates :description, :title
 
   BLOCK = %w(首頁橫幅廣告 首頁左下區塊 首頁中下區塊)
+  LOCALES = { "en" => '英文', "zh_tw" => "中文" }
+
+  def self.include_locale(locale)
+    select {|m| m.locales.include?(locale)}
+  end
 
   def render_image(version)
     if self.block == "首頁橫幅廣告"

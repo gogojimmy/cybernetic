@@ -14,11 +14,11 @@ class WidgetCell < Cell::Rails
 
   def block_ad(position)
     if position == "首頁左下區塊"
-      @ad = Slider.where(block: "首頁左下區塊").first
+      @ad = Slider.where(block: "首頁左下區塊").include_locale(params[:locale]).first
     elsif position == "首頁中下區塊"
-      @ad = Slider.where(block: "首頁中下區塊").first
+      @ad = Slider.where(block: "首頁中下區塊").include_locale(params[:locale]).first
     elsif position == "首頁右下區塊"
-      @ad = Slider.where(block: "首頁右下區塊").first
+      @ad = Slider.where(block: "首頁右下區塊").include_locale(params[:locale]).first
     end
     render
   end
