@@ -4,23 +4,24 @@
       li
         = link_to category.title, "javascript:;", id: "category-#{category.id}", data: { toggle: "collapse", target: "#content-for-category-#{category.id}" }
         div.collapse id="content-for-category-#{category.id}"
-          - category.children.each_with_index do |child, index|
+          - category.children.order("position").each_with_index do |child, index|
             ul.nav.nav-list
               li id="category-link-#{child.id}-#{index}"
                 - if child.children.size != 0
                   = link_to child.title, "javascript:;", id: "category-#{child.id}", data: { toggle: "collapse", target: "#content-for-category-#{child.id}" }
                   div.collapse id="content-for-category-#{child.id}"
                     ul.nav.nav-list
-                      - child.children.each_with_index do |c, index|
+                      - child.children.order("position").each_with_index do |c, index|
                           li id="category-link-#{c.id}-#{index}"
                             = link_to c.title, category_path(c), id: "category-#{c.id}"
                 - else
                   = link_to child.title, category_path(child), id: "category-#{child.id}"
-  .film
-    .overlay
-      = image_tag("play.png")
-    = link_to image_tag(@thumbnail_image), "#", data: { toggle: "modal", target: "#modal-film" }
-  #modal-film.modal.hide.fade
-    .modal-body
-      #film
-        = raw @film
+  - if @film.present?
+    .film
+      .overlay
+        = image_tag("play.png")
+      = link_to image_tag(@thumbnail_image), "#", data: { toggle: "modal", target: "#modal-film" }
+    #modal-film.modal.hide.fade
+      .modal-body
+        #film
+          = raw @film
