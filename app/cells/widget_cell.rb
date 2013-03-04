@@ -3,7 +3,7 @@ class WidgetCell < Cell::Rails
   helper ApplicationHelper
 
   def news_sidebar
-    @news = Post.news.last(5)
+    @news = Post.news.include_locale(params[:locale]).last(5)
     render
   end
 
@@ -55,7 +55,7 @@ class WidgetCell < Cell::Rails
   end
 
   def welcome_news
-    @news = Post.news.last(10)
+    @news = Post.news.include_locale(params[:locale]).last(10)
     render
   end
 

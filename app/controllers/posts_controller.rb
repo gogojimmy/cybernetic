@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.where(category: params[:category]).paginate(page: params[:page])
+    @posts = Post.where(category: params[:category]).include_locale(params[:locale]).paginate(page: params[:page])
     @category = params[:category]
   end
 
