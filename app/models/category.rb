@@ -25,6 +25,7 @@ class Category < ActiveRecord::Base
   translates :title
 
   has_ancestry
+  acts_as_list scope: [:ancestry]
 
   def set_products_category
     products.each do |product|

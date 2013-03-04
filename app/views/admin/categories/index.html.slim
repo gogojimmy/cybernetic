@@ -2,7 +2,8 @@
   h2.page-title.muted
     i.micon-folder
     | 分類列表
-= nested_categories @categories
+ul.unstyle.sortable#categories data-update-url="#{ sort_admin_categories_url }"
+  = suckerfish @categories
 header.page-header
   h2 新增分類
 = render 'form'

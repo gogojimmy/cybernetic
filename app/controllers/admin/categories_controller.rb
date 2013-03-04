@@ -4,12 +4,19 @@ class Admin::CategoriesController < ApplicationController
   layout 'admin'
 
   def index
-    @categories = Category.arrange(order: :created_at)
+    @categories = Category.arrange(order: :position)
     @category = Category.new
   end
 
   def new
     @category = Category.new(:parent_id => params[:parent_id])
+  end
+
+  def sort
+    params[:category].each_with_index do |id, index|
+      Category.update_all({position: index + 1}, {id: id})
+    end
+    render nothing: true
   end
 
   def create

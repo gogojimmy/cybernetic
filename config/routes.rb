@@ -23,7 +23,9 @@ Cybernetic::Application.routes.draw do
       resources :sliders do
         collection { post :sort }
       end
-      resources :categories
+      resources :categories do
+        collection { post :sort }
+      end
       resources :products
       resources :posts
       resources :contacts
