@@ -32,7 +32,7 @@
   .tabbable.tabs-custom.tabs-left
     ul.nav.nav-tabs
       - Category.roots.order("position").each do |category|
-        li= link_to "#{category.title} (#{category.products.length})", "#category-#{category.id}", data: { 'toggle' => 'tab' }
+        li= link_to "#{category.title} (#{all_products_for_category(category).length})", "#category-#{category.id}", data: { 'toggle' => 'tab' }
     .tab-content
       - Category.roots.order("position").each do |category|
         .tab-pane id="category-#{category.id}"
@@ -47,7 +47,7 @@
                 th 更新者
                 th 操作
             tbody
-              - category.products.each do |product|
+              - all_products_for_category(category).each do |product|
                 tr
                   - if product.product_images.count != 0
                     td= image_tag(product.feature_image(:thumb))

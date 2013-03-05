@@ -11,4 +11,12 @@ module ApplicationHelper
     end
     link_to(product.category.try(:title), admin_category_path(product.category))
   end
+
+  def all_products_for_category(category)
+    products = category.products
+    category.children.each do |child|
+      products << child.products
+    end
+    products
+  end
 end
