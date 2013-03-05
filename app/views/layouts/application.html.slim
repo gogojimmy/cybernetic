@@ -1,6 +1,10 @@
 doctype html
 html
   head
+    - if is_zh_tw?
+      title 嘉亨科技
+    - else
+      title Cybernetic
     = stylesheet_link_tag "application"
     /[if lte IE 8]
       = stylesheet_link_tag "ie"

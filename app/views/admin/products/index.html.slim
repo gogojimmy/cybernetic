@@ -31,10 +31,10 @@
 - else
   .tabbable.tabs-custom.tabs-left
     ul.nav.nav-tabs
-      - Category.roots.each do |category|
+      - Category.roots.order("position").each do |category|
         li= link_to "#{category.title} (#{category.products.length})", "#category-#{category.id}", data: { 'toggle' => 'tab' }
     .tab-content
-      - Category.roots.each do |category|
+      - Category.roots.order("position").each do |category|
         .tab-pane id="category-#{category.id}"
           table.table.table-striped.table-bordered.table-condensed
             thead

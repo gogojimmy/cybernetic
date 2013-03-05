@@ -68,7 +68,7 @@ jQuery ->
   )
   $("#slider .slider-pager a").click (e) ->
     index = $(this).index()
-    slider.carousel index
+    $("#slider").carousel index
     e.preventDefault()
 
   $(".film").hover (->

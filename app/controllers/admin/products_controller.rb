@@ -7,7 +7,7 @@ class Admin::ProductsController < ApplicationController
     if params[:search]
       @products = Product.search(params)
     end
-    @categories = Category.roots
+    @categories = Category.roots.order("position")
   end
 
   def new

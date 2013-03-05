@@ -10,14 +10,14 @@
               - @sliders.each_with_index do |slider, index|
                 - if index == 0
                   .item.active
-                    = image_tag(slider.image_url(:slider_normal))
+                    = link_to image_tag(slider.image_url(:slider_normal)), slider.target
                     - if slider.title.present?
                       .carousel-caption
                         h4= slider.title
                         = simple_format slider.description
                 - else
                   .item
-                    = image_tag(slider.image_url(:slider_normal))
+                    = link_to image_tag(slider.image_url(:slider_normal)), slider.target
                     - if slider.title.present?
                       .carousel-caption
                         h4= slider.title
