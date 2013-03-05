@@ -27,9 +27,10 @@
                 a href="#slider" #{index + 1}
       .row
         #news-block.span12
-          ul#news-index.js-hidden
-            - @news.each do |post|
-              li.news-item= link_to post.title, post_path(post)
+          - if @news.size > 0
+            ul#news-index.js-hidden
+              - @news.each do |post|
+                li.news-item= link_to post.title, post_path(post)
       .row
         .span4
           = render_cell :widget, :block_ad, "首頁左下區塊"

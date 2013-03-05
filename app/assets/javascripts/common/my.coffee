@@ -20,7 +20,7 @@ jQuery ->
       $("header .form").removeClass("en-form")
 
 
-  if $("#news-index").length > 0
+  if $("#news-index").length >= 1
     $("#news-index").ticker()
 
   # Find all YouTube videos
