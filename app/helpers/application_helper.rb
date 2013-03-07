@@ -13,10 +13,11 @@ module ApplicationHelper
   end
 
   def all_products_for_category(category)
-    products_ids = category.products.map(&:id)
-    category.children.each do |child|
-      products_ids << child.products.map(&:id)
+    product_ids = []
+    category.subtree.each do |child|
+      product_ids << child.products.map(&:id)
     end
-    Product.find_all_by_id(products_ids)
+    Product.find_all_by_id(product_ids)
   end
+
 end
