@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
+gem 'rails', '3.2.12'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -54,7 +54,7 @@ gem "acts_as_list"
 group :development do
   gem "annotate"
   gem "better_errors"
-  gem "binding_of_caller"
+  gem "binding_of_caller", "~> 0.7.1"
 end
 
 gem 'capistrano'
