@@ -25,28 +25,28 @@
         ul.nav.nav-tabs.navbar#product-tab
           .navbar-inner
             ul.nav
-              - if @product.feature.length > 15
+              - if @product.feature.try(:length) > 15
                 li
                   a href="#feature" data-toggle="tab" #{I18n.t('products.feature')}
-              - if @product.spec.length > 15
+              - if @product.spec.try(:length) > 15
                 li
                   a href="#spec" data-toggle="tab" #{I18n.t('products.spec')}
-              - if @product.test_report.length > 15
+              - if @product.test_report.try(:length) > 15
                 li
                   a href="#test_report" data-toggle="tab" #{I18n.t('products.test_report')}
-              - if @product.knowledge.length > 15
+              - if @product.knowledge.try(:length) > 15
                 li
                   a href="#knowledge" data-toggle="tab" #{I18n.t('products.knowledge')}
         .tab-content#product-tab-contents
-          - if @product.feature.length > 15
+          - if @product.feature.try(:length) > 15
             .tab-pane.fade.in#feature
               = raw @product.feature
-          - if @product.spec.length > 15
+          - if @product.spec.try(:length) > 15
             .tab-pane.fade.in#spec
               = raw @product.spec
-          - if @product.test_report.length > 15
+          - if @product.test_report.try(:length) > 15
             .tab-pane.fade.in#test_report
               = raw @product.test_report
-          - if @product.knowledge.length > 15
+          - if @product.knowledge.try(:length) > 15
             .tab-pane.fade.in#knowledge
               = raw @product.knowledge
