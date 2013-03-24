@@ -1,4 +1,13 @@
 zh_tw:
+  contact:
+    contact_us: '聯絡我們'
+    name: '您的大名'
+    message: '您的意見'
+    submit: '送出'
+    about_us: '關於嘉亨科技'
+    cybernetic: '嘉亨科技'
+    address: '新北市中和區建一路150號4樓'
+    phone: '電話'
   simple_form:
     "yes": '是'
     "no": '否'

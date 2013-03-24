@@ -17,3 +17,12 @@ en:
     required:
       text: 'required'
       mark: '*'
+  contact:
+    contact_us: 'Contact Us'
+    name: 'Your Name'
+    message: 'Message'
+    submit: 'Submit'
+    about_us: 'About Cybernetic'
+    cybernetic: 'Cybernetic'
+    address: '4F., No.150, Jian 1st Rd., Zhonghe Dist., New Taipei City 235, Taiwan (R.O.C.)'
+    phone: 'Phone'

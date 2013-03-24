@@ -1,4 +1,4 @@
-h2 聯絡客服
+h2= t('contact.contact_us')
 hr
 .contact
   .row
@@ -8,25 +8,25 @@ hr
   .row
     .span6
       .cwell
-        h5 聯絡我們
+        h5= t('contact.contact_us')
         .form
           = simple_form_for @contact, html: { class: 'form-horizontal' } do |f|
-            = f.input :name, label: "姓名", input_html: { class: 'span5' }
+            = f.input :name, label: t('contact.name'), input_html: { class: 'span5' }
             = f.input :email, label: "Email", input_html: { class: 'input-medium' }
-            = f.input :content, label: "您的意見", input_html: { class: 'span5', rows: 10 }
+            = f.input :content, label: t('contact.message'), input_html: { class: 'span5', rows: 10 }
             .form-actions
-              = f.submit "送出", class: 'btn btn-success'
+              = f.submit t('contact.submit'), class: 'btn btn-success'
     .span6
       .cwell
-        h5 關於我們
+        h5= t('contact.about_us')
         .address
           address
-            h6 嘉亨科技
+            h6= t('contact.cybernetic')
             br
-              | 新北市中和區建一路150號4樓
+              #{t('contact.address')}
               br
               abbr title="Phone"
-              | (02)22672415轉53
+              | +886222672415#53
           address
             a href="mailto:#" service@cybernetic.com.tw
 
