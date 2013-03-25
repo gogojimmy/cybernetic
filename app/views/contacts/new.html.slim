@@ -1,4 +1,4 @@
-h2= t('contact.contact_us')
+h2.contact= t('contact.contact_us')
 hr
 .contact
   .row
@@ -6,7 +6,7 @@ hr
       .cwell
         = image_tag('map-1.jpg')
       .cwell
-        iframe height="440" scrolling="no" src="https://maps.google.com/maps?f=q&source=s_q&hl=zh-TW&geocode=&q=%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%92%8C%E5%8D%80%E5%BB%BA%E4%B8%80%E8%B7%AF150%E8%99%9F4%E6%A8%93&aq=&sll=25.083502,121.590375&sspn=0.190142,0.149345&ie=UTF8&hq=&hnear=235%E5%8F%B0%E7%81%A3%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%92%8C%E5%8D%80%E5%BB%BA%E4%B8%80%E8%B7%AF150%E8%99%9F&t=m&ll=24.999439,121.48716&spn=0.027226,0.036478&z=14&output=embed&iwloc=&amp" width="100%"
+        iframe height="362" scrolling="no" src="https://maps.google.com/maps?f=q&source=s_q&hl=zh-TW&geocode=&q=%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%92%8C%E5%8D%80%E5%BB%BA%E4%B8%80%E8%B7%AF150%E8%99%9F4%E6%A8%93&aq=&sll=25.083502,121.590375&sspn=0.190142,0.149345&ie=UTF8&hq=&hnear=235%E5%8F%B0%E7%81%A3%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%92%8C%E5%8D%80%E5%BB%BA%E4%B8%80%E8%B7%AF150%E8%99%9F&t=m&ll=24.999439,121.48716&spn=0.027226,0.036478&z=14&output=embed&iwloc=&amp" width="100%"
     .span6
       .cwell
         h5= t('contact.about_us')
@@ -32,7 +32,6 @@ hr
             | #{t('contact.phone')}: +886222672415 #53
             br
             a href="mailto:#" service@cybernetic.com.tw
-      .cwell
         h5= t('contact.contact_us')
         .form
           = simple_form_for @contact, html: { class: 'form-horizontal' } do |f|
