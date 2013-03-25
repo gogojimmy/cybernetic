@@ -20,7 +20,7 @@
                             = image_tag a.c_image_url(:normal)
                           .span9
                             h4= a.title
-                            - a.children.order("position").each do |child|
+                            - a.children.order("position").include_locale(params[:locale]).each do |child|
                               = link_to child.title, category_path(child)
                       - if b.present?
                         td
@@ -29,7 +29,7 @@
                               = image_tag b.c_image_url(:normal)
                             .span9
                               h4= b.title
-                              - b.children.order("position").each do |child|
+                              - b.children.order("position").include_locale(params[:locale]).each do |child|
                                 = link_to child.title, category_path(child)
                       - if c.present?
                         td
@@ -38,7 +38,7 @@
                               = image_tag c.c_image_url(:normal)
                             .span9
                               h4= c.title
-                              - c.children.order("position").each do |child|
+                              - c.children.order("position").include_locale(params[:locale]).each do |child|
                                 = link_to child.title, category_path(child)
                       - if d.present?
                         td
@@ -47,7 +47,7 @@
                               = image_tag d.c_image_url(:normal)
                             .span9
                               h4= d.title
-                              - d.children.order("position").each do |child|
+                              - d.children.order("position").include_locale(params[:locale]).each do |child|
                                 = link_to child.title, category_path(child)
           li.dropdown
             =link_to "#", class: 'dropdown-toggle', data: { toggle: 'dropdown' } do
