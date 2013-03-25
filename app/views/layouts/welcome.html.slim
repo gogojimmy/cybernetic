@@ -17,9 +17,9 @@ html
           .span6
             .logo
               - if is_zh_tw?
-                = link_to image_tag(asset_path("logo_zh_tw.png")), "/"
+                = link_to image_tag(asset_path("logo_zh_tw.png")), "/zh_tw"
               - else
-                = link_to image_tag(asset_path("logo_en.png")), "/"
+                = link_to image_tag(asset_path("logo_en.png")), "/en"
           #search.span6
             #search-form.form.pull-right
               = form_tag products_path, id: 'search-form', class: 'form-search', method: 'get' do
