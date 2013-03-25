@@ -12,4 +12,9 @@
 
 class Contact < ActiveRecord::Base
   attr_accessible :content, :email, :name
+  after_create :send_mail
+
+  def send_mail
+    ContactNoticeMailer.send_contact_notice_mail.deliver
+  end
 end

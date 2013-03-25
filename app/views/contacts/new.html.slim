@@ -2,11 +2,36 @@ h2= t('contact.contact_us')
 hr
 .contact
   .row
-    .span12
-      .gmap
-        iframe frameborder="100%" height="350" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?f=q&source=s_q&hl=zh-TW&geocode=&q=%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%92%8C%E5%8D%80%E5%BB%BA%E4%B8%80%E8%B7%AF150%E8%99%9F4%E6%A8%93&aq=&sll=25.083502,121.590375&sspn=0.190142,0.149345&ie=UTF8&hq=&hnear=235%E5%8F%B0%E7%81%A3%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%92%8C%E5%8D%80%E5%BB%BA%E4%B8%80%E8%B7%AF150%E8%99%9F&t=m&ll=24.999439,121.48716&spn=0.027226,0.036478&z=14&output=embed&iwloc=&amp" width="425"
-  .row
     .span6
+      .cwell
+        = image_tag('map-1.jpg')
+      .gmap
+        iframe frameborder="100%" height="440" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?f=q&source=s_q&hl=zh-TW&geocode=&q=%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%92%8C%E5%8D%80%E5%BB%BA%E4%B8%80%E8%B7%AF150%E8%99%9F4%E6%A8%93&aq=&sll=25.083502,121.590375&sspn=0.190142,0.149345&ie=UTF8&hq=&hnear=235%E5%8F%B0%E7%81%A3%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%92%8C%E5%8D%80%E5%BB%BA%E4%B8%80%E8%B7%AF150%E8%99%9F&t=m&ll=24.999439,121.48716&spn=0.027226,0.036478&z=14&output=embed&iwloc=&amp" width="425"
+    .span6
+      .cwell
+        h5= t('contact.about_us')
+        .address
+          address
+            h6= t('contact.cybernetic')
+            br
+            #{t('contact.address')}
+            br
+            span= t('contact.sales_info')
+            br
+            abbr title="Phone"
+            | #{t('contact.phone')}: +886282263775
+            br
+            abbr title="Fax"
+            | #{t('contact.fax')}: +886282263663
+            br
+            a href="mailto:#" sales@cybernetic.com.tw
+          address
+            span= t('contact.service_info')
+            br
+            abbr title="Phone"
+            | #{t('contact.phone')}: +886222672415 #53
+            br
+            a href="mailto:#" service@cybernetic.com.tw
       .cwell
         h5= t('contact.contact_us')
         .form
@@ -16,17 +41,3 @@ hr
             = f.input :content, label: t('contact.message'), input_html: { class: 'span5', rows: 10 }
             .form-actions
               = f.submit t('contact.submit'), class: 'btn btn-success'
-    .span6
-      .cwell
-        h5= t('contact.about_us')
-        .address
-          address
-            h6= t('contact.cybernetic')
-            br
-              #{t('contact.address')}
-              br
-              abbr title="Phone"
-              | +886222672415#53
-          address
-            a href="mailto:#" service@cybernetic.com.tw
-
