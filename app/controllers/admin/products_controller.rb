@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 #encoding: utf-8
 class Admin::ProductsController < ApplicationController
   before_filter :authenticate_user!

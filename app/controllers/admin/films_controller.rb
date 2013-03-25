@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 #encoding: utf-8
 class Admin::FilmsController < ApplicationController
   before_filter :authenticate_user!

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 #encoding: utf-8
 class Admin::SlidersController < ApplicationController
   before_filter :authenticate_user!

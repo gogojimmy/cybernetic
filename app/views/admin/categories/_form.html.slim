@@ -5,5 +5,6 @@
   = f.input :c_image, as: :image_preview, label: '分類小圖示', hint: "長寬比需為正方形，最小長寬需為80x80"
   = f.input :large_image, as: :image_preview, label: '中文分類長圖示', hint: "長寬比需為700x300"
   = f.input :en_large_image, as: :image_preview, label: '英文分類長圖示', hint: "長寬比需為700x300"
+  = f.input :locales, label: '語系', as: :check_boxes, collection: Slider::LOCALES.sort.map {|k,v| [v,k]}
   .form-actions
     = f.submit '送出', class: 'btn btn-primary'

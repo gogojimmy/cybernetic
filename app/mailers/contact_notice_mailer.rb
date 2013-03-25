@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 #encoding: utf-8
 class ContactNoticeMailer < ActionMailer::Base
   default from: 'service@cybernetic.com.tw'

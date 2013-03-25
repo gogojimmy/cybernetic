@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 Cybernetic::Application.routes.draw do
 
   mount RedactorRails::Engine => '/redactor_rails'

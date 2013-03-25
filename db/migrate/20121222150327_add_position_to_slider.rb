@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddPositionToSlider < ActiveRecord::Migration
   def change
     add_column :sliders, :position, :string

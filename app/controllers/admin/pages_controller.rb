@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 #encoding: utf-8
 class Admin::PagesController < ApplicationController
   before_filter :authenticate_user!

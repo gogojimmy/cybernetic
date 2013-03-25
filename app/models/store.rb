@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 #encoding: utf-8
 class Store < ActiveRecord::Base
   attr_accessible :address, :email, :name, :store_type, :tel, :url

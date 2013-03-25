@@ -2,6 +2,8 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  product:
+    no_locale_for_this: 'The product you are looking for has no version for your language setting'
   brand: 'Cybernetic'
   right_reserve: 'All rights reserved.'
   menu:

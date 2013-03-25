@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreatePageTranslations < ActiveRecord::Migration
   def up
     Page.create_translation_table!({

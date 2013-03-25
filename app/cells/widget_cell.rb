@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 #encoding: utf-8
 class WidgetCell < Cell::Rails
   helper ApplicationHelper
@@ -24,19 +25,13 @@ class WidgetCell < Cell::Rails
   end
 
   def main_nav
-    @categories = Category.roots.order("position").to_a
-    if I18n.locale != :zh_tw
-      @categories = @categories.delete_if { |c| c.title == 'Headset' || c.title == 'Player' }
-    end
+    @categories = Category.roots.order("position").include_locale(params[:locale]).to_a
     @categories = @categories.delete_if { |c| c.title == '未整理' }
     render
   end
 
   def categories_sidebar
-    @categories = Category.roots.order("position").to_a
-    if I18n.locale != :zh_tw
-      @categories = @categories.delete_if { |c| c.title == 'Headset' || c.title == 'Player' }
-    end
+    @categories = Category.roots.order("position").include_locale(params[:locale]).to_a
     @categories = @categories.delete_if { |c| c.title == '未整理' }
     @film = Film.random_film
     film_id = /d\/\S*\"/.match(@film).to_s.delete("d/").delete("\"")

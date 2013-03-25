@@ -1,4 +1,6 @@
 zh_tw:
+  product:
+    no_locale_for_this: '您尋找的產品沒有適合您的語系設定'
   contact:
     contact_us: '聯絡我們'
     name: '您的大名'

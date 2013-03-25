@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module PostsHelper
 
   def restrict_content(content)

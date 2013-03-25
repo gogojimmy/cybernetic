@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # == Schema Information
 #
 # Table name: categories
@@ -12,10 +13,12 @@
 #
 
 class Category < ActiveRecord::Base
-  attr_accessible :c_image, :title, :user, :user_id, :parent_id, :large_image, :show_description, :en_large_image
+  attr_accessible :c_image, :title, :user, :user_id, :parent_id, :large_image,
+                  :show_description, :en_large_image, :locales
   mount_uploader :c_image, CImageUploader
   mount_uploader :large_image, LargeImageUploader
   mount_uploader :en_large_image, EnLargeImageUploader
+  serialize :locales, Array
 
   validates_presence_of :title
   belongs_to :user
@@ -23,6 +26,7 @@ class Category < ActiveRecord::Base
   before_destroy :set_products_category
 
   translates :title
+  LOCALES = { "en" => '英文', "zh_tw" => "中文" }
 
   has_ancestry
   acts_as_list scope: [:ancestry]
@@ -32,4 +36,9 @@ class Category < ActiveRecord::Base
       product.set_category_to_uncategory
     end
   end
+
+  def self.include_locale(locale)
+    select {|m| m.locales.include?(locale)}
+  end
+
 end

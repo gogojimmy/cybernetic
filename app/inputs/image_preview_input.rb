@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ImagePreviewInput < SimpleForm::Inputs::FileInput
   def input
     # :preview_version is a custom attribute from :input_html hash, so you can pick custom sizes

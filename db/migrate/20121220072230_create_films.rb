@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateFilms < ActiveRecord::Migration
   def change
     create_table :films do |t|

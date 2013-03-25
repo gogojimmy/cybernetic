@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateTranslactionTables < ActiveRecord::Migration
   def up
     Category.create_translation_table!({
