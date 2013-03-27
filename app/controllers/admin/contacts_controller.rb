@@ -5,7 +5,7 @@ class Admin::ContactsController < ApplicationController
   layout 'admin'
 
   def index
-    @contacts = Contact.paginate(page: params[:page])
+    @contacts = Contact.order('created_at desc').paginate(page: params[:page])
   end
 
   def show
