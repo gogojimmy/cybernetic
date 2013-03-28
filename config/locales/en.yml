@@ -31,3 +31,52 @@ en:
     address: '4F., No.150, Jian 1st Rd., Zhonghe Dist., New Taipei City 235, Taiwan (R.O.C.)'
     phone: 'TEL'
     fax: 'FAX'
+  activerecord:
+    errors:
+      <<: *errors
+    attributes:
+      category:
+        title: "Title"
+        c_image: "Small Image"
+        large_image: "Large image"
+      contact:
+        name: 'Name'
+        email: 'Email'
+        content: 'Content'
+      faq:
+        answer: 'Answer'
+        question: 'Question'
+      film:
+        url: 'Url'
+      marketing:
+        email: 'Email'
+      page:
+        title: 'Title'
+        content: 'Content'
+      post:
+        category: 'Category'
+        title: 'Title'
+        content: 'Content'
+      product:
+        description: 'Description'
+        feature: 'Feature'
+        knowledge: 'Knowledge'
+        name: 'Name'
+        spec: 'Spec'
+        test: 'Test Report'
+        category: 'Category'
+      slider:
+        position: 'Position'
+        target: 'Link'
+        description: 'Description'
+        title: 'Title'
+      download:
+        name: 'File name'
+        link: 'Link'
+        description: 'Description'
+      store:
+        name: 'Store'
+        url: 'Link'
+        address: 'Address'
+        store_type: 'Type'
+        tel: 'Tel'
