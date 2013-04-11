@@ -16,6 +16,6 @@ class Contact < ActiveRecord::Base
   after_create :send_mail
 
   def send_mail
-    ContactNoticeMailer.send_contact_notice_mail.deliver
+    ContactNoticeMailer.send_contact_notice_mail(self).deliver
   end
 end

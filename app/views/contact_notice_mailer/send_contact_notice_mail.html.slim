@@ -1,3 +1,8 @@
-p 有使用者在網站上提出意見
+h2 有使用者在網站上提出意見
+
+p 使用者："#{@contact.name}"
+p Email："#{@contact.email}"
+p 意見："#{@contact.content}"
+p 時間："#{I18n.l @contact.created_at, format: :long}"
 
 = link_to '連結', admin_contacts_url(locale: :zh_tw)
