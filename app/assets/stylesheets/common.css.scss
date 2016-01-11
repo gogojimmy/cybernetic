@@ -497,6 +497,7 @@ ul.nav li.dropdown:hover .dropdown-menu{
 #welcome-news {
   height: 190px;
   font-size: 12px;
+  overflow-y: scroll;
   h4 {
     margin-left: 5px;
     color: #DA5422;
@@ -567,6 +568,11 @@ footer {
 .sidebar {
   a:hover {
     color: white;
+  }
+  .posts {
+    a:hover {
+      color: black;
+    }
   }
 }
 
