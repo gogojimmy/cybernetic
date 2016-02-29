@@ -6,16 +6,6 @@ GIT
       railties (>= 3.0)
       sass (>= 3.2)
 
-GIT
-  remote: git://github.com/svenfuchs/globalize3.git
-  revision: fc4e110f704eb43e2c2edfb68e8e60e10838a4e1
-  branch: attr_accessible_locale
-  specs:
-    globalize3 (0.2.0)
-      activemodel (>= 3.0.0)
-      activerecord (>= 3.0.0)
-      paper_trail (~> 2)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -124,6 +114,9 @@ GEM
       railties (>= 3.1.1)
       sass-rails (>= 3.1.1)
     fssm (0.2.9)
+    globalize (3.1.0)
+      activemodel (>= 3.1.0, < 4.0.0)
+      activerecord (>= 3.1.0, < 4.0.0)
     gon (4.0.2)
       actionpack (>= 2.3.0)
       json
@@ -158,9 +151,6 @@ GEM
     nokogiri (1.5.6)
     open_graph_helper (0.1.1)
     orm_adapter (0.4.0)
-    paper_trail (2.7.0)
-      activerecord (~> 3.0)
-      railties (~> 3.0)
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -190,7 +180,7 @@ GEM
     redactor-rails (0.3.2)
       mime-types
       orm_adapter
-    rmagick (2.13.1)
+    rmagick (2.15.4)
     rvm-capistrano (1.2.7)
       capistrano (>= 2.0.0)
     sass (3.2.5)
@@ -265,7 +255,7 @@ DEPENDENCIES
   devise
   exception_notification
   font-awesome-sass-rails
-  globalize3!
+  globalize
   gon
   htmlentities
   jquery-rails
@@ -285,3 +275,6 @@ DEPENDENCIES
   truncate_html
   uglifier (>= 1.0.3)
   will_paginate (= 3.0.3)
+
+BUNDLED WITH
+   1.11.2

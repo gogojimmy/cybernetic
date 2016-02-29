@@ -21,7 +21,7 @@ jQuery ->
 
 
   if $("#news-index").length >= 1
-    $("#news-index").ticker()
+    $("#news-index").ticker(titleText: gon.newsTitle)
 
   # Find all YouTube videos
   #$allVideos = $("iframe[src^='http://www.youtube.com']")

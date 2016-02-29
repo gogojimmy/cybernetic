@@ -5,5 +5,6 @@ class WelcomeController < ApplicationController
   def index
     @sliders = Slider.where(block: "首頁橫幅廣告").order("position").include_locale(params[:locale])
     @news = Post.news.include_locale(params[:locale]).last(5)
+    gon.newsTitle = I18n.t('menu.news')
   end
 end

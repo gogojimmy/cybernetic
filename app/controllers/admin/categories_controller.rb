@@ -15,7 +15,7 @@ class Admin::CategoriesController < ApplicationController
 
   def sort
     params[:category].each_with_index do |id, index|
-      Category.update_all({position: index + 1}, {id: id})
+      Category.find(id).update(position: index + 1)
     end
     render nothing: true
   end

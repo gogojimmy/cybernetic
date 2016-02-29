@@ -32,10 +32,10 @@ ActiveRecord::Schema.define(:version => 20130325130551) do
 
   create_table "category_translations", :force => true do |t|
     t.integer  "category_id"
-    t.string   "locale"
-    t.string   "title"
+    t.string   "locale",      :null => false
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "title"
   end
 
   add_index "category_translations", ["category_id"], :name => "index_category_translations_on_category_id"
@@ -51,11 +51,11 @@ ActiveRecord::Schema.define(:version => 20130325130551) do
 
   create_table "download_translations", :force => true do |t|
     t.integer  "download_id"
-    t.string   "locale"
-    t.string   "name"
-    t.text     "description"
+    t.string   "locale",      :null => false
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "name"
+    t.text     "description"
   end
 
   add_index "download_translations", ["download_id"], :name => "index_download_translations_on_download_id"
@@ -69,11 +69,11 @@ ActiveRecord::Schema.define(:version => 20130325130551) do
 
   create_table "faq_translations", :force => true do |t|
     t.integer  "faq_id"
-    t.string   "locale"
-    t.text     "answer"
-    t.text     "question"
+    t.string   "locale",     :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.text     "answer"
+    t.text     "question"
   end
 
   add_index "faq_translations", ["faq_id"], :name => "index_faq_translations_on_faq_id"
@@ -105,11 +105,11 @@ ActiveRecord::Schema.define(:version => 20130325130551) do
 
   create_table "page_translations", :force => true do |t|
     t.integer  "page_id"
-    t.string   "locale"
-    t.string   "title"
-    t.text     "content"
+    t.string   "locale",     :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "title"
+    t.text     "content"
   end
 
   add_index "page_translations", ["locale"], :name => "index_page_translations_on_locale"
@@ -128,11 +128,11 @@ ActiveRecord::Schema.define(:version => 20130325130551) do
 
   create_table "post_translations", :force => true do |t|
     t.integer  "post_id"
-    t.string   "locale"
-    t.string   "title"
-    t.text     "content"
+    t.string   "locale",     :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "title"
+    t.text     "content"
   end
 
   add_index "post_translations", ["locale"], :name => "index_post_translations_on_locale"
@@ -161,15 +161,15 @@ ActiveRecord::Schema.define(:version => 20130325130551) do
 
   create_table "product_translations", :force => true do |t|
     t.integer  "product_id"
-    t.string   "locale"
+    t.string   "locale",           :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
     t.text     "description"
     t.text     "feature"
     t.text     "knowledge"
     t.string   "name"
     t.text     "spec"
     t.text     "test_report"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
     t.string   "show_description"
   end
 
@@ -211,11 +211,11 @@ ActiveRecord::Schema.define(:version => 20130325130551) do
 
   create_table "slider_translations", :force => true do |t|
     t.integer  "slider_id"
-    t.string   "locale"
-    t.text     "description"
-    t.string   "title"
+    t.string   "locale",      :null => false
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.text     "description"
+    t.string   "title"
   end
 
   add_index "slider_translations", ["locale"], :name => "index_slider_translations_on_locale"
